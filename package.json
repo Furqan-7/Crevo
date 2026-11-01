@@ -13,7 +13,9 @@
     "db:migrate": "pnpm --filter db db:migrate",
     "db:deploy": "pnpm --filter db db:deploy",
     "db:studio": "pnpm --filter db db:studio",
-    "check:setup": "node scripts/check-setup.mjs"
+    "check:setup": "node scripts/check-setup.mjs",
+    "build:api": "pnpm install --frozen-lockfile --prod=false && pnpm --filter db build && pnpm --filter backend build",
+    "start:api": "node backend/dist/index.js"
   },
   "devDependencies": {
     "concurrently": "^10.0.6"

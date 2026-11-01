@@ -146,7 +146,9 @@ pnpm --filter frontend test:e2e
 ```
 
 Deploying: `render.yaml` is a Render blueprint for the API (migrations run
-before each deploy). The frontend deploys on Vercel with `frontend` as the
+before each deploy). For a hand-made Render web service use root directory
+empty, build command `pnpm build:api`, pre-deploy command `pnpm db:deploy`
+and start command `pnpm start:api`. The frontend deploys on Vercel with `frontend` as the
 root directory.
 
 Security headers are set in `frontend/next.config.ts` for every page: a
