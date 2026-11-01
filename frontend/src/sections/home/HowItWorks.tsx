@@ -233,183 +233,366 @@ export default function HowItWorks() {
             <div className="cv-8dqu4 cv-Fp7n4 cv-1qcb8wq cv-v-1qcb8wq" style={{ width: "100%" }}>
               <div className="cv-1xens4f" data-border="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px" }}>
                 <div className="cv-1bzvp3z-container">
-                  <div className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-g43mhd" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
-                    <div className="cv-nrod8u" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "0px 0px 0px 1px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 16px 24px -12px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 32px 32px -20px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 40px 48px -20px var(--token-08bf9998-944c-4f2b-ba88-4a79c17818d4)" }}>
-                      <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
-                        <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255)))", "--cv-text-transform": "uppercase" }}>
-                            {"Step 1"}
-                          </p>
+                  <div data-step="0" style={{ display: "contents" }} data-active="">
+                    <div data-step-inactive="" className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-1gh86ky" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
+                      <div className="cv-nrod8u" style={{ "--border-bottom-width": "0px", "--border-color": "rgba(0, 0, 0, 0)", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "none" }}>
+                        <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-14b5f68b-8a87-4680-9d8b-19892bba54c0)", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104)))", "--cv-text-transform": "uppercase" }}>
+                              {"Step 1"}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="cv-17nexft">
+                          <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "24px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                              {"Upload your video"}
+                            </p>
+                          </div>
+                          <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
+                              {"Drop in a long video or paste a YouTube link - Crevo reads the transcript."}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                      <div className="cv-17nexft">
-                        <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p className="cv-text cv-styles-preset-qrqban" data-styles-preset="QJehLDsLg" dir="auto" style={{ "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
-                            {"Upload your video"}
-                          </p>
+                      <div className="cv-gh68c7">
+                        <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg1527700876_422" />
+                            </svg>
+                          </div>
                         </div>
-                        <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
-                            {"Drop in a long video or paste a YouTube link - Crevo reads the transcript."}
-                          </p>
+                      </div>
+                      <div className="cv-s1n6yv">
+                        <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg334393695_407" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-bjg7pb">
+                        <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg172319957_405" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-l2iv40">
+                        <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg-2126597858_420" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="cv-gh68c7">
-                      <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg1527700876_422" />
-                          </svg>
+                    <div data-step-active="" className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-g43mhd" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
+                      <div className="cv-nrod8u" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "0px 0px 0px 1px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 16px 24px -12px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 32px 32px -20px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 40px 48px -20px var(--token-08bf9998-944c-4f2b-ba88-4a79c17818d4)" }}>
+                        <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255)))", "--cv-text-transform": "uppercase" }}>
+                              {"Step 1"}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="cv-17nexft">
+                          <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-qrqban" data-styles-preset="QJehLDsLg" dir="auto" style={{ "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                              {"Upload your video"}
+                            </p>
+                          </div>
+                          <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
+                              {"Drop in a long video or paste a YouTube link - Crevo reads the transcript."}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-s1n6yv">
-                      <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg334393695_407" />
-                          </svg>
+                      <div className="cv-gh68c7">
+                        <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg1527700876_422" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-bjg7pb">
-                      <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg172319957_405" />
-                          </svg>
+                      <div className="cv-s1n6yv">
+                        <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg334393695_407" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-l2iv40">
-                      <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg-2126597858_420" />
-                          </svg>
+                      <div className="cv-bjg7pb">
+                        <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg172319957_405" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-l2iv40">
+                        <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg-2126597858_420" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="cv-92du0w-container">
-                  <div className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-1gh86ky" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
-                    <div className="cv-nrod8u" style={{ "--border-bottom-width": "0px", "--border-color": "rgba(0, 0, 0, 0)", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "none" }}>
-                      <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-14b5f68b-8a87-4680-9d8b-19892bba54c0)", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
-                        <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104)))", "--cv-text-transform": "uppercase" }}>
-                            {"Step 2"}
-                          </p>
+                  <div data-step="1" style={{ display: "contents" }}>
+                    <div data-step-inactive="" className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-1gh86ky" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
+                      <div className="cv-nrod8u" style={{ "--border-bottom-width": "0px", "--border-color": "rgba(0, 0, 0, 0)", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "none" }}>
+                        <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-14b5f68b-8a87-4680-9d8b-19892bba54c0)", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104)))", "--cv-text-transform": "uppercase" }}>
+                              {"Step 2"}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="cv-17nexft">
+                          <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "24px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                              {"Get clips and captions"}
+                            </p>
+                          </div>
+                          <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
+                              {"AI picks the best moments and writes titles, captions and hashtags per platform."}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                      <div className="cv-17nexft">
-                        <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "24px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
-                            {"Get clips and captions"}
-                          </p>
+                      <div className="cv-gh68c7">
+                        <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg1527700876_422" />
+                            </svg>
+                          </div>
                         </div>
-                        <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
-                            {"AI picks the best moments and writes titles, captions and hashtags per platform."}
-                          </p>
+                      </div>
+                      <div className="cv-s1n6yv">
+                        <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg334393695_407" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-bjg7pb">
+                        <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg172319957_405" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-l2iv40">
+                        <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg-2126597858_420" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="cv-gh68c7">
-                      <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg1527700876_422" />
-                          </svg>
+                    <div data-step-active="" className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-g43mhd" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
+                      <div className="cv-nrod8u" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "0px 0px 0px 1px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 16px 24px -12px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 32px 32px -20px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 40px 48px -20px var(--token-08bf9998-944c-4f2b-ba88-4a79c17818d4)" }}>
+                        <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255)))", "--cv-text-transform": "uppercase" }}>
+                              {"Step 2"}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="cv-17nexft">
+                          <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-qrqban" data-styles-preset="QJehLDsLg" dir="auto" style={{ "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                              {"Get clips and captions"}
+                            </p>
+                          </div>
+                          <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
+                              {"AI picks the best moments and writes titles, captions and hashtags per platform."}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-s1n6yv">
-                      <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg334393695_407" />
-                          </svg>
+                      <div className="cv-gh68c7">
+                        <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg1527700876_422" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-bjg7pb">
-                      <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg172319957_405" />
-                          </svg>
+                      <div className="cv-s1n6yv">
+                        <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg334393695_407" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-l2iv40">
-                      <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg-2126597858_420" />
-                          </svg>
+                      <div className="cv-bjg7pb">
+                        <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg172319957_405" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-l2iv40">
+                        <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg-2126597858_420" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="cv-wti2e-container">
-                  <div className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-1gh86ky" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
-                    <div className="cv-nrod8u" style={{ "--border-bottom-width": "0px", "--border-color": "rgba(0, 0, 0, 0)", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "none" }}>
-                      <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-14b5f68b-8a87-4680-9d8b-19892bba54c0)", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
-                        <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104)))", "--cv-text-transform": "uppercase" }}>
-                            {"Step 3"}
-                          </p>
+                  <div data-step="2" style={{ display: "contents" }}>
+                    <div data-step-inactive="" className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-1gh86ky" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
+                      <div className="cv-nrod8u" style={{ "--border-bottom-width": "0px", "--border-color": "rgba(0, 0, 0, 0)", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "none" }}>
+                        <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-14b5f68b-8a87-4680-9d8b-19892bba54c0)", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104)))", "--cv-text-transform": "uppercase" }}>
+                              {"Step 3"}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="cv-17nexft">
+                          <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "24px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                              {"Approve and schedule"}
+                            </p>
+                          </div>
+                          <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
+                              {"Review everything on one board and schedule it for the best times to post."}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                      <div className="cv-17nexft">
-                        <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "24px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
-                            {"Approve and schedule"}
-                          </p>
+                      <div className="cv-gh68c7">
+                        <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg1527700876_422" />
+                            </svg>
+                          </div>
                         </div>
-                        <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
-                            {"Review everything on one board and schedule it for the best times to post."}
-                          </p>
+                      </div>
+                      <div className="cv-s1n6yv">
+                        <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg334393695_407" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-bjg7pb">
+                        <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg172319957_405" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-l2iv40">
+                        <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg-2126597858_420" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="cv-gh68c7">
-                      <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg1527700876_422" />
-                          </svg>
+                    <div data-step-active="" className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-g43mhd" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
+                      <div className="cv-nrod8u" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "0px 0px 0px 1px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 16px 24px -12px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 32px 32px -20px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 40px 48px -20px var(--token-08bf9998-944c-4f2b-ba88-4a79c17818d4)" }}>
+                        <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255)))", "--cv-text-transform": "uppercase" }}>
+                              {"Step 3"}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="cv-17nexft">
+                          <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-qrqban" data-styles-preset="QJehLDsLg" dir="auto" style={{ "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                              {"Approve and schedule"}
+                            </p>
+                          </div>
+                          <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
+                              {"Review everything on one board and schedule it for the best times to post."}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-s1n6yv">
-                      <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg334393695_407" />
-                          </svg>
+                      <div className="cv-gh68c7">
+                        <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg1527700876_422" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-bjg7pb">
-                      <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg172319957_405" />
-                          </svg>
+                      <div className="cv-s1n6yv">
+                        <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg334393695_407" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-l2iv40">
-                      <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg-2126597858_420" />
-                          </svg>
+                      <div className="cv-bjg7pb">
+                        <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg172319957_405" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-l2iv40">
+                        <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg-2126597858_420" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -868,183 +1051,366 @@ export default function HowItWorks() {
             <div className="cv-8dqu4 cv-Fp7n4 cv-1qcb8wq cv-v-1ljofgb" style={{ width: "100%" }}>
               <div className="cv-1xens4f" data-border="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px" }}>
                 <div className="cv-1bzvp3z-container">
-                  <div className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-g43mhd" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
-                    <div className="cv-nrod8u" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "0px 0px 0px 1px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 16px 24px -12px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 32px 32px -20px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 40px 48px -20px var(--token-08bf9998-944c-4f2b-ba88-4a79c17818d4)" }}>
-                      <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
-                        <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255)))", "--cv-text-transform": "uppercase" }}>
-                            {"Step 1"}
-                          </p>
+                  <div data-step="0" style={{ display: "contents" }} data-active="">
+                    <div data-step-inactive="" className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-1gh86ky" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
+                      <div className="cv-nrod8u" style={{ "--border-bottom-width": "0px", "--border-color": "rgba(0, 0, 0, 0)", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "none" }}>
+                        <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-14b5f68b-8a87-4680-9d8b-19892bba54c0)", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104)))", "--cv-text-transform": "uppercase" }}>
+                              {"Step 1"}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="cv-17nexft">
+                          <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "24px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                              {"Upload your video"}
+                            </p>
+                          </div>
+                          <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
+                              {"Drop in a long video or paste a YouTube link - Crevo reads the transcript."}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                      <div className="cv-17nexft">
-                        <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p className="cv-text cv-styles-preset-qrqban" data-styles-preset="QJehLDsLg" dir="auto" style={{ "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
-                            {"Upload your video"}
-                          </p>
+                      <div className="cv-gh68c7">
+                        <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg1527700876_422" />
+                            </svg>
+                          </div>
                         </div>
-                        <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
-                            {"Drop in a long video or paste a YouTube link - Crevo reads the transcript."}
-                          </p>
+                      </div>
+                      <div className="cv-s1n6yv">
+                        <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg334393695_407" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-bjg7pb">
+                        <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg172319957_405" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-l2iv40">
+                        <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg-2126597858_420" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="cv-gh68c7">
-                      <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg1527700876_422" />
-                          </svg>
+                    <div data-step-active="" className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-g43mhd" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
+                      <div className="cv-nrod8u" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "0px 0px 0px 1px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 16px 24px -12px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 32px 32px -20px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 40px 48px -20px var(--token-08bf9998-944c-4f2b-ba88-4a79c17818d4)" }}>
+                        <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255)))", "--cv-text-transform": "uppercase" }}>
+                              {"Step 1"}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="cv-17nexft">
+                          <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-qrqban" data-styles-preset="QJehLDsLg" dir="auto" style={{ "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                              {"Upload your video"}
+                            </p>
+                          </div>
+                          <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
+                              {"Drop in a long video or paste a YouTube link - Crevo reads the transcript."}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-s1n6yv">
-                      <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg334393695_407" />
-                          </svg>
+                      <div className="cv-gh68c7">
+                        <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg1527700876_422" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-bjg7pb">
-                      <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg172319957_405" />
-                          </svg>
+                      <div className="cv-s1n6yv">
+                        <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg334393695_407" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-l2iv40">
-                      <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg-2126597858_420" />
-                          </svg>
+                      <div className="cv-bjg7pb">
+                        <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg172319957_405" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-l2iv40">
+                        <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg-2126597858_420" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="cv-92du0w-container">
-                  <div className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-1gh86ky" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
-                    <div className="cv-nrod8u" style={{ "--border-bottom-width": "0px", "--border-color": "rgba(0, 0, 0, 0)", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "none" }}>
-                      <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-14b5f68b-8a87-4680-9d8b-19892bba54c0)", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
-                        <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104)))", "--cv-text-transform": "uppercase" }}>
-                            {"Step 2"}
-                          </p>
+                  <div data-step="1" style={{ display: "contents" }}>
+                    <div data-step-inactive="" className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-1gh86ky" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
+                      <div className="cv-nrod8u" style={{ "--border-bottom-width": "0px", "--border-color": "rgba(0, 0, 0, 0)", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "none" }}>
+                        <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-14b5f68b-8a87-4680-9d8b-19892bba54c0)", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104)))", "--cv-text-transform": "uppercase" }}>
+                              {"Step 2"}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="cv-17nexft">
+                          <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "24px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                              {"Get clips and captions"}
+                            </p>
+                          </div>
+                          <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
+                              {"AI picks the best moments and writes titles, captions and hashtags per platform."}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                      <div className="cv-17nexft">
-                        <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "24px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
-                            {"Get clips and captions"}
-                          </p>
+                      <div className="cv-gh68c7">
+                        <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg1527700876_422" />
+                            </svg>
+                          </div>
                         </div>
-                        <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
-                            {"AI picks the best moments and writes titles, captions and hashtags per platform."}
-                          </p>
+                      </div>
+                      <div className="cv-s1n6yv">
+                        <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg334393695_407" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-bjg7pb">
+                        <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg172319957_405" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-l2iv40">
+                        <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg-2126597858_420" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="cv-gh68c7">
-                      <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg1527700876_422" />
-                          </svg>
+                    <div data-step-active="" className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-g43mhd" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
+                      <div className="cv-nrod8u" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "0px 0px 0px 1px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 16px 24px -12px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 32px 32px -20px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 40px 48px -20px var(--token-08bf9998-944c-4f2b-ba88-4a79c17818d4)" }}>
+                        <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255)))", "--cv-text-transform": "uppercase" }}>
+                              {"Step 2"}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="cv-17nexft">
+                          <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-qrqban" data-styles-preset="QJehLDsLg" dir="auto" style={{ "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                              {"Get clips and captions"}
+                            </p>
+                          </div>
+                          <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
+                              {"AI picks the best moments and writes titles, captions and hashtags per platform."}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-s1n6yv">
-                      <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg334393695_407" />
-                          </svg>
+                      <div className="cv-gh68c7">
+                        <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg1527700876_422" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-bjg7pb">
-                      <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg172319957_405" />
-                          </svg>
+                      <div className="cv-s1n6yv">
+                        <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg334393695_407" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-l2iv40">
-                      <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg-2126597858_420" />
-                          </svg>
+                      <div className="cv-bjg7pb">
+                        <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg172319957_405" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-l2iv40">
+                        <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg-2126597858_420" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="cv-wti2e-container">
-                  <div className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-1gh86ky" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
-                    <div className="cv-nrod8u" style={{ "--border-bottom-width": "0px", "--border-color": "rgba(0, 0, 0, 0)", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "none" }}>
-                      <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-14b5f68b-8a87-4680-9d8b-19892bba54c0)", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
-                        <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104)))", "--cv-text-transform": "uppercase" }}>
-                            {"Step 3"}
-                          </p>
+                  <div data-step="2" style={{ display: "contents" }}>
+                    <div data-step-inactive="" className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-1gh86ky" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
+                      <div className="cv-nrod8u" style={{ "--border-bottom-width": "0px", "--border-color": "rgba(0, 0, 0, 0)", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "none" }}>
+                        <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-14b5f68b-8a87-4680-9d8b-19892bba54c0)", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104)))", "--cv-text-transform": "uppercase" }}>
+                              {"Step 3"}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="cv-17nexft">
+                          <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "24px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                              {"Approve and schedule"}
+                            </p>
+                          </div>
+                          <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
+                              {"Review everything on one board and schedule it for the best times to post."}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                      <div className="cv-17nexft">
-                        <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "24px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
-                            {"Approve and schedule"}
-                          </p>
+                      <div className="cv-gh68c7">
+                        <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg1527700876_422" />
+                            </svg>
+                          </div>
                         </div>
-                        <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
-                            {"Review everything on one board and schedule it for the best times to post."}
-                          </p>
+                      </div>
+                      <div className="cv-s1n6yv">
+                        <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg334393695_407" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-bjg7pb">
+                        <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg172319957_405" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-l2iv40">
+                        <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg-2126597858_420" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="cv-gh68c7">
-                      <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg1527700876_422" />
-                          </svg>
+                    <div data-step-active="" className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-g43mhd" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
+                      <div className="cv-nrod8u" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "0px 0px 0px 1px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 16px 24px -12px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 32px 32px -20px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 40px 48px -20px var(--token-08bf9998-944c-4f2b-ba88-4a79c17818d4)" }}>
+                        <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255)))", "--cv-text-transform": "uppercase" }}>
+                              {"Step 3"}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="cv-17nexft">
+                          <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-qrqban" data-styles-preset="QJehLDsLg" dir="auto" style={{ "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                              {"Approve and schedule"}
+                            </p>
+                          </div>
+                          <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
+                              {"Review everything on one board and schedule it for the best times to post."}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-s1n6yv">
-                      <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg334393695_407" />
-                          </svg>
+                      <div className="cv-gh68c7">
+                        <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg1527700876_422" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-bjg7pb">
-                      <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg172319957_405" />
-                          </svg>
+                      <div className="cv-s1n6yv">
+                        <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg334393695_407" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-l2iv40">
-                      <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg-2126597858_420" />
-                          </svg>
+                      <div className="cv-bjg7pb">
+                        <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg172319957_405" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-l2iv40">
+                        <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg-2126597858_420" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1187,183 +1553,366 @@ export default function HowItWorks() {
             <div className="cv-8dqu4 cv-Fp7n4 cv-1qcb8wq cv-v-rh1sy0" style={{ width: "100%" }}>
               <div className="cv-1xens4f" data-border="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px" }}>
                 <div className="cv-1bzvp3z-container">
-                  <div className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-g43mhd" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
-                    <div className="cv-nrod8u" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "0px 0px 0px 1px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 16px 24px -12px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 32px 32px -20px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 40px 48px -20px var(--token-08bf9998-944c-4f2b-ba88-4a79c17818d4)" }}>
-                      <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
-                        <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255)))", "--cv-text-transform": "uppercase" }}>
-                            {"Step 1"}
-                          </p>
+                  <div data-step="0" style={{ display: "contents" }} data-active="">
+                    <div data-step-inactive="" className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-1gh86ky" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
+                      <div className="cv-nrod8u" style={{ "--border-bottom-width": "0px", "--border-color": "rgba(0, 0, 0, 0)", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "none" }}>
+                        <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-14b5f68b-8a87-4680-9d8b-19892bba54c0)", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104)))", "--cv-text-transform": "uppercase" }}>
+                              {"Step 1"}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="cv-17nexft">
+                          <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "24px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                              {"Upload your video"}
+                            </p>
+                          </div>
+                          <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
+                              {"Drop in a long video or paste a YouTube link - Crevo reads the transcript."}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                      <div className="cv-17nexft">
-                        <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p className="cv-text cv-styles-preset-qrqban" data-styles-preset="QJehLDsLg" dir="auto" style={{ "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
-                            {"Upload your video"}
-                          </p>
+                      <div className="cv-gh68c7">
+                        <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg1527700876_422" />
+                            </svg>
+                          </div>
                         </div>
-                        <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
-                            {"Drop in a long video or paste a YouTube link - Crevo reads the transcript."}
-                          </p>
+                      </div>
+                      <div className="cv-s1n6yv">
+                        <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg334393695_407" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-bjg7pb">
+                        <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg172319957_405" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-l2iv40">
+                        <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg-2126597858_420" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="cv-gh68c7">
-                      <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg1527700876_422" />
-                          </svg>
+                    <div data-step-active="" className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-g43mhd" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
+                      <div className="cv-nrod8u" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "0px 0px 0px 1px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 16px 24px -12px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 32px 32px -20px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 40px 48px -20px var(--token-08bf9998-944c-4f2b-ba88-4a79c17818d4)" }}>
+                        <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255)))", "--cv-text-transform": "uppercase" }}>
+                              {"Step 1"}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="cv-17nexft">
+                          <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-qrqban" data-styles-preset="QJehLDsLg" dir="auto" style={{ "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                              {"Upload your video"}
+                            </p>
+                          </div>
+                          <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
+                              {"Drop in a long video or paste a YouTube link - Crevo reads the transcript."}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-s1n6yv">
-                      <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg334393695_407" />
-                          </svg>
+                      <div className="cv-gh68c7">
+                        <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg1527700876_422" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-bjg7pb">
-                      <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg172319957_405" />
-                          </svg>
+                      <div className="cv-s1n6yv">
+                        <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg334393695_407" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-l2iv40">
-                      <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg-2126597858_420" />
-                          </svg>
+                      <div className="cv-bjg7pb">
+                        <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg172319957_405" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-l2iv40">
+                        <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg-2126597858_420" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="cv-92du0w-container">
-                  <div className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-1gh86ky" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
-                    <div className="cv-nrod8u" style={{ "--border-bottom-width": "0px", "--border-color": "rgba(0, 0, 0, 0)", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "none" }}>
-                      <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-14b5f68b-8a87-4680-9d8b-19892bba54c0)", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
-                        <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104)))", "--cv-text-transform": "uppercase" }}>
-                            {"Step 2"}
-                          </p>
+                  <div data-step="1" style={{ display: "contents" }}>
+                    <div data-step-inactive="" className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-1gh86ky" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
+                      <div className="cv-nrod8u" style={{ "--border-bottom-width": "0px", "--border-color": "rgba(0, 0, 0, 0)", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "none" }}>
+                        <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-14b5f68b-8a87-4680-9d8b-19892bba54c0)", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104)))", "--cv-text-transform": "uppercase" }}>
+                              {"Step 2"}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="cv-17nexft">
+                          <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "24px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                              {"Get clips and captions"}
+                            </p>
+                          </div>
+                          <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
+                              {"AI picks the best moments and writes titles, captions and hashtags per platform."}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                      <div className="cv-17nexft">
-                        <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "24px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
-                            {"Get clips and captions"}
-                          </p>
+                      <div className="cv-gh68c7">
+                        <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg1527700876_422" />
+                            </svg>
+                          </div>
                         </div>
-                        <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
-                            {"AI picks the best moments and writes titles, captions and hashtags per platform."}
-                          </p>
+                      </div>
+                      <div className="cv-s1n6yv">
+                        <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg334393695_407" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-bjg7pb">
+                        <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg172319957_405" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-l2iv40">
+                        <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg-2126597858_420" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="cv-gh68c7">
-                      <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg1527700876_422" />
-                          </svg>
+                    <div data-step-active="" className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-g43mhd" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
+                      <div className="cv-nrod8u" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "0px 0px 0px 1px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 16px 24px -12px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 32px 32px -20px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 40px 48px -20px var(--token-08bf9998-944c-4f2b-ba88-4a79c17818d4)" }}>
+                        <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255)))", "--cv-text-transform": "uppercase" }}>
+                              {"Step 2"}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="cv-17nexft">
+                          <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-qrqban" data-styles-preset="QJehLDsLg" dir="auto" style={{ "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                              {"Get clips and captions"}
+                            </p>
+                          </div>
+                          <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
+                              {"AI picks the best moments and writes titles, captions and hashtags per platform."}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-s1n6yv">
-                      <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg334393695_407" />
-                          </svg>
+                      <div className="cv-gh68c7">
+                        <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg1527700876_422" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-bjg7pb">
-                      <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg172319957_405" />
-                          </svg>
+                      <div className="cv-s1n6yv">
+                        <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg334393695_407" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-l2iv40">
-                      <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg-2126597858_420" />
-                          </svg>
+                      <div className="cv-bjg7pb">
+                        <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg172319957_405" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-l2iv40">
+                        <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg-2126597858_420" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="cv-wti2e-container">
-                  <div className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-1gh86ky" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
-                    <div className="cv-nrod8u" style={{ "--border-bottom-width": "0px", "--border-color": "rgba(0, 0, 0, 0)", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "none" }}>
-                      <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-14b5f68b-8a87-4680-9d8b-19892bba54c0)", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
-                        <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104)))", "--cv-text-transform": "uppercase" }}>
-                            {"Step 3"}
-                          </p>
+                  <div data-step="2" style={{ display: "contents" }}>
+                    <div data-step-inactive="" className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-1gh86ky" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
+                      <div className="cv-nrod8u" style={{ "--border-bottom-width": "0px", "--border-color": "rgba(0, 0, 0, 0)", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "none" }}>
+                        <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-14b5f68b-8a87-4680-9d8b-19892bba54c0)", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104)))", "--cv-text-transform": "uppercase" }}>
+                              {"Step 3"}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="cv-17nexft">
+                          <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "24px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                              {"Approve and schedule"}
+                            </p>
+                          </div>
+                          <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
+                              {"Review everything on one board and schedule it for the best times to post."}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                      <div className="cv-17nexft">
-                        <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "24px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
-                            {"Approve and schedule"}
-                          </p>
+                      <div className="cv-gh68c7">
+                        <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg1527700876_422" />
+                            </svg>
+                          </div>
                         </div>
-                        <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                          <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
-                            {"Review everything on one board and schedule it for the best times to post."}
-                          </p>
+                      </div>
+                      <div className="cv-s1n6yv">
+                        <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg334393695_407" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-bjg7pb">
+                        <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg172319957_405" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-l2iv40">
+                        <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg-2126597858_420" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="cv-gh68c7">
-                      <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg1527700876_422" />
-                          </svg>
+                    <div data-step-active="" className="cv-vsqGt cv-O2uTk cv-Flo0j cv-1gh86ky cv-v-g43mhd" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
+                      <div className="cv-nrod8u" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", borderBottomLeftRadius: "12px", borderBottomRightRadius: "12px", borderTopLeftRadius: "12px", borderTopRightRadius: "12px", boxShadow: "0px 0px 0px 1px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 16px 24px -12px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 32px 32px -20px var(--token-b503b127-3177-402f-920a-821cd2205702), 0px 40px 48px -20px var(--token-08bf9998-944c-4f2b-ba88-4a79c17818d4)" }}>
+                        <div className="cv-1851egi" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-1fupfgy" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.04em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-b8bc3670-987c-48cf-82d4-790f50736b23, rgb(255, 255, 255)))", "--cv-text-transform": "uppercase" }}>
+                              {"Step 3"}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="cv-17nexft">
+                          <div className="cv-ztyd7z" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-qrqban" data-styles-preset="QJehLDsLg" dir="auto" style={{ "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                              {"Approve and schedule"}
+                            </p>
+                          </div>
+                          <div className="cv-1lf5zop" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                            <p className="cv-text cv-styles-preset-r3kf23" data-styles-preset="Ncsb6Q58x" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163))" }}>
+                              {"Review everything on one board and schedule it for the best times to post."}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-s1n6yv">
-                      <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg334393695_407" />
-                          </svg>
+                      <div className="cv-gh68c7">
+                        <div data-cv-component-type="SVG" className="cv-xi9098" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg1527700876_422" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-bjg7pb">
-                      <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg172319957_405" />
-                          </svg>
+                      <div className="cv-s1n6yv">
+                        <div data-cv-component-type="SVG" className="cv-oxuq8d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg334393695_407" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="cv-l2iv40">
-                      <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
-                        <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
-                          <svg style={{ width: "100%", height: "100%" }}>
-                            <use href="#svg-2126597858_420" />
-                          </svg>
+                      <div className="cv-bjg7pb">
+                        <div data-cv-component-type="SVG" className="cv-1r1ek3d" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg172319957_405" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="cv-l2iv40">
+                        <div data-cv-component-type="SVG" className="cv-1uwhczj" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
+                          <div className="svgContainer" style={{ width: "100%", height: "100%", aspectRatio: "inherit" }}>
+                            <svg style={{ width: "100%", height: "100%" }}>
+                              <use href="#svg-2126597858_420" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </div>

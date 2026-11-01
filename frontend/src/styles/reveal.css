@@ -78,3 +78,8 @@
 @media (prefers-reduced-motion: reduce) {
   [data-ticker] { animation: none; }
 }
+
+/* "How it works": each step renders its active and inactive look;
+   StepHighlight moves data-active as the section scrolls. */
+[data-step]:not([data-active]) > [data-step-active],
+[data-step][data-active] > [data-step-inactive] { display: none !important; }
