@@ -112,6 +112,10 @@ pnpm --filter backend test     # needs TEST_DATABASE_URL: a throwaway Postgres w
 `GET /health` answers without sign-in; everything under `/api/*` needs a
 Supabase access token (`Authorization: Bearer <token>`).
 
+Every push and pull request runs `.github/workflows/ci.yml` on GitHub: it
+applies the migrations to a fresh Postgres with pgvector, type-checks all
+three packages, runs the backend tests and builds everything.
+
 Deploying: `render.yaml` is a Render blueprint for the API (migrations run
 before each deploy). The frontend deploys on Vercel with `frontend` as the
 root directory.
