@@ -109,7 +109,7 @@ async function todoList(userId: string, today: string) {
     orderBy: [{ done: "asc" }, { dueDate: "asc" }, { dueMinutes: "asc" }],
     take: 100,
   });
-  return todos.map((t) => ({ title: t.title, detail: t.detail || null, dueDate: toIsoDate(t.dueDate), time: hhmm(t.dueMinutes), done: t.done, overdue: !t.done && toIsoDate(t.dueDate) < today }));
+  return todos.map((t) => ({ title: t.title, detail: t.detail || null, dueDate: toIsoDate(t.dueDate), time: hhmm(t.dueMinutes), done: t.done, dueToday: toIsoDate(t.dueDate) === today, overdue: !t.done && toIsoDate(t.dueDate) < today }));
 }
 
 // Everything on the calendar between two dates (past or future): events
@@ -325,8 +325,11 @@ export async function askCopilot(userId: string, question: string, history: Chat
     `Today is ${dayName(fromIsoDate(today))} ${today.slice(0, 4)} (${today}) in the creator's time zone, ${tz}.`,
     "Answer only from what the tools return. Call the tools you need before answering; if they don't have it, say you couldn't find it in the workspace.",
     "To-dos: get_todos. Calendar for any dates, past or future: get_calendar. Deals including finished or paid ones: get_all_deals. Open deals and risks: get_open_deals. Messages: get_inbox, and search_workspace for what was said.",
-    "Be brief and specific: name brands, amounts, dates and what to do next. Two to four sentences unless asked for more. Plain text, no markdown headings.",
-    "You can't send, post or book anything. Point to the screen where the creator can do it (Inbox, Brand deals, Publish, Calendar).",
+    `"Today" means items dated ${today}; also mention overdue items (dated before today and not done). Don't call later-dated items today's, and don't say items are done unless the tool says done: true.`,
+    "Be brief and specific: name brands, amounts, dates and what to do next. Start with the answer itself, in one or two short sentences.",
+    "Format: plain sentences. For three or more items, use a short list, one item per line starting with \"- \". You may bold a key name or amount with **double asterisks**, at most a few per answer. No headings, tables, code or other markdown.",
+    "Write dates like \"Tue 3 Nov\" and times like \"5:00 pm\". Never show slugs, ids or field names.",
+    "You can't send, post or book anything. Point to the screen where the creator can do it. The screens are exactly: Today (the daily briefing and to-do list), Inbox, Publish, Brand deals, Calendar, Analytics and Settings.",
   ].join("\n");
   try {
     const answer = await runWithTools({ system, turns: [...history.slice(-8), { role: "user", text: question }], tools: tools(userId, today), timeoutMs: 30_000 });

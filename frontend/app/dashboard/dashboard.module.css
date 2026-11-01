@@ -985,6 +985,35 @@
   border-radius: 10px;
   max-width: 90%;
 }
+/* Copilot answers (CopilotText): paragraphs and lists inside the bubble.
+   .app ul resets list styles, so these restore them. */
+.app .copilotText > * + * {
+  margin-top: 8px;
+}
+.app .copilotText ul,
+.app .copilotText ol {
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.app .copilotText ul {
+  list-style: disc;
+}
+.app .copilotText ol {
+  list-style: decimal;
+}
+.app .copilotText strong {
+  font-weight: 600;
+  color: #182a40;
+}
+.copilotCode {
+  font-family: var(--font-mono), monospace;
+  font-size: 12.5px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0 4px;
+  border-radius: 4px;
+}
 .bubbleYou {
   align-self: flex-end;
   background: var(--soft);

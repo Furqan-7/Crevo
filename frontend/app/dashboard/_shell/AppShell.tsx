@@ -9,6 +9,7 @@ import Loading from "../(workspace)/loading";
 import { TODAY_ISO, copilotQuestions, setWorkspaceClock, type Alert, type BoardDeal, type CalEvent, type Idea, type InboxThread, type Todo, type Tone, type Video } from "../data";
 import { ApiError, api } from "./api";
 import { TONE_CODE, toAlert, toDeal, toEvent, toIdea, toProfilePatch, toSettings, toThread, toTodo, toVideo } from "./model";
+import { CopilotText } from "./CopilotText";
 import Notifications from "./Notifications";
 import { ACCOUNT_META, DEFAULT_SETTINGS, type AccountId, type Settings } from "./settings";
 import { EmptyState } from "./states";
@@ -614,7 +615,7 @@ export default function AppShell({ children }: { children: ReactNode }) {
               <p className={styles.chatEmpty}>Ask anything about your deals, deadlines, money or content. Answers come from your workspace.</p>
             )}
             {chat.map((turn, i) => (
-              <div key={i} className={turn.role === "you" ? styles.bubbleYou : styles.bubbleBot}>{turn.text}</div>
+              <div key={i} className={turn.role === "you" ? styles.bubbleYou : styles.bubbleBot}>{turn.role === "you" ? turn.text : <CopilotText text={turn.text} />}</div>
             ))}
           </div>
           <div className={styles.suggest}>
