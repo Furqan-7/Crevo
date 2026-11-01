@@ -47,6 +47,15 @@ test.describe("marketing pages", () => {
     expect(signin).not.toContain("Back to Home Page");
   });
 
+  test("/health reports the deployment without exposing keys", async ({ request }) => {
+    const res = await request.get("/health");
+    expect(res.ok()).toBeTruthy();
+    const body = await res.json();
+    expect(body).toHaveProperty("signInReady");
+    // The anon key is reported only as "set" or missing, never its value.
+    expect([null, "set"]).toContain(body.settings.NEXT_PUBLIC_SUPABASE_ANON_KEY);
+  });
+
   test("sitemap and robots.txt are served", async ({ request }) => {
     const sitemap = await request.get("/sitemap.xml");
     expect(sitemap.ok()).toBeTruthy();
