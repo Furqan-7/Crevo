@@ -66,6 +66,82 @@ async function post<T>(provider: "gemini" | "groq", url: string, body: unknown, 
   return JSON.parse(text) as T;
 }
 
+// ── Models ──────────────────────────────────────────────────────────────────
+//
+// GEMINI_MODEL / GROQ_MODEL pick the models. Providers retire models, and a
+// mistyped name (or an API key pasted into the model field) would make every
+// AI feature fail with "not found". So when a provider says the model doesn't
+// exist, we ask it which models this key can use, pick one, remember it and
+// retry the request.
+
+type Kind = "gemini" | "groq" | "embedding";
+const looksWrong = (name: string) => !name || /\s/.test(name) || /^(AIza|gsk_)/.test(name) || name.length > 80;
+const models: Record<Kind, string> = {
+  gemini: looksWrong(env.GEMINI_MODEL) ? "gemini-flash-latest" : env.GEMINI_MODEL.replace(/^models\//, ""),
+  groq: looksWrong(env.GROQ_MODEL) ? "llama-3.3-70b-versatile" : env.GROQ_MODEL,
+  embedding: looksWrong(env.GEMINI_EMBEDDING_MODEL) ? "gemini-embedding-001" : env.GEMINI_EMBEDDING_MODEL.replace(/^models\//, ""),
+};
+const resolved: Partial<Record<Kind, Promise<string | null>>> = {};
+
+// A provider error that means "no such model" (Groq says 400 for retired ones).
+const modelMissing = (e: unknown) =>
+  e instanceof ProviderError && (e.status === 404 || (e.status === 400 && /model_(not_found|decommissioned)|does not exist|decommissioned|not found/i.test(e.message)));
+
+// The first name that matches a preference, in order; else the first one.
+function prefer(names: string[], order: RegExp[]): string | null {
+  for (const re of order) {
+    const hit = names.find((n) => re.test(n));
+    if (hit) return hit;
+  }
+  return names[0] ?? null;
+}
+
+async function getJson<T>(url: string, headers: Record<string, string>): Promise<T | null> {
+  try {
+    const response = await fetch(url, { headers, signal: AbortSignal.timeout(15_000) });
+    return response.ok ? ((await response.json()) as T) : null;
+  } catch {
+    return null;
+  }
+}
+
+async function discover(kind: Kind): Promise<string | null> {
+  if (kind === "groq") {
+    const data = await getJson<{ data?: { id: string; active?: boolean }[] }>(`${GROQ}/models`, { Authorization: `Bearer ${env.GROQ_API_KEY}` });
+    const names = (data?.data ?? []).filter((m) => m.active !== false).map((m) => m.id).filter((id) => !/whisper|guard|tts|playai|orpheus|distil|compound/i.test(id));
+    return prefer(names, [/^llama-3\.3-70b/, /gpt-oss-120b/, /70b/, /gpt-oss/, /llama-4/, /llama/, /qwen/]);
+  }
+  const data = await getJson<{ models?: { name: string; supportedGenerationMethods?: string[] }[] }>(`${GEMINI}/v1beta/models?pageSize=1000`, { "x-goog-api-key": env.GEMINI_API_KEY! });
+  const method = kind === "embedding" ? "embedContent" : "generateContent";
+  const names = (data?.models ?? [])
+    .filter((m) => m.supportedGenerationMethods?.includes(method))
+    .map((m) => m.name.replace(/^models\//, ""))
+    .filter((n) => !/image|tts|audio|live|vision|robotics|computer|learnlm|gemma|aqa/i.test(n));
+  return kind === "embedding"
+    ? prefer(names, [/^gemini-embedding/, /embedding/])
+    : prefer(names, [/^gemini-flash-latest$/, /^gemini-[\d.]+-flash$/, /^gemini-[\d.]+-flash(?!-lite)/, /flash(?!-lite)/, /flash/, /pro/]);
+}
+
+// Runs a request with the current model; if the provider says the model
+// doesn't exist, switches to one the key can use and tries once more.
+async function withModel<T>(kind: Kind, run: (model: string) => Promise<T>): Promise<T> {
+  try {
+    return await run(models[kind]);
+  } catch (err) {
+    if (!modelMissing(err)) throw err;
+    const tried = models[kind];
+    resolved[kind] ??= discover(kind);
+    const next = await resolved[kind];
+    if (!next || next === tried) {
+      resolved[kind] = undefined;
+      throw err;
+    }
+    logger.warn("ai model not found, switching", { provider: kind, from: tried, to: next });
+    models[kind] = next;
+    return run(next);
+  }
+}
+
 // ── Gemini ──────────────────────────────────────────────────────────────────
 
 interface GeminiPart {
@@ -92,7 +168,9 @@ async function gemini(contents: GeminiContent[], opts: { system?: string; temper
     ...(opts.tools?.length ? { tools: [{ functionDeclarations: opts.tools.map((t) => ({ name: t.name, description: t.description, parameters: t.parameters })) }] } : {}),
     generationConfig: { temperature: opts.temperature ?? 0.4, ...(opts.json ? { responseMimeType: "application/json" } : {}) },
   };
-  const data = await post<GeminiResponse>("gemini", `${GEMINI}/v1beta/models/${env.GEMINI_MODEL}:generateContent`, body, { "x-goog-api-key": env.GEMINI_API_KEY! }, opts.timeoutMs);
+  const data = await withModel("gemini", (model) =>
+    post<GeminiResponse>("gemini", `${GEMINI}/v1beta/models/${model}:generateContent`, body, { "x-goog-api-key": env.GEMINI_API_KEY! }, opts.timeoutMs),
+  );
   const content = data.candidates?.[0]?.content;
   if (!content) throw new ProviderError("gemini", 200, data.promptFeedback?.blockReason ? `blocked: ${data.promptFeedback.blockReason}` : "empty response");
   return content;
@@ -122,13 +200,14 @@ interface GroqResponse {
 
 async function groq(messages: GroqMessage[], opts: { temperature?: number; json?: boolean; tools?: Tool[]; timeoutMs: number }) {
   const body = {
-    model: env.GROQ_MODEL,
     messages,
     temperature: opts.temperature ?? 0.4,
     ...(opts.json ? { response_format: { type: "json_object" } } : {}),
     ...(opts.tools?.length ? { tools: opts.tools.map((t) => ({ type: "function", function: { name: t.name, description: t.description, parameters: t.parameters } })) } : {}),
   };
-  const data = await post<GroqResponse>("groq", `${GROQ}/chat/completions`, body, { Authorization: `Bearer ${env.GROQ_API_KEY}` }, opts.timeoutMs);
+  const data = await withModel("groq", (model) =>
+    post<GroqResponse>("groq", `${GROQ}/chat/completions`, { model, ...body }, { Authorization: `Bearer ${env.GROQ_API_KEY}` }, opts.timeoutMs),
+  );
   const message = data.choices?.[0]?.message;
   if (!message) throw new ProviderError("groq", 200, "empty response");
   return message;
@@ -148,7 +227,7 @@ function unavailableReason(errors: ProviderError[]): [string, string] {
   const badKey = (e: ProviderError) => e.status === 401 || e.status === 403 || (e.status === 400 && /api[ _-]?key/i.test(e.message));
   if (errors.every(badKey)) return [`The AI key on the server was rejected. Check ${names} in the API's environment settings.`, "AI_KEY_REJECTED"];
   if (errors.some((e) => e.status === 429)) return ["The AI service's usage limit is used up for now. Try again in a minute.", "AI_RATE_LIMITED"];
-  if (errors.every((e) => e.status === 404)) return ["The AI model set on the server wasn't found. Check GEMINI_MODEL / GROQ_MODEL, or remove them to use the defaults.", "AI_MODEL_NOT_FOUND"];
+  if (errors.every(modelMissing)) return ["The AI model set on the server wasn't found. Check GEMINI_MODEL / GROQ_MODEL, or remove them to use the defaults.", "AI_MODEL_NOT_FOUND"];
   return ["The AI service didn't answer. Try again in a minute.", "AI_UNAVAILABLE"];
 }
 
@@ -286,12 +365,14 @@ export async function embed(texts: string[], task: "RETRIEVAL_DOCUMENT" | "RETRI
   const out: number[][] = [];
   for (let i = 0; i < texts.length; i += 100) {
     const batch = texts.slice(i, i + 100);
-    const data = await post<{ embeddings?: { values: number[] }[] }>(
-      "gemini",
-      `${GEMINI}/v1beta/models/${env.GEMINI_EMBEDDING_MODEL}:batchEmbedContents`,
-      { requests: batch.map((text) => ({ model: `models/${env.GEMINI_EMBEDDING_MODEL}`, content: { parts: [{ text }] }, taskType: task, outputDimensionality: EMBEDDING_DIMENSIONS })) },
-      { "x-goog-api-key": env.GEMINI_API_KEY! },
-      60_000,
+    const data = await withModel("embedding", (model) =>
+      post<{ embeddings?: { values: number[] }[] }>(
+        "gemini",
+        `${GEMINI}/v1beta/models/${model}:batchEmbedContents`,
+        { requests: batch.map((text) => ({ model: `models/${model}`, content: { parts: [{ text }] }, taskType: task, outputDimensionality: EMBEDDING_DIMENSIONS })) },
+        { "x-goog-api-key": env.GEMINI_API_KEY! },
+        60_000,
+      ),
     ).catch((err: unknown) => {
       if (err instanceof ProviderError) unavailable([err]);
       throw err;
