@@ -72,7 +72,9 @@ export const env = {
   corsOrigins: e.CORS_ORIGIN.split(",").map((origin) => origin.trim()).filter(Boolean),
   isProduction: e.NODE_ENV === "production",
   appUrl: (e.APP_URL ?? e.CORS_ORIGIN.split(",")[0]!.trim()).replace(/\/$/, ""),
-  apiUrl: (e.API_URL ?? `http://localhost:${e.PORT}`).replace(/\/$/, ""),
+  // Render sets RENDER_EXTERNAL_URL to the service's public https address, so
+  // Google's return URL is right even when API_URL wasn't set there.
+  apiUrl: (e.API_URL || process.env.RENDER_EXTERNAL_URL || `http://localhost:${e.PORT}`).replace(/\/$/, ""),
 };
 
 // Which optional features are switched on.
