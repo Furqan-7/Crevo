@@ -521,5 +521,36 @@
     fixAnchors();
   }).observe(document.documentElement, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ["src", "srcset", "href", "placeholder"] });
 
+  // Framer's runtime navigates on click from its own copy of each link's
+  // target (the template's contact page), ignoring the href fixLink set. Catch
+  // clicks on the sign-up and "how it works" buttons first (capture phase,
+  // before React's handlers) and go where the button says.
+  var TO_SIGNUP = /^(get started( free)?|start creating|sign up( free)?|get template)$/i;
+  var TO_HOW = /^(see how it works|try demo)$/i;
+  function labelOf(a) {
+    // Framer renders each label twice (for its hover effect); use one copy.
+    var text = (a.textContent || "").replace(/\s+/g, " ").trim();
+    var twice = text.match(/^(.+?) ?\1$/);
+    return twice ? twice[1] : text;
+  }
+  window.addEventListener("click", function (e) {
+    if (e.defaultPrevented || e.button !== 0) return;
+    var a = e.target && e.target.closest ? e.target.closest("a") : null;
+    if (!a || a.closest("form")) return;
+    var label = labelOf(a), dest = null;
+    if (TO_SIGNUP.test(label)) dest = SIGNUP;
+    else if (TO_HOW.test(label)) dest = "/#how-it-works";
+    if (!dest) return;
+    a.setAttribute("href", dest);
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; // new tab or window: the browser uses the href
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    if (dest.charAt(0) === "/" && dest.indexOf("#") > 0 && location.pathname === "/") {
+      var target = document.getElementById(dest.split("#")[1]);
+      if (target) return target.scrollIntoView({ behavior: "smooth" });
+    }
+    location.href = dest;
+  }, true);
+
   document.addEventListener("DOMContentLoaded", function () { fixTree(document.body); fixTitle(); fixAnchors(); });
 })();
