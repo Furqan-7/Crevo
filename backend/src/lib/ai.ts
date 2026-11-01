@@ -66,6 +66,12 @@ async function post<T>(provider: "gemini" | "groq", url: string, body: unknown, 
   return JSON.parse(text) as T;
 }
 
+// Milliseconds left of a time budget (at least 1s, so a call can still fail fast).
+const budget = (ms: number) => {
+  const until = Date.now() + ms;
+  return () => Math.max(1_000, until - Date.now());
+};
+
 // ── Models ──────────────────────────────────────────────────────────────────
 //
 // GEMINI_MODEL / GROQ_MODEL pick the models. Providers retire models, and a
@@ -98,7 +104,7 @@ function prefer(names: string[], order: RegExp[]): string | null {
 
 async function getJson<T>(url: string, headers: Record<string, string>): Promise<T | null> {
   try {
-    const response = await fetch(url, { headers, signal: AbortSignal.timeout(15_000) });
+    const response = await fetch(url, { headers, signal: AbortSignal.timeout(8_000) });
     return response.ok ? ((await response.json()) as T) : null;
   } catch {
     return null;
@@ -162,6 +168,7 @@ interface GeminiResponse {
 }
 
 async function gemini(contents: GeminiContent[], opts: { system?: string; temperature?: number; json?: boolean; tools?: Tool[]; timeoutMs: number }) {
+  const left = budget(opts.timeoutMs);
   const body = {
     contents,
     ...(opts.system ? { systemInstruction: { parts: [{ text: opts.system }] } } : {}),
@@ -169,7 +176,7 @@ async function gemini(contents: GeminiContent[], opts: { system?: string; temper
     generationConfig: { temperature: opts.temperature ?? 0.4, ...(opts.json ? { responseMimeType: "application/json" } : {}) },
   };
   const data = await withModel("gemini", (model) =>
-    post<GeminiResponse>("gemini", `${GEMINI}/v1beta/models/${model}:generateContent`, body, { "x-goog-api-key": env.GEMINI_API_KEY! }, opts.timeoutMs),
+    post<GeminiResponse>("gemini", `${GEMINI}/v1beta/models/${model}:generateContent`, body, { "x-goog-api-key": env.GEMINI_API_KEY! }, left()),
   );
   const content = data.candidates?.[0]?.content;
   if (!content) throw new ProviderError("gemini", 200, data.promptFeedback?.blockReason ? `blocked: ${data.promptFeedback.blockReason}` : "empty response");
@@ -199,6 +206,7 @@ interface GroqResponse {
 }
 
 async function groq(messages: GroqMessage[], opts: { temperature?: number; json?: boolean; tools?: Tool[]; timeoutMs: number }) {
+  const left = budget(opts.timeoutMs);
   const body = {
     messages,
     temperature: opts.temperature ?? 0.4,
@@ -206,7 +214,7 @@ async function groq(messages: GroqMessage[], opts: { temperature?: number; json?
     ...(opts.tools?.length ? { tools: opts.tools.map((t) => ({ type: "function", function: { name: t.name, description: t.description, parameters: t.parameters } })) } : {}),
   };
   const data = await withModel("groq", (model) =>
-    post<GroqResponse>("groq", `${GROQ}/chat/completions`, { model, ...body }, { Authorization: `Bearer ${env.GROQ_API_KEY}` }, opts.timeoutMs),
+    post<GroqResponse>("groq", `${GROQ}/chat/completions`, { model, ...body }, { Authorization: `Bearer ${env.GROQ_API_KEY}` }, left()),
   );
   const message = data.choices?.[0]?.message;
   if (!message) throw new ProviderError("groq", 200, "empty response");
@@ -226,6 +234,7 @@ function unavailableReason(errors: ProviderError[]): [string, string] {
   const names = [...new Set(errors.map((e) => (e.provider === "gemini" ? "GEMINI_API_KEY" : "GROQ_API_KEY")))].join(" / ");
   const badKey = (e: ProviderError) => e.status === 401 || e.status === 403 || (e.status === 400 && /api[ _-]?key/i.test(e.message));
   if (errors.every(badKey)) return [`The AI key on the server was rejected. Check ${names} in the API's environment settings.`, "AI_KEY_REJECTED"];
+  if (errors.every((e) => e.status === 0 && /timeout|timed out|aborted/i.test(e.message))) return ["The AI service took too long to answer. Try again.", "AI_TIMEOUT"];
   if (errors.some((e) => e.status === 429)) return ["The AI service's usage limit is used up for now. Try again in a minute.", "AI_RATE_LIMITED"];
   if (errors.every(modelMissing)) return ["The AI model set on the server wasn't found. Check GEMINI_MODEL / GROQ_MODEL, or remove them to use the defaults.", "AI_MODEL_NOT_FOUND"];
   return ["The AI service didn't answer. Try again in a minute.", "AI_UNAVAILABLE"];
@@ -234,11 +243,14 @@ function unavailableReason(errors: ProviderError[]): [string, string] {
 // Plain text (or JSON text with `json`), with the Gemini → Groq fallback.
 export async function generateText(opts: GenerateOptions): Promise<string> {
   if (!features.ai) throw new AiUnavailableError();
-  const timeoutMs = opts.timeoutMs ?? 60_000;
+  // timeoutMs is the whole request's budget: Gemini, then Groq with what's left.
+  const left = budget(opts.timeoutMs ?? 60_000);
   const errors: ProviderError[] = [];
   if (env.GEMINI_API_KEY) {
     try {
-      const content = await gemini([{ role: "user", parts: parts(opts.prompt) as GeminiPart[] }], { ...opts, timeoutMs });
+      // Leave Groq a share of the time when it's there to fall back on.
+      const geminiMs = env.GROQ_API_KEY && !hasFiles(opts.prompt) ? Math.max(5_000, left() * 0.6) : left();
+      const content = await gemini([{ role: "user", parts: parts(opts.prompt) as GeminiPart[] }], { ...opts, timeoutMs: geminiMs });
       const text = geminiText(content);
       if (text) return text;
       throw new ProviderError("gemini", 200, "no text in response");
@@ -247,10 +259,10 @@ export async function generateText(opts: GenerateOptions): Promise<string> {
       errors.push(err);
     }
   }
-  if (env.GROQ_API_KEY && !hasFiles(opts.prompt)) {
+  if (env.GROQ_API_KEY && !hasFiles(opts.prompt) && left() > 3_000) {
     try {
       const messages: GroqMessage[] = [...(opts.system ? [{ role: "system" as const, content: opts.system }] : []), { role: "user", content: textOf(opts.prompt) }];
-      const message = await groq(messages, { ...opts, timeoutMs });
+      const message = await groq(messages, { ...opts, timeoutMs: left() });
       if (message.content?.trim()) return message.content.trim();
       throw new ProviderError("groq", 200, "no text in response");
     } catch (err) {
@@ -271,8 +283,10 @@ export function parseJson(text: string): unknown {
 // doesn't parse or doesn't match.
 export async function generateJson<T>(opts: GenerateOptions, schema: z.ZodType<T>): Promise<T> {
   let lastProblem = "";
+  const left = budget(opts.timeoutMs ?? 60_000);
   for (let attempt = 0; attempt < 2; attempt++) {
-    const text = await generateText({ ...opts, json: true, prompt: attempt === 0 ? opts.prompt : [...parts(opts.prompt), { text: `\n\nYour last answer was not valid (${lastProblem}). Reply with JSON only, matching the format exactly.` }] });
+    if (attempt > 0 && left() < 8_000) break; // no time for a second try
+    const text = await generateText({ ...opts, json: true, timeoutMs: left(), prompt: attempt === 0 ? opts.prompt : [...parts(opts.prompt), { text: `\n\nYour last answer was not valid (${lastProblem}). Reply with JSON only, matching the format exactly.` }] });
     try {
       const result = schema.safeParse(parseJson(text));
       if (result.success) return result.data;
@@ -360,7 +374,7 @@ export async function runWithTools(opts: { system: string; turns: ChatTurn[]; to
 
 // Embeddings for RAG (Gemini only; Groq has no embeddings API). Vectors are
 // L2-normalised, as Gemini recommends below its full 3072 dimensions.
-export async function embed(texts: string[], task: "RETRIEVAL_DOCUMENT" | "RETRIEVAL_QUERY"): Promise<number[][]> {
+export async function embed(texts: string[], task: "RETRIEVAL_DOCUMENT" | "RETRIEVAL_QUERY", timeoutMs = 60_000): Promise<number[][]> {
   if (!features.embeddings) throw new AiUnavailableError("Search embeddings need GEMINI_API_KEY on this server.");
   const out: number[][] = [];
   for (let i = 0; i < texts.length; i += 100) {
@@ -371,7 +385,7 @@ export async function embed(texts: string[], task: "RETRIEVAL_DOCUMENT" | "RETRI
         `${GEMINI}/v1beta/models/${model}:batchEmbedContents`,
         { requests: batch.map((text) => ({ model: `models/${model}`, content: { parts: [{ text }] }, taskType: task, outputDimensionality: EMBEDDING_DIMENSIONS })) },
         { "x-goog-api-key": env.GEMINI_API_KEY! },
-        60_000,
+        timeoutMs,
       ),
     ).catch((err: unknown) => {
       if (err instanceof ProviderError) unavailable([err]);

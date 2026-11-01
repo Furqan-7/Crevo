@@ -100,7 +100,9 @@ export async function searchWorkspace(userId: string, query: string, opts: { lim
 
   let vector: Promise<Omit<SearchHit, "score">[]> = Promise.resolve([]);
   if (features.embeddings) {
-    vector = embed([q], "RETRIEVAL_QUERY")
+    // A search query is one short text: don't let a slow embedding hold up
+    // the caller (keyword results still answer).
+    vector = embed([q], "RETRIEVAL_QUERY", 6_000)
       .then(([v]) => prisma.$queryRaw<Omit<SearchHit, "score">[]>`
         SELECT id, "sourceType", "sourceId", content FROM "Chunk"
         WHERE "profileId" = ${userId}::uuid AND "sourceType"::text = ANY(${sources}) AND embedding IS NOT NULL

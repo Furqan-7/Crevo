@@ -26,7 +26,11 @@ export async function writeDrafts(userId: string, messageId: string, opts: { req
   if (message.category === "spam") throw badRequest("Spam doesn't need a reply", "SPAM_REPLY");
   const profile = await prisma.profile.findUniqueOrThrow({ where: { id: userId } });
 
-  const past = await searchWorkspace(userId, `${message.subject} ${message.body.join(" ")}`.slice(0, 400), { sources: ["reply"], limit: 3 }).catch(() => []);
+  // Past replies only help match the voice: give up on them after 8 seconds.
+  const past = await Promise.race([
+    searchWorkspace(userId, `${message.subject} ${message.body.join(" ")}`.slice(0, 400), { sources: ["reply"], limit: 3 }).catch(() => []),
+    new Promise<never[]>((resolve) => setTimeout(() => resolve([]), 8_000)),
+  ]);
   const examples = (await describeHits(userId, past)).map((h) => `- ${h.text}`).join("\n");
   const deal = message.deal;
   const dealFacts = deal
@@ -54,6 +58,9 @@ export async function writeDrafts(userId: string, messageId: string, opts: { req
         examples ? `\nHow the creator has replied before (match their voice, not their facts):\n${examples}` : "",
       ].join("\n"),
       temperature: 0.6,
+      // The creator is waiting on the button: fail with a clear error rather
+      // than hang while a provider struggles.
+      timeoutMs: 40_000,
     },
     draftsSchema,
   );

@@ -70,8 +70,14 @@ async function request<T>(method: "GET" | "POST" | "PATCH" | "PUT" | "DELETE", p
       method,
       headers: { Authorization: `Bearer ${token}`, ...(body !== undefined && !form ? { "Content-Type": "application/json" } : {}) },
       body: form ? (body as FormData) : body !== undefined ? JSON.stringify(body) : undefined,
+      // Never leave a button spinning: the API answers AI requests within
+      // about a minute, so give up after 2 minutes (uploads can take longer).
+      signal: form ? undefined : AbortSignal.timeout(120_000),
     });
-  } catch {
+  } catch (err) {
+    if (err instanceof DOMException && err.name === "TimeoutError") {
+      throw new ApiError(0, "TIMEOUT", "This is taking too long. Try again in a minute.");
+    }
     // A deployed site still pointing at the local API means NEXT_PUBLIC_API_URL
     // wasn't set when the frontend was built; say so instead of blaming the
     // visitor's connection.
