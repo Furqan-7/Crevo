@@ -1,0 +1,12 @@
+{
+  "name": "crevo",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.28.0",
+  "scripts": {
+    "dev": "pnpm --filter frontend dev",
+    "build": "pnpm --filter frontend build",
+    "start": "pnpm --filter frontend start",
+    "typecheck": "pnpm --filter frontend typecheck"
+  }
+}

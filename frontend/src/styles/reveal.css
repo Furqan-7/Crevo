@@ -1,0 +1,80 @@
+/* Entrance animation for elements marked data-reveal. Each element sets its
+   own start/end transform, delay and duration as CSS variables. */
+@keyframes cv-reveal {
+  from { opacity: 0; transform: var(--reveal-from, translateY(50px)); }
+  to   { opacity: 1; transform: var(--reveal-to, none); }
+}
+[data-reveal] {
+  animation: cv-reveal var(--reveal-duration, 0.8s) cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0s) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { animation: none; }
+}
+
+/* Scroll reveal: elements marked data-scroll-reveal stay hidden until
+   ScrollReveal (src/components/ScrollReveal.tsx) sees them enter the screen. */
+@keyframes cv-scroll-reveal {
+  from { opacity: 0; transform: var(--reveal-from, translateY(20px)); }
+  to   { opacity: 1; transform: var(--reveal-to, none); }
+}
+[data-scroll-reveal] { opacity: 0; }
+[data-scroll-reveal].is-visible {
+  animation: cv-scroll-reveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-scroll-reveal], [data-scroll-reveal].is-visible { opacity: 1; animation: none; }
+}
+
+/* FAQ: each item renders its closed and open state; data-open picks one. */
+[data-faq]:not([data-open]) > [data-faq-open],
+[data-faq][data-open] > [data-faq-closed] { display: none !important; }
+[data-faq] > * { cursor: pointer; }
+
+/* Mobile menu (tablet and phone widths). */
+.crevo-mobile-menu {
+  display: none;
+  position: fixed;
+  top: var(--menu-top, 64px);
+  left: 0;
+  right: 0;
+  z-index: 50;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 20px 20px;
+  background: rgb(249, 249, 249);
+  border-bottom: 1px solid rgb(237, 237, 237);
+  box-shadow: 0 16px 32px -16px rgba(0, 0, 0, 0.15);
+  font-family: "Inter", "Inter Placeholder", sans-serif;
+}
+[data-menu-open] > .crevo-mobile-menu { display: flex; }
+.crevo-mobile-menu__link {
+  padding: 12px 4px;
+  color: rgb(24, 24, 24);
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(237, 237, 237);
+}
+.crevo-mobile-menu__cta {
+  margin-top: 12px;
+  padding: 14px;
+  text-align: center;
+  background: rgb(24, 24, 24);
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+}
+[data-menu-toggle] { cursor: pointer; }
+
+/* Logo strips: the list is rendered twice and slides left by one copy. */
+@keyframes cv-ticker {
+  to { transform: translateX(calc(-50% - var(--ticker-gap, 40px) / 2)); }
+}
+[data-ticker] {
+  width: max-content !important;
+  max-width: none !important;
+  animation: cv-ticker 30s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-ticker] { animation: none; }
+}
