@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import "@/src/styles/base.css";
 import "@/src/styles/shared.css";
 import "@/src/styles/reveal.css";
 import ScrollReveal from "@/src/components/ScrollReveal";

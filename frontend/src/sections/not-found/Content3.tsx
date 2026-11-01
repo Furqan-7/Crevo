@@ -163,7 +163,7 @@ export default function Content3() {
               {"Stay connected"}
             </p>
           </div>
-          <form className="cv-1xhirwq" action="/auth/signup" method="get">
+          <form className="cv-1xhirwq" data-newsletter-form="" action="/auth/signup" method="get">
             <label className="cv-1dw8j17" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-b8bc3670-987c-48cf-82d4-790f50736b23)", borderBottomLeftRadius: "5px", borderBottomRightRadius: "5px", borderTopLeftRadius: "5px", borderTopRightRadius: "5px" }}>
               <div className="cv-form-text-input cv-form-input-wrapper cv-146vkyh" style={{ "--cv-input-font-color": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163)", "--cv-input-icon-mask-image": "none", "--cv-input-placeholder-color": "var(--token-0142e593-9c62-4a02-8a77-c2bc87e6f565, rgb(104, 104, 104))" }}>
                 <input type="email" required name="Email" placeholder="you@example.com" className="cv-form-input cv-form-input-empty" defaultValue="" />

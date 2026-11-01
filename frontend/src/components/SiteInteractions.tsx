@@ -59,6 +59,7 @@ export default function SiteInteractions() {
 
     const onSubmit = (e: SubmitEvent) => {
       const form = e.target as HTMLFormElement;
+      if (!form.matches("[data-contact-form], [data-newsletter-form]")) return;
       const email = form.querySelector<HTMLInputElement>('input[type="email"]');
       if (!email) return;
       e.preventDefault();
