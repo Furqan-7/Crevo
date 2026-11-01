@@ -6,3 +6,4 @@ node_modules
 .DS_Store
 /db/generated
 /db/dist
+/backend/dist

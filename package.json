@@ -4,14 +4,17 @@
   "private": true,
   "packageManager": "pnpm@10.28.0",
   "scripts": {
-    "dev": "pnpm --filter frontend dev",
-    "build": "pnpm --filter db build && pnpm --filter frontend build",
+    "dev": "concurrently -n web,api -c blue,green \"pnpm --filter frontend dev\" \"pnpm --filter backend dev\"",
+    "build": "pnpm --filter db build && pnpm --filter backend build && pnpm --filter frontend build",
     "start": "pnpm --filter frontend start",
-    "typecheck": "pnpm --filter db build && pnpm --filter frontend typecheck",
+    "typecheck": "pnpm --filter db build && pnpm --filter backend typecheck && pnpm --filter frontend typecheck",
     "prisma": "pnpm --filter db exec prisma",
     "db:generate": "pnpm --filter db db:generate",
     "db:migrate": "pnpm --filter db db:migrate",
     "db:deploy": "pnpm --filter db db:deploy",
     "db:studio": "pnpm --filter db db:studio"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
   }
 }

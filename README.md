@@ -10,6 +10,9 @@ deals, content, calendar and analytics.
 - Auth with Supabase: sign up, sign in, Google sign-in, forgot and reset
   password, email confirmation and sign out (`/auth/*`).
 - Database: Prisma schema and migrations for Neon PostgreSQL (`db/`).
+- Backend API: Express 5 + TypeScript REST API and background worker
+  (`backend/`): inbox, deals, todos, ideas, calendar, videos and clips,
+  publishing, analytics, Copilot and Google integrations.
 
 ## Project structure
 
@@ -18,6 +21,7 @@ A pnpm monorepo:
 | Folder | What it is |
 |---|---|
 | `frontend/` | Next.js app: marketing site and auth pages |
+| `backend/` | Express 5 + TypeScript REST API (`/api/*`) and background worker |
 | `db/` | Prisma 7 schema, migrations and the shared Prisma Client |
 
 The frontend uses Next.js App Router with file-based routing: each folder
@@ -56,9 +60,12 @@ To add a page, create `frontend/app/<name>/page.tsx`.
 ## Run it
 
 ```bash
-cp frontend/.env.example frontend/.env.local   # then fill in the Supabase values
+cp frontend/.env.example frontend/.env.local   # Supabase URL + anon key
+cp db/.env.example db/.env                     # Neon DATABASE_URL, DIRECT_URL
+cp backend/.env.example backend/.env           # Neon + Supabase, and any optional keys
 pnpm install
-pnpm dev        # http://localhost:3000
+pnpm db:migrate     # creates the tables in Neon
+pnpm dev            # site on http://localhost:3000, API on http://localhost:4000
 ```
 
 Without the Supabase values the site still runs; the auth pages say sign-in
@@ -79,6 +86,26 @@ pnpm db:studio      # optional: browse the data
 ```
 
 The migrations turn on `pgvector` themselves (Neon has it built in).
+
+## Backend
+
+`backend/.env.example` lists every setting. Required: `DATABASE_URL`,
+`SUPABASE_URL`, `SUPABASE_ANON_KEY`, `CORS_ORIGIN`, `APP_URL`, `API_URL`. The
+rest each switch on one feature (AI with Gemini/Groq, Google integrations,
+uploads, briefing emails with Resend); without them the API says that feature
+isn't set up.
+
+```bash
+pnpm --filter backend dev      # API with reload on http://localhost:4000
+pnpm --filter backend test     # needs TEST_DATABASE_URL: a throwaway Postgres with pgvector
+```
+
+`GET /health` answers without sign-in; everything under `/api/*` needs a
+Supabase access token (`Authorization: Bearer <token>`).
+
+Deploying: `render.yaml` is a Render blueprint for the API (migrations run
+before each deploy). The frontend deploys on Vercel with `frontend` as the
+root directory.
 
 ## Supabase setup (auth)
 

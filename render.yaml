@@ -1,0 +1,52 @@
+# Render blueprint for the API (https://render.com/docs/blueprint-spec).
+# New → Blueprint → pick this repo. Fill in the secrets marked sync: false
+# in the dashboard. The frontend deploys on Vercel (root directory: frontend).
+services:
+  - type: web
+    name: crevo-api
+    runtime: node
+    plan: starter
+    buildCommand: corepack enable && pnpm install --frozen-lockfile --prod=false && pnpm --filter db build && pnpm --filter backend build
+    # Migrations run before each deploy goes live.
+    preDeployCommand: pnpm db:deploy
+    startCommand: node backend/dist/index.js
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "22"
+      # The worker runs inside the API process. Render's free plan sleeps
+      # when idle, which stops syncs and briefings; use a paid plan.
+      - key: RUN_WORKER
+        value: "true"
+      - key: CORS_ORIGIN
+        sync: false
+      - key: APP_URL
+        sync: false
+      - key: API_URL
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: DIRECT_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: TOKEN_ENCRYPTION_KEY
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: EMAIL_FROM
+        sync: false

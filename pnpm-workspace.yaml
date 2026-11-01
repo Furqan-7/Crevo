@@ -1,8 +1,11 @@
 packages:
   - 'frontend'
+  - 'backend'
   - 'db'
 onlyBuiltDependencies:
   - '@prisma/engines'
+  - esbuild
+  - ffmpeg-static
   - prisma
   - sharp
   - unrs-resolver
