@@ -39,6 +39,14 @@ test.describe("marketing pages", () => {
     await expect(page).toHaveTitle(/Page Not Found — Crevo/);
   });
 
+  test("pages don't carry a hidden copy of the full 404 page", async ({ request }) => {
+    // The full Crevo 404 lives in app/global-not-found.tsx; if it moves back
+    // into app/not-found.tsx, every page grows by ~300 KB again.
+    const signin = await (await request.get("/auth/signin")).text();
+    expect(signin.length).toBeLessThan(100_000);
+    expect(signin).not.toContain("Back to Home Page");
+  });
+
   test("sitemap and robots.txt are served", async ({ request }) => {
     const sitemap = await request.get("/sitemap.xml");
     expect(sitemap.ok()).toBeTruthy();

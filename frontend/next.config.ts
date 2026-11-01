@@ -50,6 +50,9 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // Unknown addresses get app/global-not-found.tsx, rendered only for them,
+  // instead of embedding the full 404 page in every page (see that file).
+  experimental: { globalNotFound: true },
   turbopack: { root: workspace },
   outputFileTracingRoot: workspace,
   async headers() {

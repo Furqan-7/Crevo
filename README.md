@@ -39,7 +39,8 @@ frontend/
 │   │   ├── contact-us/page.tsx /contact-us
 │   │   ├── privacy-policy/page.tsx   /privacy-policy
 │   │   └── terms-of-service/page.tsx /terms-of-service
-│   ├── not-found.tsx           404 page for any unknown URL
+│   ├── global-not-found.tsx    the Crevo 404 page for unknown addresses
+│   ├── not-found.tsx           small fallback for notFound() calls
 │   ├── sitemap.ts              /sitemap.xml (the public pages)
 │   ├── robots.ts               /robots.txt (keeps /dashboard and /auth out of search)
 │   ├── opengraph-image.png     link preview image (WhatsApp, LinkedIn, Slack…), 1200×630
