@@ -300,10 +300,16 @@ export async function generateJson<T>(opts: GenerateOptions, schema: z.ZodType<T
 }
 
 // A conversation where the model may call tools (our own services) before
-// answering. Up to `maxSteps` rounds of tool calls.
-export async function runWithTools(opts: { system: string; turns: ChatTurn[]; tools: Tool[]; maxSteps?: number }): Promise<string> {
+// answering. Up to `maxSteps` rounds of tool calls, all within timeoutMs
+// (shared by Gemini and the Groq fallback), so a slow provider ends in an
+// error the caller can act on instead of a request that never finishes.
+export async function runWithTools(opts: { system: string; turns: ChatTurn[]; tools: Tool[]; maxSteps?: number; timeoutMs?: number }): Promise<string> {
   if (!features.ai) throw new AiUnavailableError();
   const maxSteps = opts.maxSteps ?? 5;
+  const left = budget(opts.timeoutMs ?? 35_000);
+  const outOfTime = (provider: "gemini" | "groq", until: () => number) => {
+    if (until() <= 1_000) throw new ProviderError(provider, 0, "timeout: no time left for another step");
+  };
   const byName = new Map(opts.tools.map((t) => [t.name, t]));
   const call = async (name: string, args: Record<string, unknown>) => {
     const tool = byName.get(name);
@@ -318,10 +324,13 @@ export async function runWithTools(opts: { system: string; turns: ChatTurn[]; to
   const errors: ProviderError[] = [];
 
   if (env.GEMINI_API_KEY) {
+    // Gemini gets most of the time, Groq (when set) the rest.
+    const geminiLeft = budget(env.GROQ_API_KEY ? left() * 0.6 : left());
     try {
       const contents: GeminiContent[] = opts.turns.map((t) => ({ role: t.role, parts: [{ text: t.text }] }));
       for (let step = 0; step <= maxSteps; step++) {
-        const content = await gemini(contents, { system: opts.system, tools: step < maxSteps ? opts.tools : undefined, timeoutMs: 60_000, temperature: 0.2 });
+        outOfTime("gemini", geminiLeft);
+        const content = await gemini(contents, { system: opts.system, tools: step < maxSteps ? opts.tools : undefined, timeoutMs: geminiLeft(), temperature: 0.2 });
         const calls = content.parts.filter((p) => p.functionCall);
         if (calls.length === 0) {
           const text = geminiText(content);
@@ -343,11 +352,12 @@ export async function runWithTools(opts: { system: string; turns: ChatTurn[]; to
     }
   }
 
-  if (env.GROQ_API_KEY) {
+  if (env.GROQ_API_KEY && left() > 3_000) {
     try {
       const messages: GroqMessage[] = [{ role: "system", content: opts.system }, ...opts.turns.map((t) => (t.role === "user" ? { role: "user" as const, content: t.text } : { role: "assistant" as const, content: t.text }))];
       for (let step = 0; step <= maxSteps; step++) {
-        const message = await groq(messages, { tools: step < maxSteps ? opts.tools : undefined, timeoutMs: 60_000, temperature: 0.2 });
+        outOfTime("groq", left);
+        const message = await groq(messages, { tools: step < maxSteps ? opts.tools : undefined, timeoutMs: left(), temperature: 0.2 });
         if (!message.tool_calls?.length) {
           if (message.content?.trim()) return message.content.trim();
           throw new ProviderError("groq", 200, "no text in response");

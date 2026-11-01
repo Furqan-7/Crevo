@@ -263,8 +263,9 @@ async function ruleAnswer(userId: string, today: string, question: string): Prom
       .join(" ");
   }
   if (intent === "todo") {
-    const open = (await todoList(userId, today)).filter((t) => !t.done);
-    if (open.length === 0) return "Your to-do list is clear.";
+    const onlyToday = /\btoday\b/.test(q);
+    const open = (await todoList(userId, today)).filter((t) => !t.done && (!onlyToday || t.dueDate <= today));
+    if (open.length === 0) return onlyToday ? "Nothing on your to-do list for today." : "Your to-do list is clear.";
     const late = open.filter((t) => t.overdue).length;
     return `You have ${open.length} open ${open.length === 1 ? "to-do" : "to-dos"}${late ? `, ${late} overdue` : ""}: ${list(open.slice(0, 6).map((t) => `${t.title} (${dayName(fromIsoDate(t.dueDate))}${t.time ? ` ${t.time}` : ""})`))}${open.length > 6 ? ", and more on the Today screen" : ""}.`;
   }
@@ -328,7 +329,7 @@ export async function askCopilot(userId: string, question: string, history: Chat
     "You can't send, post or book anything. Point to the screen where the creator can do it (Inbox, Brand deals, Publish, Calendar).",
   ].join("\n");
   try {
-    const answer = await runWithTools({ system, turns: [...history.slice(-8), { role: "user", text: question }], tools: tools(userId, today) });
+    const answer = await runWithTools({ system, turns: [...history.slice(-8), { role: "user", text: question }], tools: tools(userId, today), timeoutMs: 30_000 });
     return { question, answer };
   } catch (err) {
     // The model is down: the data-backed answers still work.
