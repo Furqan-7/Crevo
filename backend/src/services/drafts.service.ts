@@ -14,7 +14,10 @@ import { describeHits, searchWorkspace } from "./rag.service";
 
 const draftsSchema = z.object({ friendly: z.string().min(1), professional: z.string().min(1), shorter: z.string().min(1) });
 
-export async function writeDrafts(userId: string, messageId: string): Promise<MessageDto> {
+// requested: the creator asked for this reply (Draft a reply / Regenerate),
+// so it shows even when Settings › Replies doesn't auto-draft this category.
+// The background job writes drafts ahead without marking them requested.
+export async function writeDrafts(userId: string, messageId: string, opts: { requested?: boolean } = {}): Promise<MessageDto> {
   const message = await prisma.message.findFirst({
     where: { id: messageId, profileId: userId },
     include: { deal: { include: { terms: { orderBy: { position: "asc" } }, risks: { orderBy: { position: "asc" } } } } },
@@ -63,7 +66,7 @@ export async function writeDrafts(userId: string, messageId: string): Promise<Me
         update: { text: drafts[tone] },
       }),
     ),
-    prisma.message.update({ where: { id: messageId }, data: { draftReady: true, editedReply: null } }),
+    prisma.message.update({ where: { id: messageId }, data: { draftReady: true, editedReply: null, ...(opts.requested ? { draftRequested: true } : {}) } }),
   ]);
   return toMessageDto(await prisma.message.findUniqueOrThrow({ where: { id: messageId }, include: messageInclude }));
 }

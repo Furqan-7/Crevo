@@ -111,6 +111,7 @@ describe("API", { skip }, () => {
     const r = await api.call(a.token, "POST", `/api/messages/${nike.id}/drafts`);
     assert.equal(r.status, 200);
     assert.equal(r.body.data.drafts.shorter, "Confirmed: ==Friday==.");
+    assert.equal(r.body.data.draftRequested, true, "a reply the creator asked for shows even when auto-drafts are off");
     const prompt = calls.filter((c) => c.url.pathname.includes(":generateContent")).at(-1)!.json<GeminiBody>();
     assert.match(prompt.systemInstruction!.parts[0]!.text, /Best,\nMaya/, "uses the creator's sign-off");
     assert.match(JSON.stringify(prompt.contents), /Spring campaign/, "includes the linked deal");
