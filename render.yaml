@@ -6,7 +6,9 @@ services:
     name: crevo-api
     runtime: node
     plan: starter
-    buildCommand: corepack enable && pnpm install --frozen-lockfile --prod=false && pnpm --filter db build && pnpm --filter backend build
+    # Render's build image already has pnpm (read-only), so no corepack step;
+    # pnpm then follows the packageManager version in package.json.
+    buildCommand: pnpm install --frozen-lockfile --prod=false && pnpm --filter db build && pnpm --filter backend build
     # Migrations run before each deploy goes live.
     preDeployCommand: pnpm db:deploy
     startCommand: node backend/dist/index.js
