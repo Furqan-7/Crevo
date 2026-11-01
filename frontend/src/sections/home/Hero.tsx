@@ -294,7 +294,7 @@ export default function Hero() {
         </div>
         <div className="cv-1k5lfyc-container">
             <div style={{ position: "relative", width: "100%", height: "100%", padding: "0", boxSizing: "border-box" }}>
-              <div style={{ position: "relative", width: "100%", height: "100%", borderRadius: "0", overflow: "hidden", background: "rgba(255, 255, 255, 0)" }} />
+              <div className="cv-hero-sky" />
             </div>
         </div>
       </div>
