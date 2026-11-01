@@ -47,6 +47,20 @@ test.describe("marketing pages", () => {
     expect(await robots.text()).toContain("Disallow: /dashboard");
   });
 
+  test("security headers are sent and private pages aren't publicly cached", async ({ request }) => {
+    const home = await request.get("/");
+    const headers = home.headers();
+    expect(headers["content-security-policy"]).toContain("frame-ancestors 'none'");
+    expect(headers["x-frame-options"]).toBe("DENY");
+    expect(headers["x-content-type-options"]).toBe("nosniff");
+    expect(headers["referrer-policy"]).toBe("strict-origin-when-cross-origin");
+    expect(headers["x-powered-by"]).toBeUndefined();
+
+    const dashboard = await request.get("/dashboard", { maxRedirects: 0 });
+    expect(dashboard.status()).toBe(307);
+    expect(dashboard.headers()["cache-control"] ?? "").not.toMatch(/public|s-maxage/);
+  });
+
   test("every page has a 1200x630 link preview image", async ({ page, request }) => {
     for (const { path } of PAGES) {
       await page.goto(path);

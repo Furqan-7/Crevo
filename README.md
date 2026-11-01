@@ -148,6 +148,14 @@ Deploying: `render.yaml` is a Render blueprint for the API (migrations run
 before each deploy). The frontend deploys on Vercel with `frontend` as the
 root directory.
 
+Security headers are set in `frontend/next.config.ts` for every page: a
+Content Security Policy (only this site, Supabase and the API may be
+contacted; other sites can't embed Crevo in a frame), `X-Frame-Options`,
+`X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy` and HSTS.
+The policy reads `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_API_URL` at build
+time, so set both in Vercel before deploying, or the dashboard can't reach
+the API.
+
 ## Supabase setup (auth)
 
 1. Create a project at [supabase.com](https://supabase.com).
