@@ -12,7 +12,8 @@
     "db:generate": "pnpm --filter db db:generate",
     "db:migrate": "pnpm --filter db db:migrate",
     "db:deploy": "pnpm --filter db db:deploy",
-    "db:studio": "pnpm --filter db db:studio"
+    "db:studio": "pnpm --filter db db:studio",
+    "check:setup": "node scripts/check-setup.mjs"
   },
   "devDependencies": {
     "concurrently": "^10.0.6"

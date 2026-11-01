@@ -75,9 +75,17 @@ cp frontend/.env.example frontend/.env.local   # Supabase URL + anon key, NEXT_P
 cp db/.env.example db/.env                     # Neon DATABASE_URL, DIRECT_URL
 cp backend/.env.example backend/.env           # Neon + Supabase, and any optional keys
 pnpm install
+pnpm check:setup    # checks the three .env files and tests your Supabase key
 pnpm db:migrate     # creates the tables in Neon
 pnpm dev            # site on http://localhost:3000, API on http://localhost:4000
 ```
+
+`pnpm check:setup` lists any required key that's missing or still the example
+value, checks that the frontend and backend use the same Supabase project and
+key, asks Supabase whether the key works, checks the Neon URLs (pooled for the
+app, direct for migrations) and shows which optional features are switched on.
+It never prints your keys, and exits with an error if something required is
+wrong. Add `--offline` to skip the Supabase request.
 
 Without the Supabase values the site still runs; the auth pages say sign-in
 isn't set up yet.
