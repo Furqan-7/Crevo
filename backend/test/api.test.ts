@@ -124,6 +124,15 @@ describe("API", { skip }, () => {
     assert.equal(fallback.body.data.drafts.friendly, "From Groq");
   });
 
+  it("asks Gemini first even with a Groq key and uneven time budgets", async () => {
+    // A fractional timeout once made every Gemini call fail at once (Node's
+    // timer wants whole milliseconds), so everything quietly went to Groq.
+    const { generateText } = await import("../src/lib/ai");
+    for (const timeoutMs of [10_000.37, 12_345.6, 20_000]) {
+      assert.match(await generateText({ prompt: "Sort this message.", timeoutMs }), /fan_question/, `Gemini answered with timeoutMs ${timeoutMs}`);
+    }
+  });
+
   it("approves replies, indexes them and counts the time saved", async () => {
     const nike = (await api.call(a.token, "GET", "/api/messages?q=nike")).body.data[0];
     const r = await api.call(a.token, "POST", "/api/messages/approve", { items: [{ id: nike.id, text: "Hi Alex, confirmed for Friday." }] });

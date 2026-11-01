@@ -57,7 +57,7 @@ const textOf = (prompt: string | Part[]) => parts(prompt).map((p) => ("text" in 
 async function post<T>(provider: "gemini" | "groq", url: string, body: unknown, headers: Record<string, string>, timeoutMs: number): Promise<T> {
   let response: Response;
   try {
-    response = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json", ...headers }, body: JSON.stringify(body), signal: AbortSignal.timeout(timeoutMs) });
+    response = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json", ...headers }, body: JSON.stringify(body), signal: AbortSignal.timeout(Math.max(1, Math.floor(timeoutMs))) });
   } catch (err) {
     throw new ProviderError(provider, 0, err instanceof Error ? err.message : "network error");
   }
@@ -68,8 +68,8 @@ async function post<T>(provider: "gemini" | "groq", url: string, body: unknown, 
 
 // Milliseconds left of a time budget (at least 1s, so a call can still fail fast).
 const budget = (ms: number) => {
-  const until = Date.now() + ms;
-  return () => Math.max(1_000, until - Date.now());
+  const until = Date.now() + Math.floor(ms);
+  return () => Math.max(1_000, Math.floor(until - Date.now()));
 };
 
 // ── Models ──────────────────────────────────────────────────────────────────
