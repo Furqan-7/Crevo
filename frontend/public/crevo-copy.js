@@ -10,6 +10,46 @@
 // Swaps are scoped to the section named by the nearest data-framer-name
 // ancestor, because the same template string can need different copy in
 // different sections. Anything outside those sections uses the global map.
+// Hides the page (on its own background colour) until Framer's runtime has
+// loaded and re-rendered it, then fades it in. Without this, visitors see the
+// page as exported for about the time Framer takes to load, and then watch it
+// change. Shown anyway after 4 seconds, or as soon as the runtime fails to load.
+(function () {
+  var root = document.documentElement;
+  var style = document.createElement("style");
+  style.textContent =
+    "html.crevo-loading,html.crevo-loading body{background:#f9f9f9}" +
+    "html.crevo-loading body{opacity:0}" +
+    "body{transition:opacity .3s ease}";
+  document.head.appendChild(style);
+  root.classList.add("crevo-loading");
+
+  var shown = false, quiet = null;
+  function show() {
+    if (shown) return;
+    shown = true;
+    root.classList.remove("crevo-loading");
+  }
+  function settle(ms) {
+    clearTimeout(quiet);
+    quiet = setTimeout(show, ms);
+  }
+  setTimeout(show, 4000);
+
+  var isFramer = function (el) { return el && el.tagName === "SCRIPT" && /framerusercontent\.com/.test(el.src || ""); };
+  // Framer's main bundle has run: show the page once its re-render settles.
+  document.addEventListener("load", function (e) {
+    if (!isFramer(e.target) || shown) return;
+    settle(500);
+    var main = document.getElementById("main") || document.body;
+    new MutationObserver(function () { if (!shown) settle(250); })
+      .observe(main, { childList: true, subtree: true, characterData: true });
+  }, true);
+  document.addEventListener("error", function (e) { if (isFramer(e.target)) show(); }, true);
+  // Coming back with the browser's back button: the page is already rendered.
+  window.addEventListener("pageshow", function (e) { if (e.persisted) show(); });
+})();
+
 (function () {
   var COPY = {
  "sections": {

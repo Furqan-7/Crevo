@@ -1,10 +1,11 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
-// Runs before every /dashboard request: refreshes the Supabase session (an
-// expired access token is swapped using the refresh token, and the new
-// cookies go out with the response) and sends signed-out visitors to
-// sign-in. Server components can read cookies but not write them, which is
+// Runs before /dashboard, /auth/signin and /auth/signup requests (and / for
+// sign-in links): refreshes the Supabase session (an expired access token is
+// swapped using the refresh token, and the new cookies go out with the
+// response), sends signed-out visitors from /dashboard to sign-in, and sends
+// signed-in visitors from sign-in and sign-up to the dashboard. Server components can read cookies but not write them, which is
 // why the refresh happens here.
 export async function proxy(request: NextRequest) {
   // Supabase sends people to the Site URL (this site's home page) with
@@ -27,7 +28,10 @@ export async function proxy(request: NextRequest) {
 
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  if (!url || !anonKey) return NextResponse.redirect(new URL("/auth/signin?notice=auth-unavailable", request.url));
+  const authPage = request.nextUrl.pathname.startsWith("/auth/");
+  if (!url || !anonKey) {
+    return authPage ? NextResponse.next() : NextResponse.redirect(new URL("/auth/signin?notice=auth-unavailable", request.url));
+  }
 
   let response = NextResponse.next({ request });
   const supabase = createServerClient(url, anonKey, {
@@ -43,6 +47,19 @@ export async function proxy(request: NextRequest) {
 
   // getClaims verifies the token (and refreshes it first when it's about to expire).
   const { data } = await supabase.auth.getClaims();
+
+  // Sign-in and sign-up: someone already signed in (e.g. coming back through
+  // the landing page's Get started buttons) goes straight to the dashboard
+  // instead of seeing the form as if they'd been signed out.
+  if (authPage) {
+    if (!data?.claims) return response;
+    const next = request.nextUrl.searchParams.get("next");
+    const to = next && next.startsWith("/") && !next.startsWith("//") ? next : "/dashboard";
+    const redirect = NextResponse.redirect(new URL(to, request.url));
+    response.cookies.getAll().forEach((cookie) => redirect.cookies.set(cookie));
+    return redirect;
+  }
+
   if (!data?.claims) {
     const signIn = new URL("/auth/signin", request.url);
     return NextResponse.redirect(signIn);
@@ -51,5 +68,5 @@ export async function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/", "/dashboard/:path*"],
+  matcher: ["/", "/dashboard/:path*", "/auth/signin", "/auth/signup"],
 };
