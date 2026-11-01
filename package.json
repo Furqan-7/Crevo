@@ -4,7 +4,7 @@
   "private": true,
   "packageManager": "pnpm@10.28.0",
   "scripts": {
-    "dev": "concurrently -n web,api -c blue,green \"pnpm --filter frontend dev\" \"pnpm --filter backend dev\"",
+    "dev": "pnpm --filter db build && concurrently -n web,api -c blue,green \"pnpm --filter frontend dev\" \"pnpm --filter backend dev\"",
     "build": "pnpm --filter db build && pnpm --filter backend build && pnpm --filter frontend build",
     "start": "pnpm --filter frontend start",
     "typecheck": "pnpm --filter db build && pnpm --filter backend typecheck && pnpm --filter frontend typecheck",

@@ -72,6 +72,13 @@ async function request<T>(method: "GET" | "POST" | "PATCH" | "PUT" | "DELETE", p
       body: form ? (body as FormData) : body !== undefined ? JSON.stringify(body) : undefined,
     });
   } catch {
+    // A deployed site still pointing at the local API means NEXT_PUBLIC_API_URL
+    // wasn't set when the frontend was built; say so instead of blaming the
+    // visitor's connection.
+    if (/^https?:\/\/(localhost|127\.0\.0\.1)(:|\/|$)/.test(API_URL) && !/^(localhost|127\.0\.0\.1)$/.test(window.location.hostname)) {
+      console.error(`Crevo API is set to ${API_URL}. Set NEXT_PUBLIC_API_URL to the deployed API's URL and redeploy the frontend.`);
+      throw new ApiError(0, "API_NOT_CONFIGURED", "The dashboard isn't connected to the Crevo API yet. Set NEXT_PUBLIC_API_URL to the API's URL and redeploy.");
+    }
     throw new ApiError(0, "NETWORK_ERROR", "Can't reach Crevo right now. Check your connection.");
   }
 
