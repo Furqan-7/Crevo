@@ -1310,15 +1310,15 @@ export default function Hero() {
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"How Crevo collects, uses and protects your data when you connect your inbox, calendar and channels."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"1. Introduction"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"This policy explains how Crevo (\"we,\" \"our,\" \"us\") collects, uses and protects your information when you use crevo.ai and the Crevo app. By using Crevo, you agree to this policy."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"2. Information We Collect"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We collect only what we need to run your workspace:"}
                         </p>
@@ -1334,9 +1334,9 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"3. How We Use Your Information"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We use the collected information to:"}
                         </p>
@@ -1372,9 +1372,9 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"4. Sharing and Disclosure"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We never sell your data or use it for advertising. We share it only with:"}
                         </p>
@@ -1395,27 +1395,27 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"5. Cookies and Tracking Technologies"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We use a sign-in cookie to keep you signed in and to remember that you finished setup. Some settings are stored in your browser. You can clear both at any time in your browser settings."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"6. Data Security"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"Connections are read-only where possible, data is encrypted in transit, and nothing is sent, posted or booked without your approval. No system is perfectly secure, so we can't guarantee absolute security."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"7. Data Retention"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We keep your data while your account is open. When you disconnect an account we stop syncing it, and when you delete your account we delete your data within 30 days unless the law requires us to keep it."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"8. Your Rights"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"Depending on your jurisdiction, you may have the right to:"}
                         </p>
@@ -1441,9 +1441,9 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"9. Third-Party Links"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"Crevo connects to services such as Gmail, Google Calendar and YouTube. Their own privacy policies apply to the data they hold."}
                         </p>
@@ -1466,15 +1466,15 @@ export default function Hero() {
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"How Crevo collects, uses and protects your data when you connect your inbox, calendar and channels."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"1. Introduction"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"This policy explains how Crevo (\"we,\" \"our,\" \"us\") collects, uses and protects your information when you use crevo.ai and the Crevo app. By using Crevo, you agree to this policy."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"2. Information We Collect"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We collect only what we need to run your workspace:"}
                         </p>
@@ -1490,9 +1490,9 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"3. How We Use Your Information"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We use the collected information to:"}
                         </p>
@@ -1528,9 +1528,9 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"4. Sharing and Disclosure"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We never sell your data or use it for advertising. We share it only with:"}
                         </p>
@@ -1551,27 +1551,27 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"5. Cookies and Tracking Technologies"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We use a sign-in cookie to keep you signed in and to remember that you finished setup. Some settings are stored in your browser. You can clear both at any time in your browser settings."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"6. Data Security"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"Connections are read-only where possible, data is encrypted in transit, and nothing is sent, posted or booked without your approval. No system is perfectly secure, so we can't guarantee absolute security."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"7. Data Retention"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We keep your data while your account is open. When you disconnect an account we stop syncing it, and when you delete your account we delete your data within 30 days unless the law requires us to keep it."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"8. Your Rights"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"Depending on your jurisdiction, you may have the right to:"}
                         </p>
@@ -1597,9 +1597,9 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"9. Third-Party Links"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"Crevo connects to services such as Gmail, Google Calendar and YouTube. Their own privacy policies apply to the data they hold."}
                         </p>
@@ -1622,15 +1622,15 @@ export default function Hero() {
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"How Crevo collects, uses and protects your data when you connect your inbox, calendar and channels."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"1. Introduction"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"This policy explains how Crevo (\"we,\" \"our,\" \"us\") collects, uses and protects your information when you use crevo.ai and the Crevo app. By using Crevo, you agree to this policy."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"2. Information We Collect"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We collect only what we need to run your workspace:"}
                         </p>
@@ -1646,9 +1646,9 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"3. How We Use Your Information"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We use the collected information to:"}
                         </p>
@@ -1684,9 +1684,9 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"4. Sharing and Disclosure"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We never sell your data or use it for advertising. We share it only with:"}
                         </p>
@@ -1707,27 +1707,27 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"5. Cookies and Tracking Technologies"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We use a sign-in cookie to keep you signed in and to remember that you finished setup. Some settings are stored in your browser. You can clear both at any time in your browser settings."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"6. Data Security"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"Connections are read-only where possible, data is encrypted in transit, and nothing is sent, posted or booked without your approval. No system is perfectly secure, so we can't guarantee absolute security."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"7. Data Retention"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We keep your data while your account is open. When you disconnect an account we stop syncing it, and when you delete your account we delete your data within 30 days unless the law requires us to keep it."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"8. Your Rights"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"Depending on your jurisdiction, you may have the right to:"}
                         </p>
@@ -1753,9 +1753,9 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"9. Third-Party Links"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"Crevo connects to services such as Gmail, Google Calendar and YouTube. Their own privacy policies apply to the data they hold."}
                         </p>

@@ -36,6 +36,7 @@ export default function SiteInteractions() {
 
       const faq = target.closest("[data-faq]");
       if (faq) {
+        const hadFocus = faq.contains(document.activeElement);
         // Grouped items (Use cases) behave like tabs: exactly one stays open.
         const group = faq.getAttribute("data-faq-group");
         if (group) {
@@ -44,6 +45,12 @@ export default function SiteInteractions() {
         } else {
           faq.toggleAttribute("data-open");
         }
+        // The open and closed looks are separate elements; keep keyboard focus
+        // on whichever one is now showing.
+        if (hadFocus) {
+          const shown = faq.querySelector<HTMLElement>(faq.hasAttribute("data-open") ? "[data-faq-open]" : "[data-faq-closed]");
+          shown?.focus({ preventScroll: true });
+        }
       }
     };
 
@@ -51,7 +58,7 @@ export default function SiteInteractions() {
       if (e.key === "Escape") closeMenus();
       if (e.key !== "Enter" && e.key !== " ") return;
       const el = e.target as Element;
-      if (el.matches?.("[data-menu-toggle]") || (el.closest?.("[data-faq]") && el.hasAttribute("tabindex"))) {
+      if (el.matches?.('[data-menu-toggle], [data-faq] > [role="button"]')) {
         e.preventDefault();
         (el as HTMLElement).click();
       }

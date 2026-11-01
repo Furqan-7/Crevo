@@ -20,17 +20,17 @@ import Content3 from "@/src/sections/contact-us/Content3";
 export default function ContactUsPage() {
   return (
     <>
-      <div id="main">
+      <main id="main">
           <style data-cv-html-style="" dangerouslySetInnerHTML={{ __html: ":root body { background: var(--token-b264e7a4-07c4-4441-b3e8-2493ff121911, rgb(249, 249, 249)); }" }} />
           <div className="cv-CgQMj cv-1dg1g0z" data-layout-template="true" style={{ minHeight: "100vh", width: "auto" }}>
             <style data-cv-html-style="" dangerouslySetInnerHTML={{ __html: "html body { background: var(--token-b264e7a4-07c4-4441-b3e8-2493ff121911); } @media (max-width: 809.98px) { html { font-size: 93.75%; } }" }} />
+            <Navigation />
             <div data-cv-root="" className="cv-KGLXS cv-6ClnC cv-UgM4l cv-VHGFB cv-eOTAQ cv-GbfdA cv-O2uTk cv-Tcee2 cv-Va3GM cv-13val70" style={{ minHeight: "100vh", width: "auto", display: "contents" }}>
               <Hero />
               <Testimonials />
             </div>
             <div id="overlay" />
             <div className="cv-1yfa73d" />
-            <Navigation />
             <div className="cv-1a9297r-container">
               <div className="ssr-variant hidden-xcpezk hidden-1p7oir">
                 <div className="cv-XBDjN cv-6ClnC cv-UgM4l cv-VHGFB cv-1imhxae cv-v-1imhxae" style={{ "--border-bottom-width": "0px", "--border-color": "rgba(0, 0, 0, 0)", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", width: "100%" }}>
@@ -81,7 +81,7 @@ export default function ContactUsPage() {
             </div>
           </div>
           <div id="template-overlay" />
-      </div>
+      </main>
       <div id="svg-templates" style={{ position: "absolute", overflow: "hidden", bottom: "0", left: "0", width: "0", height: "0", zIndex: "0", contain: "strict" }} aria-hidden="true">
         <svg viewBox="0 0 36 36" overflow="visible" id="svg1729701791_1164">
           <g>

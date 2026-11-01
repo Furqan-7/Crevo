@@ -1310,21 +1310,21 @@ export default function Hero() {
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"The rules for using Crevo: what we provide, what we ask of you, and what each of us is responsible for."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"1. Introduction"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"These terms apply when you use crevo.ai and the Crevo app (\"Crevo,\" \"we,\" \"our,\" \"us\"). By using Crevo, you agree to them. If you don't agree, please don't use Crevo."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"2. Services"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"Crevo is an AI assistant for creators. It connects to accounts you choose, such as Gmail, Google Calendar and YouTube, to sort messages, draft replies, track brand deals, repurpose videos and plan your schedule. Features may change as we improve the product."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"3. User Responsibilities"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"By using Crevo, you agree that you will not:"}
                         </p>
@@ -1350,9 +1350,9 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"4. Payments and Refunds"}
-                        </h4>
+                        </h2>
                         <ul dir="auto" className="cv-text">
                           <li data-preset-tag="p" className="cv-text cv-styles-preset-12h7zc6">
                             <p className="cv-text cv-styles-preset-12h7zc6">
@@ -1370,9 +1370,9 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"5. Intellectual Property"}
-                        </h4>
+                        </h2>
                         <ul dir="auto" className="cv-text">
                           <li data-preset-tag="p" className="cv-text cv-styles-preset-12h7zc6">
                             <p className="cv-text cv-styles-preset-12h7zc6">
@@ -1390,27 +1390,27 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"6. Limitation of Liability"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"AI suggestions can be wrong, so review drafts, captions and extracted contract terms before you approve them. Crevo never sends, posts or signs anything without your approval. To the extent the law allows, we are not liable for indirect losses such as lost profits, and we don't guarantee the service will be uninterrupted or error-free."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"7. Termination"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We may suspend or close an account that breaks these terms. You can delete your account at any time."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"8. Changes to These Terms"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We may update these terms. We'll tell you about important changes by email, and continuing to use Crevo after that means you accept them."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"9. Governing Law"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"These Terms are governed by the laws of [Your Jurisdiction]. Any disputes shall be resolved in the courts of [Your Jurisdiction]."}
                         </p>
@@ -1433,21 +1433,21 @@ export default function Hero() {
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"The rules for using Crevo: what we provide, what we ask of you, and what each of us is responsible for."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"1. Introduction"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"These terms apply when you use crevo.ai and the Crevo app (\"Crevo,\" \"we,\" \"our,\" \"us\"). By using Crevo, you agree to them. If you don't agree, please don't use Crevo."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"2. Services"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"Crevo is an AI assistant for creators. It connects to accounts you choose, such as Gmail, Google Calendar and YouTube, to sort messages, draft replies, track brand deals, repurpose videos and plan your schedule. Features may change as we improve the product."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"3. User Responsibilities"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"By using Crevo, you agree that you will not:"}
                         </p>
@@ -1473,9 +1473,9 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"4. Payments and Refunds"}
-                        </h4>
+                        </h2>
                         <ul dir="auto" className="cv-text">
                           <li data-preset-tag="p" className="cv-text cv-styles-preset-12h7zc6">
                             <p className="cv-text cv-styles-preset-12h7zc6">
@@ -1493,9 +1493,9 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"5. Intellectual Property"}
-                        </h4>
+                        </h2>
                         <ul dir="auto" className="cv-text">
                           <li data-preset-tag="p" className="cv-text cv-styles-preset-12h7zc6">
                             <p className="cv-text cv-styles-preset-12h7zc6">
@@ -1513,27 +1513,27 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"6. Limitation of Liability"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"AI suggestions can be wrong, so review drafts, captions and extracted contract terms before you approve them. Crevo never sends, posts or signs anything without your approval. To the extent the law allows, we are not liable for indirect losses such as lost profits, and we don't guarantee the service will be uninterrupted or error-free."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"7. Termination"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We may suspend or close an account that breaks these terms. You can delete your account at any time."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"8. Changes to These Terms"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We may update these terms. We'll tell you about important changes by email, and continuing to use Crevo after that means you accept them."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"9. Governing Law"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"These Terms are governed by the laws of [Your Jurisdiction]. Any disputes shall be resolved in the courts of [Your Jurisdiction]."}
                         </p>
@@ -1556,21 +1556,21 @@ export default function Hero() {
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"The rules for using Crevo: what we provide, what we ask of you, and what each of us is responsible for."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"1. Introduction"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"These terms apply when you use crevo.ai and the Crevo app (\"Crevo,\" \"we,\" \"our,\" \"us\"). By using Crevo, you agree to them. If you don't agree, please don't use Crevo."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"2. Services"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"Crevo is an AI assistant for creators. It connects to accounts you choose, such as Gmail, Google Calendar and YouTube, to sort messages, draft replies, track brand deals, repurpose videos and plan your schedule. Features may change as we improve the product."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"3. User Responsibilities"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"By using Crevo, you agree that you will not:"}
                         </p>
@@ -1596,9 +1596,9 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"4. Payments and Refunds"}
-                        </h4>
+                        </h2>
                         <ul dir="auto" className="cv-text">
                           <li data-preset-tag="p" className="cv-text cv-styles-preset-12h7zc6">
                             <p className="cv-text cv-styles-preset-12h7zc6">
@@ -1616,9 +1616,9 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"5. Intellectual Property"}
-                        </h4>
+                        </h2>
                         <ul dir="auto" className="cv-text">
                           <li data-preset-tag="p" className="cv-text cv-styles-preset-12h7zc6">
                             <p className="cv-text cv-styles-preset-12h7zc6">
@@ -1636,27 +1636,27 @@ export default function Hero() {
                             </p>
                           </li>
                         </ul>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"6. Limitation of Liability"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"AI suggestions can be wrong, so review drafts, captions and extracted contract terms before you approve them. Crevo never sends, posts or signs anything without your approval. To the extent the law allows, we are not liable for indirect losses such as lost profits, and we don't guarantee the service will be uninterrupted or error-free."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"7. Termination"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We may suspend or close an account that breaks these terms. You can delete your account at any time."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"8. Changes to These Terms"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"We may update these terms. We'll tell you about important changes by email, and continuing to use Crevo after that means you accept them."}
                         </p>
-                        <h4 dir="auto" className="cv-text cv-styles-preset-192kqv5">
+                        <h2 dir="auto" className="cv-text cv-styles-preset-192kqv5">
                           {"9. Governing Law"}
-                        </h4>
+                        </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
                           {"These Terms are governed by the laws of [Your Jurisdiction]. Any disputes shall be resolved in the courts of [Your Jurisdiction]."}
                         </p>

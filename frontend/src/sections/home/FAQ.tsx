@@ -218,7 +218,7 @@ export default function FAQ() {
             <div className="cv-1jx0k5v">
               <div className="cv-1teh5u2-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
                 <div data-faq="" style={{ display: "contents" }} data-open="">
-                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -230,7 +230,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -309,7 +309,7 @@ export default function FAQ() {
                       </div>
                     </div>
                   </div>
-                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -321,7 +321,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -409,7 +409,7 @@ export default function FAQ() {
               </div>
               <div className="cv-1jjzhbw-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
                 <div data-faq="" style={{ display: "contents" }}>
-                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -421,7 +421,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -500,7 +500,7 @@ export default function FAQ() {
                       </div>
                     </div>
                   </div>
-                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -512,7 +512,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -600,7 +600,7 @@ export default function FAQ() {
               </div>
               <div className="cv-t8tlgd-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
                 <div data-faq="" style={{ display: "contents" }}>
-                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -612,7 +612,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -691,7 +691,7 @@ export default function FAQ() {
                       </div>
                     </div>
                   </div>
-                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -703,7 +703,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -793,7 +793,7 @@ export default function FAQ() {
             <div className="cv-1t5y9qm">
               <div className="cv-wgenz5-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
                 <div data-faq="" style={{ display: "contents" }}>
-                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -805,7 +805,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -884,7 +884,7 @@ export default function FAQ() {
                       </div>
                     </div>
                   </div>
-                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -896,7 +896,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -984,7 +984,7 @@ export default function FAQ() {
               </div>
               <div className="cv-sewvko-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
                 <div data-faq="" style={{ display: "contents" }}>
-                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -996,7 +996,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -1075,7 +1075,7 @@ export default function FAQ() {
                       </div>
                     </div>
                   </div>
-                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -1087,7 +1087,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -1175,7 +1175,7 @@ export default function FAQ() {
               </div>
               <div className="cv-9pwc3j-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
                 <div data-faq="" style={{ display: "contents" }}>
-                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -1187,7 +1187,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -1266,7 +1266,7 @@ export default function FAQ() {
                       </div>
                     </div>
                   </div>
-                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -1278,7 +1278,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -1372,7 +1372,7 @@ export default function FAQ() {
             <div className="cv-1jx0k5v">
               <div className="cv-1teh5u2-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
                 <div data-faq="" style={{ display: "contents" }} data-open="">
-                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -1384,7 +1384,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -1463,7 +1463,7 @@ export default function FAQ() {
                       </div>
                     </div>
                   </div>
-                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -1475,7 +1475,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -1563,7 +1563,7 @@ export default function FAQ() {
               </div>
               <div className="cv-1jjzhbw-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
                 <div data-faq="" style={{ display: "contents" }}>
-                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -1575,7 +1575,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -1654,7 +1654,7 @@ export default function FAQ() {
                       </div>
                     </div>
                   </div>
-                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -1666,7 +1666,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -1754,7 +1754,7 @@ export default function FAQ() {
               </div>
               <div className="cv-t8tlgd-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
                 <div data-faq="" style={{ display: "contents" }}>
-                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -1766,7 +1766,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -1845,7 +1845,7 @@ export default function FAQ() {
                       </div>
                     </div>
                   </div>
-                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -1857,7 +1857,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -1947,7 +1947,7 @@ export default function FAQ() {
             <div className="cv-1t5y9qm">
               <div className="cv-wgenz5-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
                 <div data-faq="" style={{ display: "contents" }}>
-                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -1959,7 +1959,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -2038,7 +2038,7 @@ export default function FAQ() {
                       </div>
                     </div>
                   </div>
-                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -2050,7 +2050,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -2138,7 +2138,7 @@ export default function FAQ() {
               </div>
               <div className="cv-sewvko-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
                 <div data-faq="" style={{ display: "contents" }}>
-                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -2150,7 +2150,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -2229,7 +2229,7 @@ export default function FAQ() {
                       </div>
                     </div>
                   </div>
-                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -2241,7 +2241,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -2329,7 +2329,7 @@ export default function FAQ() {
               </div>
               <div className="cv-9pwc3j-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
                 <div data-faq="" style={{ display: "contents" }}>
-                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -2341,7 +2341,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -2420,7 +2420,7 @@ export default function FAQ() {
                       </div>
                     </div>
                   </div>
-                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -2432,7 +2432,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -2526,7 +2526,7 @@ export default function FAQ() {
             <div className="cv-1jx0k5v">
               <div className="cv-1teh5u2-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
                 <div data-faq="" style={{ display: "contents" }} data-open="">
-                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -2538,7 +2538,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -2617,7 +2617,7 @@ export default function FAQ() {
                       </div>
                     </div>
                   </div>
-                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -2629,7 +2629,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -2717,7 +2717,7 @@ export default function FAQ() {
               </div>
               <div className="cv-1jjzhbw-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
                 <div data-faq="" style={{ display: "contents" }}>
-                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -2729,7 +2729,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -2808,7 +2808,7 @@ export default function FAQ() {
                       </div>
                     </div>
                   </div>
-                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -2820,7 +2820,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -2908,7 +2908,7 @@ export default function FAQ() {
               </div>
               <div className="cv-t8tlgd-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
                 <div data-faq="" style={{ display: "contents" }}>
-                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -2920,7 +2920,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -2999,7 +2999,7 @@ export default function FAQ() {
                       </div>
                     </div>
                   </div>
-                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -3011,7 +3011,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -3101,7 +3101,7 @@ export default function FAQ() {
             <div className="cv-1t5y9qm">
               <div className="cv-wgenz5-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
                 <div data-faq="" style={{ display: "contents" }}>
-                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -3113,7 +3113,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -3192,7 +3192,7 @@ export default function FAQ() {
                       </div>
                     </div>
                   </div>
-                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -3204,7 +3204,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -3292,7 +3292,7 @@ export default function FAQ() {
               </div>
               <div className="cv-sewvko-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
                 <div data-faq="" style={{ display: "contents" }}>
-                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -3304,7 +3304,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -3383,7 +3383,7 @@ export default function FAQ() {
                       </div>
                     </div>
                   </div>
-                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -3395,7 +3395,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -3483,7 +3483,7 @@ export default function FAQ() {
               </div>
               <div className="cv-9pwc3j-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
                 <div data-faq="" style={{ display: "contents" }}>
-                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-closed="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-16jpvu4" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -3495,7 +3495,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -3574,7 +3574,7 @@ export default function FAQ() {
                       </div>
                     </div>
                   </div>
-                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
+                  <div data-faq-open="" className="cv-nlhE3 cv-7tdw8 cv-Tcee2 cv-16jpvu4 cv-v-1wk33rm" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", width: "100%" }}>
                     <div className="cv-1f9j6my-container" style={{ opacity: "0", transform: "translateX(-50%)" }}>
                         <div />
                     </div>
@@ -3586,7 +3586,7 @@ export default function FAQ() {
                           </p>
                         </div>
                         <div className="cv-aeh9qz-container">
-                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                          <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                             <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                             <div className="cv-1p0fmlf">
                               <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>

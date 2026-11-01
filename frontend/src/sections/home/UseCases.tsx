@@ -216,7 +216,7 @@ export default function UseCases() {
           <div className="ssr-variant hidden-15twu3q hidden-1mvte0s">
             <div className="cv-xv47cq-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
               <div data-faq="" data-faq-group="use-cases" style={{ display: "contents" }} data-open="">
-                <div data-faq-closed="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-9se8ze" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", width: "100%" }}>
+                <div data-faq-closed="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-9se8ze" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", width: "100%" }}>
                   <div className="cv-6g5qj2-container" style={{ opacity: "0" }}>
                       <div />
                   </div>
@@ -226,8 +226,8 @@ export default function UseCases() {
                         <div className="cv-3wTwJ cv-py1sjy cv-v-py1sjy" style={{ height: "100%", width: "100%" }}>
                           <div className="cv-6bdygs">
                             <div className="cv-1mlew6" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
-                              <div className="cv-1h0c7jr" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-70dd917f-3e82-45ab-bf0e-41869a710944, rgb(133, 133, 133))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                                <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-70dd917f-3e82-45ab-bf0e-41869a710944, rgb(133, 133, 133)))" }}>
+                              <div className="cv-1h0c7jr" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "rgb(107, 107, 107)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                                <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, rgb(107, 107, 107))" }}>
                                   {"001"}
                                 </p>
                               </div>
@@ -259,7 +259,7 @@ export default function UseCases() {
                       </div>
                     </div>
                     <div className="cv-11u79qd-container">
-                      <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                      <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                         <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                         <div className="cv-1p0fmlf">
                           <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -337,7 +337,7 @@ export default function UseCases() {
                     </div>
                   </div>
                 </div>
-                <div data-faq-open="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-e4paxf" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-c1043a30-7f7b-4a14-a9fb-e7a78c836d9f, rgb(246, 246, 246))", width: "100%" }}>
+                <div data-faq-open="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-e4paxf" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-c1043a30-7f7b-4a14-a9fb-e7a78c836d9f, rgb(246, 246, 246))", width: "100%" }}>
                   <div className="cv-6g5qj2-container" style={{ opacity: "0" }}>
                       <div />
                   </div>
@@ -354,8 +354,8 @@ export default function UseCases() {
                         </svg>
                       </div>
                     </div>
-                    <div className="cv-olbn6a" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-70dd917f-3e82-45ab-bf0e-41869a710944)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                      <p dir="auto" className="cv-text" style={{ "--cv-font-size": "14px", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-70dd917f-3e82-45ab-bf0e-41869a710944))", "--cv-text-transform": "uppercase" }}>
+                    <div className="cv-olbn6a" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "rgb(107, 107, 107)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                      <p dir="auto" className="cv-text" style={{ "--cv-font-size": "14px", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, rgb(107, 107, 107))", "--cv-text-transform": "uppercase" }}>
                         {"For solo creators"}
                       </p>
                     </div>
@@ -442,7 +442,7 @@ export default function UseCases() {
                       </div>
                     </div>
                     <div className="cv-11u79qd-container">
-                      <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                      <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                         <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                         <div className="cv-1p0fmlf">
                           <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -526,7 +526,7 @@ export default function UseCases() {
           <div className="ssr-variant hidden-1mvte0s hidden-72rtr7">
             <div className="cv-xv47cq-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
               <div data-faq="" data-faq-group="use-cases" style={{ display: "contents" }} data-open="">
-                <div data-faq-closed="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-2g38f3" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", width: "100%" }}>
+                <div data-faq-closed="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-2g38f3" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", width: "100%" }}>
                   <div className="cv-6g5qj2-container" style={{ opacity: "0" }}>
                       <div />
                   </div>
@@ -536,8 +536,8 @@ export default function UseCases() {
                         <div className="cv-3wTwJ cv-py1sjy cv-v-py1sjy" style={{ height: "100%", width: "100%" }}>
                           <div className="cv-6bdygs">
                             <div className="cv-1mlew6" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
-                              <div className="cv-1h0c7jr" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-70dd917f-3e82-45ab-bf0e-41869a710944, rgb(133, 133, 133))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                                <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-70dd917f-3e82-45ab-bf0e-41869a710944, rgb(133, 133, 133)))" }}>
+                              <div className="cv-1h0c7jr" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "rgb(107, 107, 107)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                                <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, rgb(107, 107, 107))" }}>
                                   {"001"}
                                 </p>
                               </div>
@@ -561,7 +561,7 @@ export default function UseCases() {
                         </div>
                       </div>
                       <div className="cv-155p9e5-container">
-                        <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                        <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                           <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                           <div className="cv-1p0fmlf">
                             <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -647,7 +647,7 @@ export default function UseCases() {
                     </div>
                   </div>
                 </div>
-                <div data-faq-open="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-d8n4gf" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-c1043a30-7f7b-4a14-a9fb-e7a78c836d9f, rgb(246, 246, 246))", width: "100%" }}>
+                <div data-faq-open="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-d8n4gf" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-c1043a30-7f7b-4a14-a9fb-e7a78c836d9f, rgb(246, 246, 246))", width: "100%" }}>
                   <div className="cv-6g5qj2-container" style={{ opacity: "0" }}>
                       <div />
                   </div>
@@ -664,8 +664,8 @@ export default function UseCases() {
                         </svg>
                       </div>
                     </div>
-                    <div className="cv-olbn6a" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-70dd917f-3e82-45ab-bf0e-41869a710944)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                      <p dir="auto" className="cv-text" style={{ "--cv-font-size": "14px", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-70dd917f-3e82-45ab-bf0e-41869a710944))", "--cv-text-transform": "uppercase" }}>
+                    <div className="cv-olbn6a" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "rgb(107, 107, 107)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                      <p dir="auto" className="cv-text" style={{ "--cv-font-size": "14px", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, rgb(107, 107, 107))", "--cv-text-transform": "uppercase" }}>
                         {"For solo creators"}
                       </p>
                     </div>
@@ -702,7 +702,7 @@ export default function UseCases() {
                         </div>
                       </div>
                       <div className="cv-5us6mj-container">
-                        <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                        <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                           <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                           <div className="cv-1p0fmlf">
                             <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -799,7 +799,7 @@ export default function UseCases() {
           <div className="ssr-variant hidden-15twu3q hidden-72rtr7">
             <div className="cv-xv47cq-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
               <div data-faq="" data-faq-group="use-cases" style={{ display: "contents" }} data-open="">
-                <div data-faq-closed="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-6xw93m" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", width: "100%" }}>
+                <div data-faq-closed="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-6xw93m" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", width: "100%" }}>
                   <div className="cv-6g5qj2-container" style={{ opacity: "0" }}>
                       <div />
                   </div>
@@ -809,8 +809,8 @@ export default function UseCases() {
                         <div className="cv-3wTwJ cv-py1sjy cv-v-py1sjy" style={{ height: "100%", width: "100%" }}>
                           <div className="cv-6bdygs">
                             <div className="cv-1mlew6" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
-                              <div className="cv-1h0c7jr" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-70dd917f-3e82-45ab-bf0e-41869a710944, rgb(133, 133, 133))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                                <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-70dd917f-3e82-45ab-bf0e-41869a710944, rgb(133, 133, 133)))" }}>
+                              <div className="cv-1h0c7jr" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "rgb(107, 107, 107)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                                <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, rgb(107, 107, 107))" }}>
                                   {"001"}
                                 </p>
                               </div>
@@ -842,7 +842,7 @@ export default function UseCases() {
                       </div>
                     </div>
                     <div className="cv-11u79qd-container">
-                      <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                      <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                         <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                         <div className="cv-1p0fmlf">
                           <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -920,7 +920,7 @@ export default function UseCases() {
                     </div>
                   </div>
                 </div>
-                <div data-faq-open="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-62a4nv" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-c1043a30-7f7b-4a14-a9fb-e7a78c836d9f, rgb(246, 246, 246))", width: "100%" }}>
+                <div data-faq-open="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-62a4nv" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-c1043a30-7f7b-4a14-a9fb-e7a78c836d9f, rgb(246, 246, 246))", width: "100%" }}>
                   <div className="cv-6g5qj2-container" style={{ opacity: "0" }}>
                       <div />
                   </div>
@@ -937,8 +937,8 @@ export default function UseCases() {
                         </svg>
                       </div>
                     </div>
-                    <div className="cv-olbn6a" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-70dd917f-3e82-45ab-bf0e-41869a710944)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                      <p dir="auto" className="cv-text" style={{ "--cv-font-size": "14px", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-70dd917f-3e82-45ab-bf0e-41869a710944))", "--cv-text-transform": "uppercase" }}>
+                    <div className="cv-olbn6a" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "rgb(107, 107, 107)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                      <p dir="auto" className="cv-text" style={{ "--cv-font-size": "14px", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, rgb(107, 107, 107))", "--cv-text-transform": "uppercase" }}>
                         {"For solo creators"}
                       </p>
                     </div>
@@ -1025,7 +1025,7 @@ export default function UseCases() {
                       </div>
                     </div>
                     <div className="cv-11u79qd-container">
-                      <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                      <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                         <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                         <div className="cv-1p0fmlf">
                           <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -1109,7 +1109,7 @@ export default function UseCases() {
           <div className="ssr-variant hidden-15twu3q hidden-1mvte0s">
             <div className="cv-1pjea5h-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
               <div data-faq="" data-faq-group="use-cases" style={{ display: "contents" }}>
-                <div data-faq-closed="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-9se8ze" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", width: "100%" }}>
+                <div data-faq-closed="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-9se8ze" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", width: "100%" }}>
                   <div className="cv-6g5qj2-container" style={{ opacity: "0" }}>
                       <div />
                   </div>
@@ -1119,8 +1119,8 @@ export default function UseCases() {
                         <div className="cv-3wTwJ cv-py1sjy cv-v-py1sjy" style={{ height: "100%", width: "100%" }}>
                           <div className="cv-6bdygs">
                             <div className="cv-1mlew6" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
-                              <div className="cv-1h0c7jr" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-70dd917f-3e82-45ab-bf0e-41869a710944, rgb(133, 133, 133))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                                <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-70dd917f-3e82-45ab-bf0e-41869a710944, rgb(133, 133, 133)))" }}>
+                              <div className="cv-1h0c7jr" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "rgb(107, 107, 107)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                                <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, rgb(107, 107, 107))" }}>
                                   {"002"}
                                 </p>
                               </div>
@@ -1152,7 +1152,7 @@ export default function UseCases() {
                       </div>
                     </div>
                     <div className="cv-11u79qd-container">
-                      <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                      <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                         <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                         <div className="cv-1p0fmlf">
                           <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -1230,7 +1230,7 @@ export default function UseCases() {
                     </div>
                   </div>
                 </div>
-                <div data-faq-open="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-e4paxf" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-c1043a30-7f7b-4a14-a9fb-e7a78c836d9f, rgb(246, 246, 246))", width: "100%" }}>
+                <div data-faq-open="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-e4paxf" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-c1043a30-7f7b-4a14-a9fb-e7a78c836d9f, rgb(246, 246, 246))", width: "100%" }}>
                   <div className="cv-6g5qj2-container" style={{ opacity: "0" }}>
                       <div />
                   </div>
@@ -1247,8 +1247,8 @@ export default function UseCases() {
                         </svg>
                       </div>
                     </div>
-                    <div className="cv-olbn6a" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-70dd917f-3e82-45ab-bf0e-41869a710944)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                      <p dir="auto" className="cv-text" style={{ "--cv-font-size": "14px", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-70dd917f-3e82-45ab-bf0e-41869a710944))", "--cv-text-transform": "uppercase" }}>
+                    <div className="cv-olbn6a" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "rgb(107, 107, 107)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                      <p dir="auto" className="cv-text" style={{ "--cv-font-size": "14px", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, rgb(107, 107, 107))", "--cv-text-transform": "uppercase" }}>
                         {"For talent managers"}
                       </p>
                     </div>
@@ -1335,7 +1335,7 @@ export default function UseCases() {
                       </div>
                     </div>
                     <div className="cv-11u79qd-container">
-                      <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                      <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                         <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                         <div className="cv-1p0fmlf">
                           <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -1419,7 +1419,7 @@ export default function UseCases() {
           <div className="ssr-variant hidden-1mvte0s hidden-72rtr7">
             <div className="cv-1pjea5h-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
               <div data-faq="" data-faq-group="use-cases" style={{ display: "contents" }}>
-                <div data-faq-closed="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-2g38f3" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", width: "100%" }}>
+                <div data-faq-closed="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-2g38f3" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", width: "100%" }}>
                   <div className="cv-6g5qj2-container" style={{ opacity: "0" }}>
                       <div />
                   </div>
@@ -1429,8 +1429,8 @@ export default function UseCases() {
                         <div className="cv-3wTwJ cv-py1sjy cv-v-py1sjy" style={{ height: "100%", width: "100%" }}>
                           <div className="cv-6bdygs">
                             <div className="cv-1mlew6" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
-                              <div className="cv-1h0c7jr" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-70dd917f-3e82-45ab-bf0e-41869a710944, rgb(133, 133, 133))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                                <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-70dd917f-3e82-45ab-bf0e-41869a710944, rgb(133, 133, 133)))" }}>
+                              <div className="cv-1h0c7jr" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "rgb(107, 107, 107)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                                <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, rgb(107, 107, 107))" }}>
                                   {"002"}
                                 </p>
                               </div>
@@ -1454,7 +1454,7 @@ export default function UseCases() {
                         </div>
                       </div>
                       <div className="cv-155p9e5-container">
-                        <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                        <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                           <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                           <div className="cv-1p0fmlf">
                             <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -1540,7 +1540,7 @@ export default function UseCases() {
                     </div>
                   </div>
                 </div>
-                <div data-faq-open="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-d8n4gf" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-c1043a30-7f7b-4a14-a9fb-e7a78c836d9f, rgb(246, 246, 246))", width: "100%" }}>
+                <div data-faq-open="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-d8n4gf" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-c1043a30-7f7b-4a14-a9fb-e7a78c836d9f, rgb(246, 246, 246))", width: "100%" }}>
                   <div className="cv-6g5qj2-container" style={{ opacity: "0" }}>
                       <div />
                   </div>
@@ -1557,8 +1557,8 @@ export default function UseCases() {
                         </svg>
                       </div>
                     </div>
-                    <div className="cv-olbn6a" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-70dd917f-3e82-45ab-bf0e-41869a710944)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                      <p dir="auto" className="cv-text" style={{ "--cv-font-size": "14px", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-70dd917f-3e82-45ab-bf0e-41869a710944))", "--cv-text-transform": "uppercase" }}>
+                    <div className="cv-olbn6a" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "rgb(107, 107, 107)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                      <p dir="auto" className="cv-text" style={{ "--cv-font-size": "14px", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, rgb(107, 107, 107))", "--cv-text-transform": "uppercase" }}>
                         {"For talent managers"}
                       </p>
                     </div>
@@ -1595,7 +1595,7 @@ export default function UseCases() {
                         </div>
                       </div>
                       <div className="cv-5us6mj-container">
-                        <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                        <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                           <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                           <div className="cv-1p0fmlf">
                             <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -1692,7 +1692,7 @@ export default function UseCases() {
           <div className="ssr-variant hidden-15twu3q hidden-72rtr7">
             <div className="cv-1pjea5h-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
               <div data-faq="" data-faq-group="use-cases" style={{ display: "contents" }}>
-                <div data-faq-closed="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-6xw93m" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", width: "100%" }}>
+                <div data-faq-closed="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-6xw93m" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", width: "100%" }}>
                   <div className="cv-6g5qj2-container" style={{ opacity: "0" }}>
                       <div />
                   </div>
@@ -1702,8 +1702,8 @@ export default function UseCases() {
                         <div className="cv-3wTwJ cv-py1sjy cv-v-py1sjy" style={{ height: "100%", width: "100%" }}>
                           <div className="cv-6bdygs">
                             <div className="cv-1mlew6" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
-                              <div className="cv-1h0c7jr" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-70dd917f-3e82-45ab-bf0e-41869a710944, rgb(133, 133, 133))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                                <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-70dd917f-3e82-45ab-bf0e-41869a710944, rgb(133, 133, 133)))" }}>
+                              <div className="cv-1h0c7jr" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "rgb(107, 107, 107)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                                <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, rgb(107, 107, 107))" }}>
                                   {"002"}
                                 </p>
                               </div>
@@ -1735,7 +1735,7 @@ export default function UseCases() {
                       </div>
                     </div>
                     <div className="cv-11u79qd-container">
-                      <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                      <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                         <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                         <div className="cv-1p0fmlf">
                           <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -1813,7 +1813,7 @@ export default function UseCases() {
                     </div>
                   </div>
                 </div>
-                <div data-faq-open="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-62a4nv" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-c1043a30-7f7b-4a14-a9fb-e7a78c836d9f, rgb(246, 246, 246))", width: "100%" }}>
+                <div data-faq-open="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-62a4nv" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-c1043a30-7f7b-4a14-a9fb-e7a78c836d9f, rgb(246, 246, 246))", width: "100%" }}>
                   <div className="cv-6g5qj2-container" style={{ opacity: "0" }}>
                       <div />
                   </div>
@@ -1830,8 +1830,8 @@ export default function UseCases() {
                         </svg>
                       </div>
                     </div>
-                    <div className="cv-olbn6a" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-70dd917f-3e82-45ab-bf0e-41869a710944)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                      <p dir="auto" className="cv-text" style={{ "--cv-font-size": "14px", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-70dd917f-3e82-45ab-bf0e-41869a710944))", "--cv-text-transform": "uppercase" }}>
+                    <div className="cv-olbn6a" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "rgb(107, 107, 107)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                      <p dir="auto" className="cv-text" style={{ "--cv-font-size": "14px", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, rgb(107, 107, 107))", "--cv-text-transform": "uppercase" }}>
                         {"For talent managers"}
                       </p>
                     </div>
@@ -1918,7 +1918,7 @@ export default function UseCases() {
                       </div>
                     </div>
                     <div className="cv-11u79qd-container">
-                      <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                      <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                         <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                         <div className="cv-1p0fmlf">
                           <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -2002,7 +2002,7 @@ export default function UseCases() {
           <div className="ssr-variant hidden-15twu3q hidden-1mvte0s">
             <div className="cv-66m4rj-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
               <div data-faq="" data-faq-group="use-cases" style={{ display: "contents" }}>
-                <div data-faq-closed="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-9se8ze" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", width: "100%" }}>
+                <div data-faq-closed="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-9se8ze" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", width: "100%" }}>
                   <div className="cv-6g5qj2-container" style={{ opacity: "0" }}>
                       <div />
                   </div>
@@ -2012,8 +2012,8 @@ export default function UseCases() {
                         <div className="cv-3wTwJ cv-py1sjy cv-v-py1sjy" style={{ height: "100%", width: "100%" }}>
                           <div className="cv-6bdygs">
                             <div className="cv-1mlew6" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
-                              <div className="cv-1h0c7jr" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-70dd917f-3e82-45ab-bf0e-41869a710944, rgb(133, 133, 133))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                                <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-70dd917f-3e82-45ab-bf0e-41869a710944, rgb(133, 133, 133)))" }}>
+                              <div className="cv-1h0c7jr" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "rgb(107, 107, 107)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                                <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, rgb(107, 107, 107))" }}>
                                   {"003"}
                                 </p>
                               </div>
@@ -2045,7 +2045,7 @@ export default function UseCases() {
                       </div>
                     </div>
                     <div className="cv-11u79qd-container">
-                      <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                      <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                         <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                         <div className="cv-1p0fmlf">
                           <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -2123,7 +2123,7 @@ export default function UseCases() {
                     </div>
                   </div>
                 </div>
-                <div data-faq-open="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-e4paxf" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-c1043a30-7f7b-4a14-a9fb-e7a78c836d9f, rgb(246, 246, 246))", width: "100%" }}>
+                <div data-faq-open="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-e4paxf" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-c1043a30-7f7b-4a14-a9fb-e7a78c836d9f, rgb(246, 246, 246))", width: "100%" }}>
                   <div className="cv-6g5qj2-container" style={{ opacity: "0" }}>
                       <div />
                   </div>
@@ -2140,8 +2140,8 @@ export default function UseCases() {
                         </svg>
                       </div>
                     </div>
-                    <div className="cv-olbn6a" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-70dd917f-3e82-45ab-bf0e-41869a710944)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                      <p dir="auto" className="cv-text" style={{ "--cv-font-size": "14px", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-70dd917f-3e82-45ab-bf0e-41869a710944))", "--cv-text-transform": "uppercase" }}>
+                    <div className="cv-olbn6a" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "rgb(107, 107, 107)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                      <p dir="auto" className="cv-text" style={{ "--cv-font-size": "14px", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, rgb(107, 107, 107))", "--cv-text-transform": "uppercase" }}>
                         {"For creator teams"}
                       </p>
                     </div>
@@ -2228,7 +2228,7 @@ export default function UseCases() {
                       </div>
                     </div>
                     <div className="cv-11u79qd-container">
-                      <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                      <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                         <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                         <div className="cv-1p0fmlf">
                           <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -2312,7 +2312,7 @@ export default function UseCases() {
           <div className="ssr-variant hidden-1mvte0s hidden-72rtr7">
             <div className="cv-66m4rj-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
               <div data-faq="" data-faq-group="use-cases" style={{ display: "contents" }}>
-                <div data-faq-closed="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-2g38f3" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", width: "100%" }}>
+                <div data-faq-closed="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-2g38f3" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", width: "100%" }}>
                   <div className="cv-6g5qj2-container" style={{ opacity: "0" }}>
                       <div />
                   </div>
@@ -2322,8 +2322,8 @@ export default function UseCases() {
                         <div className="cv-3wTwJ cv-py1sjy cv-v-py1sjy" style={{ height: "100%", width: "100%" }}>
                           <div className="cv-6bdygs">
                             <div className="cv-1mlew6" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
-                              <div className="cv-1h0c7jr" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-70dd917f-3e82-45ab-bf0e-41869a710944, rgb(133, 133, 133))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                                <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-70dd917f-3e82-45ab-bf0e-41869a710944, rgb(133, 133, 133)))" }}>
+                              <div className="cv-1h0c7jr" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "rgb(107, 107, 107)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                                <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, rgb(107, 107, 107))" }}>
                                   {"003"}
                                 </p>
                               </div>
@@ -2347,7 +2347,7 @@ export default function UseCases() {
                         </div>
                       </div>
                       <div className="cv-155p9e5-container">
-                        <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                        <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                           <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                           <div className="cv-1p0fmlf">
                             <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -2433,7 +2433,7 @@ export default function UseCases() {
                     </div>
                   </div>
                 </div>
-                <div data-faq-open="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-d8n4gf" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-c1043a30-7f7b-4a14-a9fb-e7a78c836d9f, rgb(246, 246, 246))", width: "100%" }}>
+                <div data-faq-open="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-d8n4gf" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-c1043a30-7f7b-4a14-a9fb-e7a78c836d9f, rgb(246, 246, 246))", width: "100%" }}>
                   <div className="cv-6g5qj2-container" style={{ opacity: "0" }}>
                       <div />
                   </div>
@@ -2450,8 +2450,8 @@ export default function UseCases() {
                         </svg>
                       </div>
                     </div>
-                    <div className="cv-olbn6a" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-70dd917f-3e82-45ab-bf0e-41869a710944)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                      <p dir="auto" className="cv-text" style={{ "--cv-font-size": "14px", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-70dd917f-3e82-45ab-bf0e-41869a710944))", "--cv-text-transform": "uppercase" }}>
+                    <div className="cv-olbn6a" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "rgb(107, 107, 107)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                      <p dir="auto" className="cv-text" style={{ "--cv-font-size": "14px", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, rgb(107, 107, 107))", "--cv-text-transform": "uppercase" }}>
                         {"For creator teams"}
                       </p>
                     </div>
@@ -2488,7 +2488,7 @@ export default function UseCases() {
                         </div>
                       </div>
                       <div className="cv-5us6mj-container">
-                        <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                        <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                           <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                           <div className="cv-1p0fmlf">
                             <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -2585,7 +2585,7 @@ export default function UseCases() {
           <div className="ssr-variant hidden-15twu3q hidden-72rtr7">
             <div className="cv-66m4rj-container" data-scroll-reveal="" style={{ transform: "none", "--reveal-from": "translateY(50px)", "--reveal-to": "none" }}>
               <div data-faq="" data-faq-group="use-cases" style={{ display: "contents" }}>
-                <div data-faq-closed="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-6xw93m" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", width: "100%" }}>
+                <div data-faq-closed="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-6xw93m" data-border="true" data-highlight="true" role="button" aria-expanded="false" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "rgba(0, 0, 0, 0)", width: "100%" }}>
                   <div className="cv-6g5qj2-container" style={{ opacity: "0" }}>
                       <div />
                   </div>
@@ -2595,8 +2595,8 @@ export default function UseCases() {
                         <div className="cv-3wTwJ cv-py1sjy cv-v-py1sjy" style={{ height: "100%", width: "100%" }}>
                           <div className="cv-6bdygs">
                             <div className="cv-1mlew6" data-border="true" style={{ "--border-bottom-width": "1px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d)", "--border-left-width": "1px", "--border-right-width": "1px", "--border-style": "solid", "--border-top-width": "1px", backgroundColor: "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
-                              <div className="cv-1h0c7jr" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--token-70dd917f-3e82-45ab-bf0e-41869a710944, rgb(133, 133, 133))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                                <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-70dd917f-3e82-45ab-bf0e-41869a710944, rgb(133, 133, 133)))" }}>
+                              <div className="cv-1h0c7jr" data-cv-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "rgb(107, 107, 107)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                                <p dir="auto" className="cv-text" style={{ "--font-selector": "SW50ZXItTWVkaXVt", "--cv-font-size": "14px", "--cv-font-weight": "500", "--cv-letter-spacing": "-0.01em", "--cv-text-alignment": "center", "--cv-text-color": "var(--extracted-r6o4lv, rgb(107, 107, 107))" }}>
                                   {"003"}
                                 </p>
                               </div>
@@ -2628,7 +2628,7 @@ export default function UseCases() {
                       </div>
                     </div>
                     <div className="cv-11u79qd-container">
-                      <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                      <div className="cv-OlWmV cv-147jppj cv-v-147jppj" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "1.5px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "1.5px", "--border-right-width": "1.5px", "--border-style": "solid", "--border-top-width": "1.5px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                         <div className="cv-XBAO3 cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", transform: "rotate(-180deg)" }} />
                         <div className="cv-1p0fmlf">
                           <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
@@ -2706,7 +2706,7 @@ export default function UseCases() {
                     </div>
                   </div>
                 </div>
-                <div data-faq-open="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-62a4nv" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-c1043a30-7f7b-4a14-a9fb-e7a78c836d9f, rgb(246, 246, 246))", width: "100%" }}>
+                <div data-faq-open="" className="cv-Wy0vE cv-eOTAQ cv-Flo0j cv-9se8ze cv-v-62a4nv" data-border="true" data-highlight="true" role="button" aria-expanded="true" tabIndex={0} style={{ "--border-bottom-width": "2px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-c1043a30-7f7b-4a14-a9fb-e7a78c836d9f, rgb(246, 246, 246))", width: "100%" }}>
                   <div className="cv-6g5qj2-container" style={{ opacity: "0" }}>
                       <div />
                   </div>
@@ -2723,8 +2723,8 @@ export default function UseCases() {
                         </svg>
                       </div>
                     </div>
-                    <div className="cv-olbn6a" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-70dd917f-3e82-45ab-bf0e-41869a710944)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
-                      <p dir="auto" className="cv-text" style={{ "--cv-font-size": "14px", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-70dd917f-3e82-45ab-bf0e-41869a710944))", "--cv-text-transform": "uppercase" }}>
+                    <div className="cv-olbn6a" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "rgb(107, 107, 107)", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                      <p dir="auto" className="cv-text" style={{ "--cv-font-size": "14px", "--cv-letter-spacing": "-0.01em", "--cv-text-color": "var(--extracted-r6o4lv, rgb(107, 107, 107))", "--cv-text-transform": "uppercase" }}>
                         {"For creator teams"}
                       </p>
                     </div>
@@ -2811,7 +2811,7 @@ export default function UseCases() {
                       </div>
                     </div>
                     <div className="cv-11u79qd-container">
-                      <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
+                      <div className="cv-OlWmV cv-147jppj cv-v-wq7qfu" data-border="true" data-highlight="true" aria-hidden="true" style={{ "--border-bottom-width": "0px", "--border-color": "var(--token-98add4f9-5140-43c9-a5d6-d7d07e477a2d, rgb(237, 237, 237))", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", height: "100%", width: "100%", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>
                         <div className="cv-Bu3it cv-1hyfg3m" style={{ "--enlj2d": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", height: "100%", width: "100%", transform: "rotate(180deg)" }} />
                         <div className="cv-1p0fmlf">
                           <div data-cv-component-type="SVG" className="cv-yvraqe" aria-hidden="true" style={{ imageRendering: "pixelated", flexShrink: "0" }}>
