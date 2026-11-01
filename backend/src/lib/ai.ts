@@ -138,7 +138,18 @@ async function groq(messages: GroqMessage[], opts: { temperature?: number; json?
 
 function unavailable(errors: ProviderError[]): never {
   for (const e of errors) logger.warn("ai provider failed", { provider: e.provider, status: e.status, error: e.message });
-  throw new AiUnavailableError("The AI service didn't answer. Try again in a minute.", "AI_UNAVAILABLE");
+  throw new AiUnavailableError(...unavailableReason(errors));
+}
+
+// Says why, so whoever runs the server knows what to fix: a rejected key, a
+// used-up quota and a wrong model name each need something different.
+function unavailableReason(errors: ProviderError[]): [string, string] {
+  const names = [...new Set(errors.map((e) => (e.provider === "gemini" ? "GEMINI_API_KEY" : "GROQ_API_KEY")))].join(" / ");
+  const badKey = (e: ProviderError) => e.status === 401 || e.status === 403 || (e.status === 400 && /api[ _-]?key/i.test(e.message));
+  if (errors.every(badKey)) return [`The AI key on the server was rejected. Check ${names} in the API's environment settings.`, "AI_KEY_REJECTED"];
+  if (errors.some((e) => e.status === 429)) return ["The AI service's usage limit is used up for now. Try again in a minute.", "AI_RATE_LIMITED"];
+  if (errors.every((e) => e.status === 404)) return ["The AI model set on the server wasn't found. Check GEMINI_MODEL / GROQ_MODEL, or remove them to use the defaults.", "AI_MODEL_NOT_FOUND"];
+  return ["The AI service didn't answer. Try again in a minute.", "AI_UNAVAILABLE"];
 }
 
 // Plain text (or JSON text with `json`), with the Gemini → Groq fallback.
