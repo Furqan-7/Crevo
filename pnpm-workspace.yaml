@@ -1,5 +1,8 @@
 packages:
   - 'frontend'
+  - 'db'
 onlyBuiltDependencies:
+  - '@prisma/engines'
+  - prisma
   - sharp
   - unrs-resolver

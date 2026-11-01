@@ -9,11 +9,19 @@ deals, content, calendar and analytics.
   `/terms-of-service` and a 404 page for unknown URLs.
 - Auth with Supabase: sign up, sign in, Google sign-in, forgot and reset
   password, email confirmation and sign out (`/auth/*`).
+- Database: Prisma schema and migrations for Neon PostgreSQL (`db/`).
 
 ## Project structure
 
-Next.js App Router with file-based routing: each folder under `frontend/app/`
-is a URL.
+A pnpm monorepo:
+
+| Folder | What it is |
+|---|---|
+| `frontend/` | Next.js app: marketing site and auth pages |
+| `db/` | Prisma 7 schema, migrations and the shared Prisma Client |
+
+The frontend uses Next.js App Router with file-based routing: each folder
+under `frontend/app/` is a URL.
 
 ```
 frontend/
@@ -55,6 +63,22 @@ pnpm dev        # http://localhost:3000
 
 Without the Supabase values the site still runs; the auth pages say sign-in
 isn't set up yet.
+
+## Database setup (Neon)
+
+1. Sign up at [neon.tech](https://neon.tech) → **New project** (Postgres 16 or
+   newer, the region nearest your users).
+2. On the project dashboard click **Connect** and copy two connection strings:
+   - with **Connection pooling** on → `DATABASE_URL` (its host contains `-pooler`);
+   - with it off → `DIRECT_URL`.
+3. Put both in `db/.env` (copy `db/.env.example`), then create the tables:
+
+```bash
+pnpm db:migrate     # applies the migrations to Neon
+pnpm db:studio      # optional: browse the data
+```
+
+The migrations turn on `pgvector` themselves (Neon has it built in).
 
 ## Supabase setup (auth)
 
