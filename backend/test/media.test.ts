@@ -6,7 +6,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { after, before, describe, it } from "node:test";
 import { uploadGeminiFile } from "../src/lib/ai";
-import { cutClip, probe, qualityLabel } from "../src/lib/ffmpeg";
+import { cameraPath, focusExpression, probe, qualityLabel, renderShort } from "../src/lib/ffmpeg";
 
 // ffmpeg on a real (generated) video, and the Gemini Files API upload.
 
@@ -27,10 +27,23 @@ describe("media", () => {
     assert.equal(qualityLabel(meta.width, meta.height), "240p");
   });
 
-  it("cuts an exact clip", async () => {
-    const out = join(dir, "clip.mp4");
-    await cutClip(source, 1, 4, out);
-    assert.equal((await probe(out)).durationSec, 3);
+  it("renders an exact vertical 9:16 short that follows the subject, with progress", async () => {
+    const out = join(dir, "short.mp4");
+    const seen: number[] = [];
+    await renderShort({ input: source, startSec: 1, endSec: 4, width: 320, height: 240, focus: [{ sec: 1, x: 0.2 }, { sec: 3, x: 0.8 }], output: out, onProgress: (f) => seen.push(f) });
+    const made = await probe(out);
+    assert.equal(made.durationSec, 3);
+    assert.deepEqual([made.width, made.height], [1080, 1920]);
+    assert.equal(seen.at(-1), 1, "reports it finished");
+  });
+
+  it("smooths the camera path and eases between points", () => {
+    // Clip time, jitter under 3% held still, a point every 3/4 s at most.
+    const path = cameraPath([{ sec: 10, x: 0.3 }, { sec: 10.2, x: 0.9 }, { sec: 12, x: 0.31 }, { sec: 14, x: 0.7 }], 10, 6);
+    assert.equal(path[0]!.t, 0);
+    assert.ok(path.every((p, i) => i === 0 || p.t - path[i - 1]!.t >= 0.75));
+    assert.equal(cameraPath(null, 0, 5).length, 1, "no focus: hold the middle");
+    assert.match(focusExpression([{ t: 0, x: 0.2 }, { t: 2, x: 0.8 }]), /3-2\*/, "smoothstep easing");
   });
 
   it("uploads a file to Gemini with the resumable protocol", async () => {

@@ -141,6 +141,9 @@ export const api = {
   video: (id: string) => get<VideoDto>(`/api/videos/${id}`),
   createVideoUpload: (file: { fileName: string; size: number; mimeType: string }) => send<VideoUploadDto>("POST", "/api/videos/uploads", file),
   processVideo: (id: string) => send<VideoDto>("POST", `/api/videos/${id}/process`),
+  // A short-lived link to a clip's vertical short (to watch, or to download).
+  clipShort: (id: string, download = false) => get<{ url: string }>(`/api/clips/${id}/short${download ? "?download=1" : ""}`),
+  renderClip: (id: string) => send<ClipDto>("POST", `/api/clips/${id}/render`),
   rewriteCaption: (id: string, platform: PublishPlatform) => send<ClipDto>("POST", `/api/clips/${id}/captions/${platform}/rewrite`),
   postDownload: (id: string) => get<{ url: string }>(`/api/posts/${id}/download`),
   updateClip: (id: string, patch: { startSec?: number; endSec?: number; skipped?: boolean; hashtags?: string[] }) => send<ClipDto>("PATCH", `/api/clips/${id}`, patch),

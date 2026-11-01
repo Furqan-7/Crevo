@@ -42,6 +42,17 @@ export async function downloadClip(req: Request, res: Response) {
   sendSuccess(res, { url: await clipDownloadUrl(res.locals.userId, req.params.id as string) }, "Download ready");
 }
 
+// The clip's vertical short: a link to watch it, or to download it (?download=1).
+export async function clipShort(req: Request, res: Response) {
+  sendSuccess(res, { url: await videos.shortUrl(res.locals.userId, req.params.id as string, req.query.download === "1") }, "Short ready");
+}
+
+// Renders the clip's vertical short again (after a failure).
+export async function renderClipShort(req: Request, res: Response) {
+  await videos.queueRender(res.locals.userId, req.params.id as string);
+  sendSuccess(res, await publishService.getClip(res.locals.userId, req.params.id as string), "Rendering the short", 202);
+}
+
 export async function scheduleClip(req: Request, res: Response) {
   sendSuccess(res, await publishService.scheduleClip(res.locals.userId, req.params.id as string, req.body as ScheduleClipInput), "Clip scheduled", 201);
 }

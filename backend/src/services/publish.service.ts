@@ -8,6 +8,7 @@ import type { ClipDto, PostDto, PublishPlatform, VideoDto } from "../types/api";
 import { badRequest, notFound } from "../utils/AppError";
 import { fromIsoDate } from "../utils/dates";
 import { clipInclude, toClipDto, toPostDto, toVideoDto, videoInclude } from "./mappers";
+import { queueRender } from "./videos.service";
 
 // Shortest clip worth posting, in seconds.
 const MIN_CLIP_SEC = 5;
@@ -22,9 +23,14 @@ export async function listVideos(userId: string, page: number, limit: number) {
 }
 
 async function ownedClip(userId: string, id: string) {
-  const clip = await prisma.clip.findFirst({ where: { id, video: { profileId: userId } }, include: { ...clipInclude, video: { select: { lengthSec: true } } } });
+  const clip = await prisma.clip.findFirst({ where: { id, video: { profileId: userId } }, include: { ...clipInclude, video: { select: { lengthSec: true, storagePath: true } } } });
   if (!clip) throw notFound("Clip");
   return clip;
+}
+
+export async function getClip(userId: string, id: string): Promise<ClipDto> {
+  await ownedClip(userId, id);
+  return toClipDto(await prisma.clip.findUniqueOrThrow({ where: { id }, include: clipInclude }));
 }
 
 export async function updateClip(userId: string, id: string, input: UpdateClipInput): Promise<ClipDto> {
@@ -34,12 +40,13 @@ export async function updateClip(userId: string, id: string, input: UpdateClipIn
   if (endSec - startSec < MIN_CLIP_SEC) throw badRequest(`A clip must be at least ${MIN_CLIP_SEC} seconds long`, "CLIP_TOO_SHORT");
   if (endSec > clip.video.lengthSec) throw badRequest("A clip can't run past the end of the video", "CLIP_OUT_OF_RANGE");
 
-  const updated = await prisma.clip.update({
+  await prisma.clip.update({
     where: { id: clip.id },
     data: { startSec, endSec, skipped: input.skipped, hashtags: input.hashtags ? [...new Set(input.hashtags)] : undefined },
-    include: clipInclude,
   });
-  return toClipDto(updated);
+  // A trim makes the stored vertical short out of date: render it again.
+  if ((startSec !== clip.startSec || endSec !== clip.endSec) && clip.video.storagePath) await queueRender(userId, clip.id);
+  return toClipDto(await prisma.clip.findUniqueOrThrow({ where: { id: clip.id }, include: clipInclude }));
 }
 
 export async function updateCaption(userId: string, id: string, platform: PublishPlatform, input: UpdateCaptionInput): Promise<ClipDto> {

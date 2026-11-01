@@ -1,14 +1,15 @@
-import { mkdtemp, readFile, rm, stat } from "fs/promises";
+import { mkdtemp, readFile, rm, stat, writeFile } from "fs/promises";
 import { tmpdir } from "os";
 import { join } from "path";
 import { prisma } from "db";
-import { cutClip } from "../lib/ffmpeg";
 import { accessToken, hasScopes } from "../lib/google";
-import { signedDownload, uploadFile } from "../lib/storage";
+import { signedDownload } from "../lib/storage";
 import { notFound } from "../utils/AppError";
+import { renderClip } from "./videos.service";
 
-// Posting a scheduled clip when its time comes. The clip is cut from the
-// uploaded video with ffmpeg and kept in Storage. YouTube Shorts upload
+// Posting a scheduled clip when its time comes. It posts the clip's
+// vertical 9:16 short (rendered after upload, or now if the clip was
+// trimmed since), kept in Storage. YouTube Shorts upload
 // through the YouTube API when YouTube is connected. Instagram and TikTok
 // only allow posting through apps they have approved, so for those the
 // post is marked "ready to post" and the creator gets an alert with the
@@ -69,11 +70,14 @@ export async function publishPost(postId: string) {
 
   const dir = await mkdtemp(join(tmpdir(), "crevo-"));
   try {
-    const out = join(dir, "clip.mp4");
-    await cutClip(await signedDownload(video.storagePath, 3600), clip.startSec, clip.endSec, out);
-    const clipPath = `${userId}/clips/${post.id}.mp4`;
-    await uploadFile(clipPath, new Uint8Array(await readFile(out)), "video/mp4");
+    const current = clip.renderStatus === "ready" && clip.renderPath && clip.renderedStartSec === clip.startSec && clip.renderedEndSec === clip.endSec;
+    const clipPath = current ? clip.renderPath! : await renderClip(userId, clip.id);
+    if (!clipPath) throw new Error("the short couldn't be made");
     await prisma.scheduledPost.update({ where: { id: post.id }, data: { clipPath } });
+    const out = join(dir, "short.mp4");
+    const file = await fetch(await signedDownload(clipPath, 3600));
+    if (!file.ok) throw new Error(`couldn't read the short (${file.status})`);
+    await writeFile(out, new Uint8Array(await file.arrayBuffer()));
 
     const youtube = await prisma.connectedAccount.findUnique({ where: { profileId_provider: { profileId: userId, provider: "youtube" } } });
     if (post.platform === "short" && youtube?.status === "connected" && (await hasScopes(userId, "youtube"))) {

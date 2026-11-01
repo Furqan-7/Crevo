@@ -412,7 +412,14 @@ export async function embed(texts: string[], task: "RETRIEVAL_DOCUMENT" | "RETRI
 
 // Uploads a file to the Gemini Files API (for video, which is too large to
 // send inline) and waits until Gemini has processed it.
-export async function uploadGeminiFile(stream: ReadableStream<Uint8Array> | Uint8Array, size: number, mimeType: string, displayName: string): Promise<{ uri: string; mimeType: string; name: string }> {
+// onProgress gets 0-1 as the bytes go out, then while Gemini processes it.
+export async function uploadGeminiFile(
+  stream: ReadableStream<Uint8Array> | Uint8Array,
+  size: number,
+  mimeType: string,
+  displayName: string,
+  onProgress?: (fraction: number) => void,
+): Promise<{ uri: string; mimeType: string; name: string }> {
   if (!env.GEMINI_API_KEY) throw new AiUnavailableError("Processing video needs GEMINI_API_KEY on this server.");
   const start = await fetch(`${GEMINI}/upload/v1beta/files`, {
     method: "POST",
@@ -429,10 +436,24 @@ export async function uploadGeminiFile(stream: ReadableStream<Uint8Array> | Uint
   const uploadUrl = start.headers.get("x-goog-upload-url");
   if (!start.ok || !uploadUrl) throw new Error(`gemini file upload start failed: ${start.status}`);
 
+  // Count the bytes as they stream out, for the progress bar.
+  let sent = 0;
+  const body =
+    stream instanceof Uint8Array || !onProgress || size <= 0
+      ? stream
+      : stream.pipeThrough(
+          new TransformStream<Uint8Array, Uint8Array>({
+            transform(chunk, controller) {
+              sent += chunk.byteLength;
+              onProgress(Math.min(0.9, (sent / size) * 0.9));
+              controller.enqueue(chunk);
+            },
+          }),
+        );
   const upload = await fetch(uploadUrl, {
     method: "POST",
     headers: { "Content-Length": String(size), "X-Goog-Upload-Offset": "0", "X-Goog-Upload-Command": "upload, finalize" },
-    body: stream as RequestInit["body"],
+    body: body as RequestInit["body"],
     // Node needs this to send a stream as the body.
     ...({ duplex: "half" } as object),
   });
@@ -440,11 +461,13 @@ export async function uploadGeminiFile(stream: ReadableStream<Uint8Array> | Uint
   let file = ((await upload.json()) as { file: { name: string; uri: string; mimeType: string; state: string } }).file;
 
   for (let i = 0; file.state === "PROCESSING" && i < 120; i++) {
+    onProgress?.(Math.min(0.99, 0.9 + i * 0.01));
     await new Promise((r) => setTimeout(r, 5_000));
     const res = await fetch(`${GEMINI}/v1beta/${file.name}`, { headers: { "x-goog-api-key": env.GEMINI_API_KEY } });
     if (!res.ok) throw new Error(`gemini file status failed: ${res.status}`);
     file = (await res.json()) as typeof file;
   }
   if (file.state !== "ACTIVE") throw new Error(`gemini file ended in state ${file.state}`);
+  onProgress?.(1);
   return { uri: file.uri, mimeType: file.mimeType, name: file.name };
 }

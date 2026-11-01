@@ -671,3 +671,146 @@
 .postFailed {
   color: var(--red);
 }
+
+/* Upload and processing progress */
+.progressHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+.percent {
+  font: 600 28px var(--font-mono), monospace;
+  letter-spacing: -0.02em;
+}
+.stages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 2px 0 0 !important;
+  padding: 0 !important;
+  list-style: none;
+  font-size: 12.5px;
+  color: var(--faint, #9a9a9a);
+}
+.stages li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.stages li span {
+  width: 10px;
+  text-align: center;
+}
+.stageDone {
+  color: var(--muted);
+}
+.stageNow {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* The clip's vertical short */
+.shortWrap {
+  display: grid;
+  grid-template-columns: minmax(150px, 210px) 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.shortFrame {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  overflow: hidden;
+  background: radial-gradient(120% 120% at 80% 100%, #8193a8 0%, #4a5462 45%, #2b2f36 100%);
+}
+.shortVideo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+}
+.shortState {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  color: #fff;
+  text-align: center;
+}
+.shortState strong {
+  font-size: 13.5px;
+  font-weight: 500;
+}
+.shortState small {
+  font-size: 12px;
+  opacity: 0.8;
+}
+.shortState .bar {
+  background: rgba(255, 255, 255, 0.2);
+}
+.shortState .bar i {
+  background: #fff;
+}
+.shortPercent {
+  font: 600 26px var(--font-mono), monospace;
+}
+.shortInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.shortInfo strong {
+  font-size: 14.5px;
+  font-weight: 500;
+}
+.shortInfo small {
+  font: 12.5px var(--font-mono), monospace;
+  color: var(--muted);
+}
+.subtitleText {
+  margin: 4px 0 8px;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.shortInfo button {
+  align-self: flex-start;
+}
+@media (max-width: 560px) {
+  .shortWrap {
+    grid-template-columns: 1fr;
+  }
+  .shortFrame {
+    max-width: 260px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* Editable post times */
+.timeInputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.timeInputs input {
+  height: 30px;
+  padding: 0 8px;
+  border: 1px solid var(--line, #e6e6e6);
+  border-radius: 6px;
+  background: #fff;
+  font: 12.5px var(--font-mono), monospace;
+  color: var(--ink);
+  min-width: 0;
+}
+.timeWarn {
+  margin-top: 8px !important;
+  font-size: 13px;
+  color: var(--red, #c0392b);
+}

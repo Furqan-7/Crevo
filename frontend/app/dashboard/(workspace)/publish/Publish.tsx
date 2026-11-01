@@ -10,7 +10,7 @@ import { ReconnectBanner } from "../../_shell/states";
 import { PATTERNS, Pixels, RefreshIcon, YELLOW, cx } from "../../_shell/ui";
 import { EmptyState } from "../../_shell/states";
 import { ApiError, api } from "../../_shell/api";
-import { MINUTES_SAVED_PER_CLIP, postSlots, publishPlatforms, type Clip, type PublishPlatform, type Video } from "../../data";
+import { MINUTES_SAVED_PER_CLIP, TODAY_ISO, addDays, clock, dayLabel, localParts, postSlots, publishPlatforms, type Clip, type PostSlot, type PublishPlatform, type Video } from "../../data";
 
 const STEPS = ["Upload", "Transcript", "Clips", "Captions", "Schedule"];
 // Longest clip each platform accepts, in seconds.
@@ -44,12 +44,54 @@ function putWithProgress(url: string, file: File, onProgress: (percent: number) 
   });
 }
 
-type RealUpload = { name: string; progress: number; phase: "uploading" | "transcribing"; videoId?: string } | null;
+// An upload of the creator's own video. progress: the file upload's %
+// while uploading, then the server's processing % (and stage).
+type RealUpload = { name: string; progress: number; phase: "uploading" | "transcribing"; stage?: string; videoId?: string } | null;
+
+// One bar for the whole job: the upload is the first 15%, processing
+// (transcript, clips, captions, vertical shorts) the rest.
+const overall = (u: NonNullable<RealUpload>) => Math.round(u.phase === "uploading" ? u.progress * 0.15 : 15 + u.progress * 0.85);
+
+function UploadProgress({ upload }: { upload: NonNullable<RealUpload> }) {
+  const percent = overall(upload);
+  return (
+    <div className={styles.progress} role="status" aria-live="polite">
+      <div className={styles.progressHead}>
+        <strong>{upload.phase === "uploading" ? `Uploading ${upload.name}` : upload.stage || "Processing your video"}</strong>
+        <span className={styles.percent}>{percent}%</span>
+      </div>
+      <span className={styles.bar} role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={percent} aria-label="Progress">
+        <i style={{ width: `${Math.max(2, percent)}%` }} />
+      </span>
+      <ol className={styles.stages}>
+        {PROGRESS_STAGES.map((st) => {
+          const state = percent >= st.until ? "done" : percent >= st.from ? "now" : "next";
+          return (
+            <li key={st.label} className={cx(state === "done" && styles.stageDone, state === "now" && styles.stageNow)}>
+              <span aria-hidden="true">{state === "done" ? "✓" : state === "now" ? "•" : ""}</span>
+              {st.label}
+            </li>
+          );
+        })}
+      </ol>
+      <small>{upload.phase === "uploading" ? "Keep this tab open until the upload finishes." : "This takes a few minutes. You can leave this page; it keeps going."}</small>
+    </div>
+  );
+}
+
+// The stages, by where they sit on the overall bar (see overall()).
+const PROGRESS_STAGES = [
+  { label: "Upload", from: 0, until: 15 },
+  { label: "Send to the AI", from: 15, until: 40 },
+  { label: "Transcript and best moments", from: 40, until: 71 },
+  { label: "Captions", from: 71, until: 74 },
+  { label: "Vertical shorts", from: 74, until: 100 },
+];
 
 function useVideoUpload(onReady: () => void) {
   const { notify, integrations, pendingVideo, refreshVideo } = useShell();
   const [realUpload, setRealUpload] = useState<RealUpload>(
-    pendingVideo?.status === "processing" ? { name: pendingVideo.fileName, progress: 100, phase: "transcribing", videoId: pendingVideo.id } : null,
+    pendingVideo?.status === "processing" ? { name: pendingVideo.fileName, progress: pendingVideo.progress, stage: pendingVideo.stage, phase: "transcribing", videoId: pendingVideo.id } : null,
   );
   const ready = useRef(onReady);
   ready.current = onReady;
@@ -59,17 +101,22 @@ function useVideoUpload(onReady: () => void) {
     if (!id) return;
     const timer = setInterval(async () => {
       const v = await api.video(id).catch(() => null);
-      if (!v || v.status === "processing") return;
+      if (!v) return;
+      if (v.status === "processing" || v.status === "uploading") {
+        setRealUpload((u) => (u && u.videoId === id ? { ...u, progress: v.progress, stage: v.stage } : u));
+        return;
+      }
       clearInterval(timer);
       setRealUpload(null);
       if (v.status === "ready") {
         await refreshVideo();
         ready.current();
-        notify(`${v.fileName}: transcript ready and ${v.clips.length} clips found`);
+        const made = v.clips.filter((c) => c.render.status === "ready").length;
+        notify(`${v.fileName}: ${v.clips.length} clips found${made ? `, ${made} vertical ${made === 1 ? "short" : "shorts"} ready` : ""}`);
       } else {
         notify(`${v.fileName} couldn't be processed${v.error ? `: ${v.error}` : ""}`);
       }
-    }, 5000);
+    }, 2000);
     return () => clearInterval(timer);
   }, [realUpload?.videoId, refreshVideo, notify]);
 
@@ -82,14 +129,67 @@ function useVideoUpload(onReady: () => void) {
     try {
       const target = await api.createVideoUpload({ fileName: file.name, size: file.size, mimeType: file.type || "video/mp4" });
       await putWithProgress(target.signedUrl, file, (p) => setRealUpload({ name: file.name, progress: p, phase: "uploading" }));
-      await api.processVideo(target.videoId);
-      setRealUpload({ name: file.name, progress: 100, phase: "transcribing", videoId: target.videoId });
+      const started = await api.processVideo(target.videoId);
+      setRealUpload({ name: file.name, progress: started.progress, stage: started.stage, phase: "transcribing", videoId: target.videoId });
     } catch (err) {
       setRealUpload(null);
       notify(err instanceof ApiError ? err.message : "The upload didn't finish. Try again.");
     }
   }
   return { realUpload, uploadFile };
+}
+
+// The clip's vertical 9:16 short: a player once it's rendered, progress
+// while it renders, and a retry if it failed.
+function ShortPreview({ clip, number, notify, onRetry }: { clip: Clip; number: number; notify: (text: string) => void; onRetry: () => void }) {
+  const [url, setUrl] = useState<string | null>(null);
+  const ready = clip.render.status === "ready" && !clip.render.stale;
+  useEffect(() => {
+    setUrl(null);
+    if (!ready) return;
+    let live = true;
+    api.clipShort(clip.id).then((r) => live && setUrl(r.url)).catch(() => undefined);
+    return () => {
+      live = false;
+    };
+  }, [clip.id, ready, clip.startSec, clip.endSec]);
+
+  async function download() {
+    try {
+      window.location.href = (await api.clipShort(clip.id, true)).url;
+    } catch (err) {
+      notify(err instanceof ApiError ? err.message : "Couldn't download the short. Try again.");
+    }
+  }
+
+  return (
+    <div className={styles.shortWrap}>
+      <div className={styles.shortFrame}>
+        {ready && url ? (
+          <video key={url} className={styles.shortVideo} src={url} controls playsInline preload="metadata" aria-label={`Vertical short for clip ${number}`} />
+        ) : clip.render.status === "failed" ? (
+          <div className={styles.shortState}>
+            <strong>This short didn&apos;t render</strong>
+            <small>{clip.render.error ?? "Something went wrong."}</small>
+            <button type="button" className={base.miniDark} onClick={onRetry}>Try again</button>
+          </div>
+        ) : (
+          <div className={styles.shortState} role="status">
+            <strong>{clip.render.stale ? "Updating after your trim" : "Making the vertical short"}</strong>
+            <span className={styles.shortPercent}>{ready ? "…" : `${clip.render.progress}%`}</span>
+            <span className={styles.bar}><i style={{ width: `${Math.max(3, ready ? 100 : clip.render.progress)}%` }} /></span>
+            <small>9:16, following the speaker</small>
+          </div>
+        )}
+      </div>
+      <div className={styles.shortInfo}>
+        <strong>Clip {number} · vertical short</strong>
+        <small>{mmss(clip.startSec)} – {mmss(clip.endSec)} · {clip.endSec - clip.startSec}s · 1080×1920</small>
+        <span className={styles.subtitleText}>“{clip.quote}”</span>
+        <button type="button" className={base.btnLine} onClick={download} disabled={!ready}>Download short</button>
+      </div>
+    </div>
+  );
 }
 
 export default function Publish({ initialClip }: { initialClip?: string }) {
@@ -105,14 +205,20 @@ function FirstUpload() {
     <>
       <TopBar />
       <PageHead eyebrow="publish" title="Publish" lead="Upload a video and Crevo transcribes it, finds the clips worth posting and writes captions for every platform." />
-      <EmptyState
-        title={realUpload ? (realUpload.phase === "uploading" ? `Uploading ${realUpload.name} · ${realUpload.progress}%` : `Transcribing ${realUpload.name}…`) : "No video yet"}
-        color={YELLOW}
-        pattern={PATTERNS.publish}
-        action={!realUpload && <button type="button" className={base.btnDark} onClick={() => input.current?.click()}>Choose a video</button>}
-      >
-        {realUpload ? "You can leave this page; it keeps going." : "MP4, MOV or WebM, up to 2 GB."}
-      </EmptyState>
+      {realUpload ? (
+        <section className={cx(styles.card, styles.single)} aria-label="Upload progress">
+          <UploadProgress upload={realUpload} />
+        </section>
+      ) : (
+        <EmptyState
+          title="No video yet"
+          color={YELLOW}
+          pattern={PATTERNS.publish}
+          action={<button type="button" className={base.btnDark} onClick={() => input.current?.click()}>Choose a video</button>}
+        >
+          MP4, MOV or WebM, up to 2 GB. Crevo turns it into vertical shorts with captions.
+        </EmptyState>
+      )}
       <input ref={input} type="file" accept="video/*" hidden onChange={(e) => { const f = e.target.files?.[0]; if (f) uploadFile(f); e.target.value = ""; }} />
     </>
   );
@@ -153,17 +259,22 @@ function PostStatus({ clip, notify }: { clip: Clip; notify: (m: string) => void 
 
 function Editor({ video, initialClip }: { video: Video; initialClip?: string }) {
   const router = useRouter();
-  const { notify, scheduledClips: scheduled, scheduleClip, updateClip, updateCaption, rewriteCaption, integrations } = useShell();
+  const { notify, scheduledClips: scheduled, scheduleClip, updateClip, updateCaption, rewriteCaption, integrations, refreshVideo } = useShell();
   const { clips, transcript } = video;
   const TICKS = ["0:00", mmss(video.lengthSec / 4), mmss(video.lengthSec / 2), mmss((video.lengthSec * 3) / 4), video.length];
   const fileInput = useRef<HTMLInputElement>(null);
   const [step, setStep] = useState(3);
   const [reached, setReached] = useState(3);
   const [upload, setUpload] = useState<Upload>(null);
-  const { realUpload, uploadFile } = useVideoUpload(() => {
+  const { realUpload, uploadFile: startRealUpload } = useVideoUpload(() => {
     setStep(1);
     setReached(1);
   });
+  // The progress shows on the Upload step, so go there when one starts.
+  const uploadFile = (file: File) => {
+    setStep(0);
+    void startRealUpload(file);
+  };
   const [captionBusy, setCaptionBusy] = useState(false);
   const [fileName, setFileName] = useState(video.file);
   const [dragging, setDragging] = useState(false);
@@ -174,6 +285,30 @@ function Editor({ video, initialClip }: { video: Video; initialClip?: string }) 
   const [typed, setTyped] = useState<Partial<Record<CaptionKey, string>>>({});
   const [adding, setAdding] = useState(false);
   const [newTag, setNewTag] = useState("");
+  // Times the creator picked instead of the suggested ones, per clip.
+  const [picked, setPicked] = useState<Record<string, Partial<Record<PublishPlatform, { date: string; minutes: number }>>>>({});
+
+  // A clip's post times: what's saved once it's scheduled, otherwise the
+  // suggested best times with any the creator changed.
+  function slotsFor(c: Clip): PostSlot[] {
+    const n = clips.indexOf(c);
+    const now = localParts(new Date().toISOString());
+    return postSlots(Math.max(0, n)).map((suggested) => {
+      // A suggestion whose time has already passed today moves to tomorrow.
+      const passed = suggested.date < now.iso || (suggested.date === now.iso && suggested.minutes <= now.minutes);
+      const date = passed ? addDays(now.iso, 1) : suggested.date;
+      const slot = passed ? { ...suggested, date, when: `${dayLabel(date)} ${clock(suggested.minutes)}` } : suggested;
+      const saved = c.posts.find((p) => p.platform === slot.platform);
+      const chosen = saved ? localParts(saved.scheduledAt) : picked[c.id]?.[slot.platform] ? { iso: picked[c.id]![slot.platform]!.date, minutes: picked[c.id]![slot.platform]!.minutes } : null;
+      if (!chosen) return slot;
+      const custom = !saved && Boolean(picked[c.id]?.[slot.platform]);
+      return { ...slot, date: chosen.iso, minutes: chosen.minutes, when: `${dayLabel(chosen.iso)} ${clock(chosen.minutes)}`, why: custom ? "Picked by you" : slot.why };
+    });
+  }
+
+  function pickTime(c: Clip, platform: PublishPlatform, date: string, minutes: number) {
+    setPicked((all) => ({ ...all, [c.id]: { ...all[c.id], [platform]: { date, minutes } } }));
+  }
 
   // Steps the simulated upload, then transcription, then opens the Transcript.
   useEffect(() => {
@@ -206,13 +341,34 @@ function Editor({ video, initialClip }: { video: Video; initialClip?: string }) 
     return () => clearTimeout(t);
   }, [typed, updateCaption]);
 
+  // While any short renders (after upload or a trim), refresh to show progress.
+  const rendering = clips.some((c) => c.render.status === "rendering" || c.render.stale);
+  useEffect(() => {
+    if (!rendering) return;
+    const t = setInterval(() => void refreshVideo().catch(() => undefined), 3000);
+    return () => clearInterval(t);
+  }, [rendering, refreshVideo]);
+  const hasShorts = clips.some((c) => c.render.status !== "none");
+
+  async function retryShort(c: Clip) {
+    try {
+      await api.renderClip(c.id);
+      await refreshVideo();
+    } catch (err) {
+      notify(err instanceof ApiError ? err.message : "Couldn't start the short. Try again.");
+    }
+  }
+
   const span = (c: Clip) => ({ start: c.startSec, end: c.endSec });
   const trimmed = (c: Clip) => c.startSec !== c.suggestedStartSec || c.endSec !== c.suggestedEndSec;
   const skipped = new Set(clips.filter((c) => c.skipped).map((c) => c.id));
   const kept = clips.filter((c) => !c.skipped);
   const clip = clips.find((c) => c.id === clipId) ?? clips[0];
   const clipNumber = clips.indexOf(clip) + 1;
-  const slots = postSlots(clipNumber - 1);
+  const slots = slotsFor(clip);
+  // A post can't be scheduled in the past.
+  const nowMinutes = localParts(new Date().toISOString()).minutes;
+  const pastSlot = slots.find((t) => t.date < TODAY_ISO || (t.date === TODAY_ISO && t.minutes <= nowMinutes));
   const key: CaptionKey = `${clip.id}:${platform}`;
   const saved = clip.captions[platform];
   const options = saved.options;
@@ -283,14 +439,15 @@ function Editor({ video, initialClip }: { video: Video; initialClip?: string }) 
 
   function schedule(c: Clip = clip) {
     const n = clips.indexOf(c) + 1;
+    const times = slotsFor(c);
     // Save a caption still being typed first; writes go out in order.
     (Object.entries(typed) as [CaptionKey, string][]).forEach(([k, text]) => {
       const [id, p] = k.split(":") as [string, PublishPlatform];
       updateCaption(id, p, { text });
     });
     setTyped({});
-    scheduleClip(c.id, postSlots(n - 1).map((slot) => ({ platform: slot.platform, date: slot.date, minutes: slot.minutes, why: slot.why })));
-    notify(`Clip ${n} scheduled: ${postSlots(n - 1).map((t) => `${t.label} ${t.when}`).join(", ")}`);
+    scheduleClip(c.id, times.map((slot) => ({ platform: slot.platform, date: slot.date, minutes: slot.minutes, why: slot.why })));
+    notify(`Clip ${n} scheduled: ${times.map((t) => `${t.label} ${t.when}`).join(", ")}`);
     setReached((r) => Math.max(r, 4));
   }
 
@@ -304,10 +461,14 @@ function Editor({ video, initialClip }: { video: Video; initialClip?: string }) 
         <span className={cx(base.tag, base.mono)}>{video.length} · {video.quality}</span>
       </div>
 
-      <button type="button" className={styles.player} onClick={() => notify(`Playing clip ${clipNumber}: ${mmss(start)} – ${mmss(end)}`)} aria-label={`Play clip ${clipNumber}`}>
-        <span className={styles.play} aria-hidden="true" />
-        <span className={styles.subtitle}>“{clip.quote}”</span>
-      </button>
+      {hasShorts ? (
+        <ShortPreview clip={clip} number={clipNumber} notify={notify} onRetry={() => retryShort(clip)} />
+      ) : (
+        <button type="button" className={styles.player} onClick={() => notify(`The sample vlog has no video file. Upload your own video to get real vertical shorts.`)} aria-label={`Play clip ${clipNumber}`}>
+          <span className={styles.play} aria-hidden="true" />
+          <span className={styles.subtitle}>“{clip.quote}”</span>
+        </button>
+      )}
 
       <div className={styles.timeline}>
         <div className={styles.wave} aria-hidden="true">
@@ -349,6 +510,8 @@ function Editor({ video, initialClip }: { video: Video; initialClip?: string }) 
                   <strong>{c.title}</strong>
                   <small>{mmss(s.start)} – {mmss(s.end)} · {skipped.has(c.id) ? "skipped" : c.why}</small>
                 </span>
+                {c.render.status === "rendering" && <span className={base.tag}>short {c.render.progress}%</span>}
+                {c.render.status === "failed" && <span className={base.tag}>short failed</span>}
                 {scheduled.has(c.id) && <span className={base.tag}>scheduled</span>}
                 <span className={styles.hook}>hook {c.hook}</span>
               </button>
@@ -379,7 +542,7 @@ function Editor({ video, initialClip }: { video: Video; initialClip?: string }) 
       <PageHead
         eyebrow="publish"
         title="Create once, publish everywhere"
-        lead={`One 14-minute vlog became ${clips.length} clips with captions for every platform.`}
+        lead={`${fileName} (${video.length}) became ${clips.length} ${clips.length === 1 ? "clip" : "clips"} with captions for every platform.`}
         badge={`${MINUTES_SAVED_PER_CLIP} min saved per clip`}
       />
       <ReconnectBanner accounts={["youtube"]} />
@@ -398,11 +561,7 @@ function Editor({ video, initialClip }: { video: Video; initialClip?: string }) 
       {step === 0 && (
         <section className={cx(styles.card, styles.single)} aria-label="Upload">
           {realUpload ? (
-            <div className={styles.progress} role="status">
-              <strong>{realUpload.phase === "uploading" ? `Uploading ${realUpload.name}` : `Transcribing ${realUpload.name} and finding clips`}</strong>
-              <span className={styles.bar}><i style={{ width: `${realUpload.phase === "uploading" ? realUpload.progress : 100}%` }} /></span>
-              <small>{realUpload.phase === "uploading" ? `${realUpload.progress}% · keep this tab open until it reaches 100%` : "This takes a few minutes. You can leave this page; it keeps going."}</small>
-            </div>
+            <UploadProgress upload={realUpload} />
           ) : upload ? (
             <div className={styles.progress}>
               <strong>{upload.phase === "uploading" ? `Uploading ${upload.name}` : "Transcribing and finding clips"}</strong>
@@ -575,8 +734,8 @@ function Editor({ video, initialClip }: { video: Video; initialClip?: string }) 
                   </div>
 
                   <div className={styles.fieldHead}>
-                    <span>Best times to post</span>
-                    <span className={styles.counter}>from your last 30 days</span>
+                    <span>{isScheduled ? "Scheduled for" : "When to post"}</span>
+                    <span className={styles.counter}>{isScheduled ? "in your calendar" : "suggested from your last 30 days · change any time"}</span>
                   </div>
                   <div className={styles.times}>
                     {slots.map((t) => (
@@ -585,11 +744,33 @@ function Editor({ video, initialClip }: { video: Video; initialClip?: string }) 
                           <span className={styles.swatchSmall} style={{ background: publishPlatforms.find((p) => p.id === t.platform)!.swatch }} />
                           {t.label}
                         </strong>
-                        <span className={base.mono}>{t.when}</span>
+                        {isScheduled ? (
+                          <span className={base.mono}>{t.when}</span>
+                        ) : (
+                          <span className={styles.timeInputs}>
+                            <input
+                              type="date"
+                              value={t.date}
+                              min={TODAY_ISO}
+                              onChange={(e) => e.target.value && pickTime(clip, t.platform, e.target.value, t.minutes)}
+                              aria-label={`${t.label} date`}
+                            />
+                            <input
+                              type="time"
+                              value={`${String(Math.floor(t.minutes / 60)).padStart(2, "0")}:${String(t.minutes % 60).padStart(2, "0")}`}
+                              onChange={(e) => {
+                                const [h, m] = e.target.value.split(":").map(Number);
+                                if (Number.isFinite(h) && Number.isFinite(m)) pickTime(clip, t.platform, t.date, h! * 60 + m!);
+                              }}
+                              aria-label={`${t.label} time`}
+                            />
+                          </span>
+                        )}
                         <small>{t.why}</small>
                       </div>
                     ))}
                   </div>
+                  {pastSlot && !isScheduled && <p className={styles.timeWarn} role="alert">{pastSlot.label} is set to a time that has passed. Pick a later time.</p>}
 
                   <div className={styles.foot}>
                     <span className={styles.note}>{isScheduled ? "Scheduled. Every post is now in your calendar." : "Nothing posts until you approve."}</span>
@@ -601,7 +782,7 @@ function Editor({ video, initialClip }: { video: Video; initialClip?: string }) 
                     ) : (
                       <>
                         <button type="button" className={base.btnGhost} onClick={rewrite} disabled={captionBusy}><RefreshIcon /> {captionBusy ? "Writing…" : "Rewrite"}</button>
-                        <button type="button" className={base.btnDark} onClick={() => schedule()}>Approve and schedule {slots.length} posts</button>
+                        <button type="button" className={base.btnDark} onClick={() => schedule()} disabled={Boolean(pastSlot)}>Approve and schedule {slots.length} posts</button>
                       </>
                     )}
                   </div>
@@ -627,7 +808,7 @@ function Editor({ video, initialClip }: { video: Video; initialClip?: string }) 
                   <span className={styles.clipNum} style={{ background: c.color }}>{n}</span>
                   <span className={styles.clipText}>
                     <strong>{c.short}</strong>
-                    <small>{postSlots(n - 1).map((s) => `${s.label} ${s.when}`).join(" · ")}</small>
+                    <small>{slotsFor(c).map((s) => `${s.label} ${s.when}`).join(" · ")}</small>
                   </span>
                   {done ? (
                     <PostStatus clip={c} notify={notify} />

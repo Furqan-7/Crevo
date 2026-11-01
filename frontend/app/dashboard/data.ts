@@ -88,6 +88,8 @@ export interface Clip {
   hashtags: string[];
   // Scheduled posts, one per platform, and how each went.
   posts: { id: string; platform: PublishPlatform; scheduledAt: string; status: "scheduled" | "publishing" | "published" | "needs_manual" | "failed"; externalUrl: string | null; error: string | null; hasClipFile: boolean }[];
+  // The vertical 9:16 short made from this clip (none for the sample video).
+  render: { status: "none" | "rendering" | "ready" | "failed"; progress: number; error: string | null; stale: boolean };
 }
 
 export interface Video {

@@ -8,7 +8,7 @@ import { runSync } from "../services/integrations/integrations.service";
 import { replyToComment, syncYouTube } from "../services/integrations/youtube.service";
 import { publishPost } from "../services/publishing.service";
 import { embedPending } from "../services/rag.service";
-import { processVideo } from "../services/videos.service";
+import { processVideo, renderClip } from "../services/videos.service";
 import type { JobHandler } from "./queue";
 
 // What each job type does. Every handler is safe to run twice.
@@ -37,6 +37,9 @@ export const handlers: Record<string, JobHandler> = {
   "youtube.reply": (job) => replyToComment(owner(job), field(job, "messageId")),
   "calendar.delete": (job) => deleteGoogleEvent(owner(job), field(job, "googleEventId")),
   "video.process": (job) => processVideo(owner(job), field(job, "videoId")),
+  "clip.render": async (job) => {
+    await renderClip(owner(job), field(job, "clipId"));
+  },
   "post.publish": (job) => publishPost(field(job, "postId")),
   "alerts.generate": (job) => generateAlerts(owner(job)),
   "briefing.send": (job) => sendBriefing(owner(job)),

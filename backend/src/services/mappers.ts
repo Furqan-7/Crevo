@@ -172,6 +172,12 @@ export function toClipDto(c: ClipRow): ClipDto {
     hashtags: c.hashtags,
     captions,
     posts: c.posts.map(toPostDto),
+    render: {
+      status: (["none", "rendering", "ready", "failed"].includes(c.renderStatus) ? c.renderStatus : "none") as ClipDto["render"]["status"],
+      progress: c.renderProgress,
+      error: c.renderError,
+      stale: c.renderStatus === "ready" && (c.renderedStartSec !== c.startSec || c.renderedEndSec !== c.endSec),
+    },
   };
 }
 
@@ -186,6 +192,8 @@ export function toVideoDto(v: Prisma.VideoGetPayload<{ include: typeof videoIncl
     fileName: v.fileName,
     status: v.status,
     error: v.error,
+    progress: v.status === "ready" ? 100 : v.progress,
+    stage: v.stage,
     lengthSec: v.lengthSec,
     quality: v.quality,
     createdAt: v.createdAt.toISOString(),

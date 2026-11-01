@@ -259,6 +259,9 @@ export interface ClipDto {
   hashtags: string[];
   captions: Record<PublishPlatform, CaptionDto>;
   posts: PostDto[];
+  // The vertical (9:16) short made from this clip. stale: the clip was
+  // trimmed since, so a new one is on its way.
+  render: { status: "none" | "rendering" | "ready" | "failed"; progress: number; error: string | null; stale: boolean };
 }
 
 export interface VideoDto {
@@ -266,6 +269,9 @@ export interface VideoDto {
   fileName: string;
   status: "uploading" | "processing" | "ready" | "failed";
   error: string | null;
+  // While processing: 0-100 and what's happening now.
+  progress: number;
+  stage: string;
   lengthSec: number;
   quality: string;
   createdAt: string;

@@ -439,7 +439,17 @@ export default function AppShell({ children }: { children: ReactNode }) {
     },
     video: ws.video,
     updateClip: (id, patch) => {
-      patchWs((w) => ({ video: w.video && { ...w.video, clips: w.video.clips.map((c) => (c.id === id ? { ...c, ...patch } : c)) } }));
+      patchWs((w) => ({
+        video: w.video && {
+          ...w.video,
+          clips: w.video.clips.map((c) => {
+            if (c.id !== id) return c;
+            // A trim re-renders the vertical short: show that straight away.
+            const trimmed = (patch.startSec !== undefined && patch.startSec !== c.startSec) || (patch.endSec !== undefined && patch.endSec !== c.endSec);
+            return { ...c, ...patch, ...(trimmed && c.render.status !== "none" ? { render: { ...c.render, status: "rendering" as const, progress: 0, stale: false } } : {}) };
+          }),
+        },
+      }));
       save(() => api.updateClip(id, patch), ["video"]);
     },
     updateCaption: (id, platform, patch) => {

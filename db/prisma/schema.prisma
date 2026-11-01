@@ -305,6 +305,9 @@ model Video {
   storagePath String?
   mimeType    String?
   error       String?
+  // Processing progress shown in Publish: 0-100 and what's happening now.
+  progress    Int         @default(0)
+  stage       String      @default("")
   createdAt   DateTime    @default(now())
 
   profile    Profile          @relation(fields: [profileId], references: [id], onDelete: Cascade)
@@ -342,6 +345,17 @@ model Clip {
   color             String
   skipped           Boolean         @default(false)
   hashtags          String[]
+  // Where the main subject is across the frame over time ([{ sec, x }], x
+  // from 0 = left edge to 1 = right edge), so the vertical short follows it.
+  focus             Json?
+  // The rendered vertical (9:16) short: none, rendering, ready or failed.
+  renderStatus      String          @default("none")
+  renderProgress    Int             @default(0)
+  renderPath        String?
+  renderError       String?
+  // The span the stored short was rendered from (re-rendered after a trim).
+  renderedStartSec  Int?
+  renderedEndSec    Int?
   video             Video           @relation(fields: [videoId], references: [id], onDelete: Cascade)
   captions          ClipCaption[]
   posts             ScheduledPost[]

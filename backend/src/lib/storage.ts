@@ -1,3 +1,5 @@
+import { createWriteStream } from "fs";
+import { once } from "events";
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 import { env, features } from "../config/env";
 import { AppError } from "../utils/AppError";
@@ -43,6 +45,29 @@ export async function signedDownload(path: string, expiresInSec = 3600, download
   const { data, error } = await bucket().createSignedUrl(path, expiresInSec, download ? { download } : undefined);
   if (error || !data) throw new Error(`signed download: ${error?.message}`);
   return data.signedUrl;
+}
+
+// Downloads a stored file to a local path (ffmpeg then reads it from disk:
+// the bundled static ffmpeg can't look up host names, so it never gets URLs).
+export async function downloadToFile(path: string, dest: string, onProgress?: (fraction: number) => void) {
+  const response = await fetch(await signedDownload(path, 3600));
+  if (!response.ok || !response.body) throw new Error(`couldn't read the upload (${response.status})`);
+  const total = Number(response.headers.get("content-length") ?? 0);
+  let done = 0;
+  const out = createWriteStream(dest);
+  const reader = response.body.getReader();
+  try {
+    for (;;) {
+      const { done: finished, value } = await reader.read();
+      if (finished) break;
+      done += value.byteLength;
+      if (!out.write(value)) await once(out, "drain");
+      if (total > 0) onProgress?.(Math.min(1, done / total));
+    }
+  } finally {
+    await new Promise<void>((resolve, reject) => out.end((err?: Error | null) => (err ? reject(err) : resolve())));
+  }
+  return done;
 }
 
 export async function fileInfo(path: string): Promise<{ size: number; mimeType: string } | null> {

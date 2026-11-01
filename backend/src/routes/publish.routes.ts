@@ -17,6 +17,8 @@ export const clipsRouter = Router();
 clipsRouter.patch("/:id", validate({ params: idParam, body: updateClipBody }), publish.updateClip);
 clipsRouter.patch("/:id/captions/:platform", validate({ params: captionParams, body: updateCaptionBody }), publish.updateCaption);
 clipsRouter.post("/:id/captions/:platform/rewrite", aiLimit, validate({ params: captionParams }), publish.rewriteCaption);
+clipsRouter.get("/:id/short", validate({ params: idParam }), publish.clipShort);
+clipsRouter.post("/:id/render", validate({ params: idParam }), publish.renderClipShort);
 clipsRouter.post("/:id/schedule", validate({ params: idParam, body: scheduleClipBody }), publish.scheduleClip);
 
 export const postsRouter = Router();

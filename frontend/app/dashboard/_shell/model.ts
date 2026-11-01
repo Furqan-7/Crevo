@@ -168,6 +168,7 @@ export function toVideo(v: VideoDto): Video {
       captions: c.captions,
       hashtags: c.hashtags,
       posts: c.posts.map((p) => ({ id: p.id, platform: p.platform, scheduledAt: p.scheduledAt, status: p.status, externalUrl: p.externalUrl, error: p.error, hasClipFile: p.hasClipFile })),
+      render: c.render,
     })),
   };
 }
