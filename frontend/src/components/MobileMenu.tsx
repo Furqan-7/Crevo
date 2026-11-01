@@ -6,6 +6,7 @@ const LINKS = [
   { href: "/#examples", label: "Examples" },
   { href: "/#pricing", label: "Pricing" },
   { href: "/contact-us", label: "Contact Us" },
+  { href: "/auth/signin", label: "Sign in" },
 ];
 
 export default function MobileMenu() {

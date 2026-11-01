@@ -61,6 +61,13 @@ export default function Navigation() {
                       </a>
                   </p>
                 </div>
+                <div className="cv-t45fud" data-cv-component-type="RichTextContainer" style={{ justifyContent: "center", "--extracted-r6o4lv": "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", "--cv-paragraph-spacing": "0px", transform: "none" }}>
+                  <p className="cv-text cv-styles-preset-1r64itd" data-styles-preset="MNlwj3ylK" dir="auto" style={{ "--cv-text-alignment": "start", "--cv-text-color": "var(--extracted-r6o4lv, var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24)))" }}>
+                      <a className="cv-text cv-styles-preset-ubvt1p" data-styles-preset="oe5nON5T_" href="/auth/signin" data-cv-page-link-current="true">
+                        {"Sign in"}
+                      </a>
+                  </p>
+                </div>
               </div>
               <div className="cv-1iaaojo-container">
                   <a className="cv-JNWaH cv-IDlYG cv-m8hd4j cv-v-m8hd4j cv-14zb1bv" data-highlight="true" href="/auth/signup" rel="noopener" tabIndex={0} style={{ "--border-bottom-width": "0px", "--border-color": "rgba(0, 0, 0, 0)", "--border-left-width": "0px", "--border-right-width": "0px", "--border-style": "solid", "--border-top-width": "0px", backgroundColor: "var(--token-150c4a4e-408f-4cdd-8cd9-4f462c902163, rgb(24, 24, 24))", borderBottomLeftRadius: "4px", borderBottomRightRadius: "4px", borderTopLeftRadius: "4px", borderTopRightRadius: "4px" }}>

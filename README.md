@@ -46,7 +46,7 @@ frontend/
 │   │   ├── onboarding/         /dashboard/onboarding (first visit)
 │   │   ├── (workspace)/        Today, inbox, publish, deals, calendar, analytics, settings
 │   │   └── _shell/             sidebar, API client, shared UI
-│   └── auth/
+│   └── auth/                   (/signin, /signup, /login, /register redirect here)
 │       ├── signup/page.tsx     /auth/signup
 │       ├── signin/page.tsx     /auth/signin
 │       ├── forgot/page.tsx     /auth/forgot   (request a reset link)
