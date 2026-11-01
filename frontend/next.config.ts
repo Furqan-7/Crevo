@@ -39,6 +39,24 @@ const csp = [
   "frame-ancestors 'none'",
 ].join("; ");
 
+// The landing page (app/route.ts) is Framer's export and runs Framer's
+// runtime from framerusercontent.com, which also loads its fonts, images and
+// data from there. It gets its own, looser policy; every other page keeps the
+// strict one above.
+const landingCsp = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://framerusercontent.com https://*.framerusercontent.com https://events.framer.com https://app.framerstatic.com",
+  "style-src 'self' 'unsafe-inline' https:",
+  "img-src 'self' data: blob: https:",
+  "font-src 'self' data: https:",
+  "connect-src 'self' https: wss:",
+  "media-src 'self' blob: https:",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self' mailto:",
+  "frame-ancestors 'none'",
+].join("; ");
+
 const securityHeaders = [
   { key: "Content-Security-Policy", value: csp },
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -58,6 +76,8 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       { source: "/:path*", headers: securityHeaders },
+      // Listed after the rule above so its Content-Security-Policy wins on /.
+      { source: "/", headers: [{ key: "Content-Security-Policy", value: landingCsp }] },
       // Images and fonts under public/assets. Some keep their name when edited
       // (crevo-hero-*.webp), so they are cached for a week, not forever.
       { source: "/assets/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }] },

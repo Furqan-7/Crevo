@@ -1,8 +1,8 @@
 import { expect, test } from "@playwright/test";
 import { isPhone, scrollThrough, watchErrors } from "./helpers";
 
+// / is Framer's exported page (app/route.ts) and is checked on its own below.
 const PAGES = [
-  { path: "/", title: /Crevo — The AI Operating System for Creators/ },
   { path: "/contact-us", title: /Contact Crevo/ },
   { path: "/privacy-policy", title: /Privacy Policy — Crevo/ },
   { path: "/terms-of-service", title: /Terms of Service — Crevo/ },
@@ -32,6 +32,15 @@ test.describe("marketing pages", () => {
       expect(errors).toEqual([]);
     });
   }
+
+  test("/ is the Framer landing page, branded Crevo", async ({ page }) => {
+    const response = await page.goto("/");
+    expect(response?.status()).toBe(200);
+    await expect(page).toHaveTitle(/Crevo — The AI Operating System for Creators/);
+    expect(await page.locator("body").innerText()).not.toMatch(/verseo|creatoros/i);
+    await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", /\/opengraph-image\.png/);
+    await expect(page.locator('script[src^="/crevo-copy.js"]')).toHaveCount(1);
+  });
 
   test("unknown addresses show the Crevo 404 page", async ({ page }) => {
     const response = await page.goto("/this-page-does-not-exist");
@@ -65,7 +74,13 @@ test.describe("marketing pages", () => {
   });
 
   test("security headers are sent and private pages aren't publicly cached", async ({ request }) => {
-    const home = await request.get("/");
+    // / allows Framer's runtime; every other page keeps the strict policy.
+    const landing = (await request.get("/")).headers()["content-security-policy"];
+    expect(landing).toContain("https://framerusercontent.com");
+    expect(landing).toContain("frame-ancestors 'none'");
+
+    const home = await request.get("/contact-us");
+    expect(home.headers()["content-security-policy"]).not.toContain("framerusercontent");
     const headers = home.headers();
     expect(headers["content-security-policy"]).toContain("frame-ancestors 'none'");
     expect(headers["x-frame-options"]).toBe("DENY");
@@ -92,7 +107,7 @@ test.describe("marketing pages", () => {
 
 test.describe("navigation", () => {
   test("Sign in and Sign up free open the auth pages", async ({ page }) => {
-    await page.goto("/");
+    await page.goto("/contact-us");
     if (isPhone(page)) {
       await page.locator("[data-menu-toggle]:visible").click();
       await expect(page.locator("[data-mobile-menu]:visible")).toBeVisible();
@@ -124,7 +139,7 @@ test.describe("navigation", () => {
 
   test("keyboard users reach the navigation first", async ({ page }) => {
     test.skip(isPhone(page), "the phone layout has a menu button instead of links");
-    await page.goto("/");
+    await page.goto("/contact-us");
     await page.keyboard.press("Tab");
     await page.keyboard.press("Tab");
     await expect(page.locator(":focus")).toHaveText("Product");
@@ -136,39 +151,9 @@ test.describe("navigation", () => {
   });
 });
 
-test.describe("landing page interactions", () => {
-  test("FAQ items open and close with the mouse and the keyboard", async ({ page }) => {
-    await page.goto("/");
-    // Pin one closed FAQ item that is visible at this screen size.
-    const index = await page.evaluate(() =>
-      [...document.querySelectorAll("[data-faq]:not([data-faq-group])")].findIndex(
-        (el) => !el.hasAttribute("data-open") && (el.querySelector("[data-faq-closed]") as HTMLElement | null)?.offsetParent,
-      ),
-    );
-    expect(index).toBeGreaterThanOrEqual(0);
-    const item = page.locator("[data-faq]:not([data-faq-group])").nth(index);
-    const question = item.locator("[data-faq-closed]");
-    await question.scrollIntoViewIfNeeded();
-    await question.click();
-    await expect(item).toHaveAttribute("data-open", "");
-    await expect(item.locator("[data-faq-open]")).toHaveAttribute("aria-expanded", "true");
-
-    await item.locator("[data-faq-open]").focus();
-    await page.keyboard.press("Enter");
-    await expect(item).not.toHaveAttribute("data-open", "");
-    await expect(item.locator("[data-faq-closed]")).toBeFocused();
-  });
-
-  test("only one use case is open at a time", async ({ page }) => {
-    await page.goto("/");
-    const closed = page.locator("[data-faq-group] [data-faq-closed]:visible").first();
-    await closed.scrollIntoViewIfNeeded();
-    await closed.click();
-    await expect(page.locator("[data-faq-group][data-open] [data-faq-open]:visible")).toHaveCount(1);
-  });
-
+test.describe("site interactions", () => {
   test("the newsletter form goes to sign-up with the email filled in", async ({ page }) => {
-    await page.goto("/");
+    await page.goto("/contact-us");
     const email = page.locator("[data-newsletter-form] input[type=email]:visible").first();
     await email.scrollIntoViewIfNeeded();
     await email.fill("fan@example.com");
