@@ -28,17 +28,23 @@ export const PUBLIC_PAGES = [
   { path: "/terms-of-service", priority: 0.3 },
 ] as const;
 
-const OG_IMAGE = "/assets/img/crevo-hero-2048.webp";
+const PREVIEW_IMAGE = {
+  url: "/opengraph-image.png",
+  width: 1200,
+  height: 630,
+  alt: "Crevo, the AI operating system for creators: run your creator business. Smarter. With AI",
+};
 
 /** Shared page metadata: title, description, Open Graph and Twitter cards. */
 export function pageMetadata(path: string, title: string, description: string): Metadata {
   return {
-    metadataBase: siteUrl(),
     title,
     description,
     alternates: { canonical: path },
     robots: { "max-image-preview": "large" },
-    openGraph: { type: "website", url: path, title, description, images: [OG_IMAGE] },
-    twitter: { card: "summary_large_image", title, description, images: [OG_IMAGE] },
+    // Link previews use app/opengraph-image.png and app/twitter-image.png. They
+    // are named here because a page's own openGraph replaces the inherited one.
+    openGraph: { type: "website", url: path, title, description, images: [PREVIEW_IMAGE] },
+    twitter: { card: "summary_large_image", title, description, images: [{ ...PREVIEW_IMAGE, url: "/twitter-image.png" }] },
   };
 }

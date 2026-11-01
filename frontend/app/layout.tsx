@@ -1,8 +1,12 @@
 import type { Metadata, Viewport } from "next";
+import { siteOrigin } from "@/lib/site";
 import "@/src/styles/base.css";
 import "@/src/styles/shared.css";
 
 export const metadata: Metadata = {
+  // Makes the preview image and canonical links absolute (SITE_URL, else
+  // Vercel's production domain, else localhost for local builds).
+  metadataBase: new URL(siteOrigin()),
   icons: {
     icon: [
       { url: "/assets/img/44d0d9b5421a4c6d.png", media: "(prefers-color-scheme: light)" },

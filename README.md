@@ -42,6 +42,8 @@ frontend/
 │   ├── not-found.tsx           404 page for any unknown URL
 │   ├── sitemap.ts              /sitemap.xml (the public pages)
 │   ├── robots.ts               /robots.txt (keeps /dashboard and /auth out of search)
+│   ├── opengraph-image.png     link preview image (WhatsApp, LinkedIn, Slack…), 1200×630
+│   ├── twitter-image.png       the same image for X
 │   ├── dashboard/              /dashboard (signed-in only)
 │   │   ├── onboarding/         /dashboard/onboarding (first visit)
 │   │   ├── (workspace)/        Today, inbox, publish, deals, calendar, analytics, settings
