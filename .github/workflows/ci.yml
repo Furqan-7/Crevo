@@ -43,3 +43,14 @@ jobs:
           NEXT_PUBLIC_SUPABASE_URL: https://example.supabase.co
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ci
           NEXT_PUBLIC_API_URL: http://localhost:4000
+      - name: Install the test browser
+        run: pnpm --filter frontend exec playwright install --with-deps chromium
+      - name: Frontend tests (desktop and phone)
+        run: pnpm --filter frontend test:e2e
+      - name: Upload test traces on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-traces
+          path: frontend/test-results
+          retention-days: 7

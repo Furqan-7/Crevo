@@ -126,7 +126,23 @@ Supabase access token (`Authorization: Bearer <token>`).
 
 Every push and pull request runs `.github/workflows/ci.yml` on GitHub: it
 applies the migrations to a fresh Postgres with pgvector, type-checks all
-three packages, runs the backend tests and builds everything.
+three packages, runs the backend tests, builds everything and runs the
+frontend browser tests.
+
+## Frontend tests
+
+`frontend/e2e/` holds Playwright tests that open the built site in a real
+browser at desktop and phone size: every marketing page loads without errors
+or hidden content, the 404 page, sitemap, robots.txt and link previews, the
+navigation and short auth addresses (`/signin`, `/signup`…), keyboard access,
+the FAQ, use cases and newsletter form, and the sign-up, sign-in and
+forgot-password forms.
+
+```bash
+pnpm --filter frontend build
+pnpm --filter frontend exec playwright install chromium   # once
+pnpm --filter frontend test:e2e
+```
 
 Deploying: `render.yaml` is a Render blueprint for the API (migrations run
 before each deploy). The frontend deploys on Vercel with `frontend` as the
