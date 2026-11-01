@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 /** The public origin, used to make canonical and og:url absolute. Set SITE_URL
  *  to your domain; on Vercel it falls back to the production domain. */
-function siteUrl(): URL | undefined {
+export function siteUrl(): URL | undefined {
   const raw = process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL;
   const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL;
   const value = raw || (vercel ? `https://${vercel}` : "");
@@ -13,6 +13,20 @@ function siteUrl(): URL | undefined {
     return undefined;
   }
 }
+
+/** The origin for links that must be absolute (sitemap, robots.txt). Falls
+ *  back to localhost when SITE_URL isn't set, so local builds still work. */
+export function siteOrigin(): string {
+  return (siteUrl()?.origin ?? "http://localhost:3000").replace(/\/$/, "");
+}
+
+/** The public marketing pages, listed in the sitemap. */
+export const PUBLIC_PAGES = [
+  { path: "/", priority: 1 },
+  { path: "/contact-us", priority: 0.6 },
+  { path: "/privacy-policy", priority: 0.3 },
+  { path: "/terms-of-service", priority: 0.3 },
+] as const;
 
 const OG_IMAGE = "/assets/img/crevo-hero-2048.webp";
 

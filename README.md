@@ -40,6 +40,8 @@ frontend/
 │   │   ├── privacy-policy/page.tsx   /privacy-policy
 │   │   └── terms-of-service/page.tsx /terms-of-service
 │   ├── not-found.tsx           404 page for any unknown URL
+│   ├── sitemap.ts              /sitemap.xml (the public pages)
+│   ├── robots.ts               /robots.txt (keeps /dashboard and /auth out of search)
 │   ├── dashboard/              /dashboard (signed-in only)
 │   │   ├── onboarding/         /dashboard/onboarding (first visit)
 │   │   ├── (workspace)/        Today, inbox, publish, deals, calendar, analytics, settings
@@ -59,7 +61,7 @@ frontend/
 │   ├── views/                  one component per page, composed from its sections
 │   ├── sections/<page>/        one file per section (Hero, Features, Pricing, FAQ…)
 │   ├── auth/                   Supabase client, form actions, auth page UI
-│   ├── components/             MobileMenu, ScrollReveal, SiteInteractions
+│   ├── components/             MobileMenu, ScrollReveal, SiteInteractions, StepHighlight
 │   └── styles/                 shared.css (fonts), one CSS file per page, reveal.css (animations)
 └── public/assets/img/          images and fonts
 ```
@@ -136,7 +138,8 @@ root directory.
    Google** → on, with a Google OAuth client ID and secret.
 
 Set `SITE_URL` (for example `https://crevo.ai`) in production so canonical
-links and social cards use your domain.
+links, social cards, `/sitemap.xml` and `/robots.txt` use your domain. On
+Vercel it falls back to the production domain.
 
 After signing up, people go through a short onboarding and land on
 `/dashboard`. A new workspace starts with sample data so every screen has
