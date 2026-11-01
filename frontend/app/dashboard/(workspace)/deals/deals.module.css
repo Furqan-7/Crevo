@@ -1,0 +1,417 @@
+/* Deals: the pipeline board and the selected deal's detail panel. */
+
+.layout {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
+  gap: 16px;
+  align-items: start;
+}
+
+/* stage tabs: phones only, in place of the four columns side by side */
+.stageTabs {
+  display: none;
+}
+
+/* board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  gap: 10px;
+  min-width: 0;
+  align-self: stretch;
+}
+.column {
+  background: rgba(244, 244, 244, 0.85);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+.columnHead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 4px 2px;
+  font-size: 13.5px;
+}
+.columnHead strong {
+  font-weight: 500;
+}
+.columnHead > span:last-child {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--muted);
+}
+.stageDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+.dealCard {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  text-align: left;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+.dealCard:hover {
+  border-color: #d8d8d8;
+  transform: translateY(-1px);
+}
+.dealOn,
+.dealOn:hover {
+  border: 1.5px solid var(--ink);
+  box-shadow: 0 14px 28px -16px rgba(24, 24, 24, 0.35);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14.5px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.brandMark {
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  flex: none;
+}
+.dealNote {
+  font-size: 12.5px;
+  color: var(--faint);
+  line-height: 1.3;
+}
+.alertWarn,
+.alertBad {
+  font-size: 12.5px;
+  line-height: 1.3;
+  margin-top: 4px;
+}
+.alertWarn {
+  color: #8a6a00;
+}
+.alertBad {
+  color: var(--red);
+}
+.dealFoot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 12px;
+}
+.dealFoot strong {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 500;
+}
+.miniBar {
+  flex: 1;
+  max-width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: #f0f0f0;
+  overflow: hidden;
+}
+.miniBar i,
+.rowBar i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+/* detail panel */
+.panel {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 18px 40px -26px rgba(24, 24, 24, 0.25);
+  min-width: 0;
+}
+.panelHead {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--line);
+}
+.chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.stageTag {
+  color: var(--ink) !important;
+  border-color: transparent !important;
+}
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  margin-top: 12px !important;
+}
+.sub {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin-top: 4px !important;
+}
+.block {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--line);
+}
+.blockHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.blockHead h3,
+.blockTitle {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.health {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 12px;
+}
+.dial {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  flex: none;
+}
+.dial svg {
+  width: 100%;
+  height: 100%;
+}
+.dial > span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dial strong {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.dial small {
+  font-size: 10px;
+  color: var(--faint);
+}
+.rows {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.rows li {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+.rows li > span:last-child {
+  text-align: right;
+  font-size: 12px;
+}
+.rowBar {
+  height: 4px;
+  border-radius: 2px;
+  background: #f0f0f0;
+  overflow: hidden;
+}
+.terms {
+  margin: 8px 0 0;
+}
+.terms div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  font-size: 14px;
+}
+.terms dt {
+  color: var(--muted);
+}
+.terms dd {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  text-align: right;
+}
+.terms dd small {
+  font-size: 11px;
+  color: var(--faint);
+}
+.missing {
+  color: var(--red);
+}
+.risks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px !important;
+}
+.risks li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  padding: 9px 12px;
+  border-radius: 6px;
+  background: #fdf1ef;
+  border: 1px solid #f6d5d0;
+  font-size: 13.5px;
+}
+.risks strong {
+  font-weight: 400;
+  color: #c2412f;
+}
+.risks span {
+  color: #5c3a35;
+}
+.clean {
+  margin-top: 10px !important;
+  font-size: 13.5px;
+  color: #3d7a35;
+}
+.deliverables {
+  margin-top: 10px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.deliverables li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+.deliverables label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 0;
+  cursor: pointer;
+  min-width: 0;
+}
+.deliverables input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--ink);
+  flex: none;
+}
+.deliverables li > span {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.doneText {
+  color: var(--muted);
+}
+.actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  gap: 10px;
+  padding: 18px 20px 20px;
+}
+.actions > * {
+  justify-content: center;
+  width: 100%;
+}
+.actionTag {
+  height: 44px !important;
+  font-size: 14px !important;
+}
+
+@media (max-width: 1099px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .board {
+    align-self: start;
+  }
+}
+
+/* phone: one stage at a time, picked from a 2×2 grid of tabs */
+@media (max-width: 860px) {
+  .stageTabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .stageTab {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    text-align: left;
+  }
+  .stageTab > span:last-child {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .stageTabOn {
+    border-color: var(--ink);
+    background: #fff;
+    font-weight: 500;
+  }
+  .board {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .columnAway,
+  .columnHead {
+    display: none;
+  }
+  /* clear the sticky phone bar */
+  .panel {
+    scroll-margin-top: 72px;
+  }
+  .health {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .dial {
+    align-self: center;
+  }
+  .actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .panelHead,
+  .block,
+  .actions {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

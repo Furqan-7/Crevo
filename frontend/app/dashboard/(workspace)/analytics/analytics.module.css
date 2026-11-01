@@ -1,0 +1,485 @@
+/* Analytics: filters, totals, then a grid of chart cards. Chart colours are
+   the validated categorical slots 1–3 and a one-hue blue ramp. */
+
+.filters {
+  margin-top: 26px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.segment {
+  display: inline-flex;
+  padding: 3px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.segBtn {
+  height: 30px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  font-size: 13.5px;
+  color: var(--muted) !important;
+}
+.segOn {
+  background: var(--ink);
+  color: #fff !important;
+}
+.channels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.channel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-size: 13.5px;
+}
+.swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--c);
+}
+.channelOff {
+  color: var(--faint) !important;
+}
+.channelOff .swatch {
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--c);
+}
+
+/* totals */
+.kpis {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 18px 40px -24px rgba(24, 24, 24, 0.25);
+}
+.kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 20px;
+  border-right: 1px solid var(--line);
+  min-width: 0;
+}
+.kpi:last-child {
+  border-right: 0;
+}
+.kpi > span:first-child {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.kpi strong {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+.delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: #2b2b2b;
+}
+.delta > span:first-child {
+  font-size: 10px;
+}
+.vs {
+  color: var(--faint);
+}
+
+/* cards */
+.grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px;
+  min-width: 0;
+}
+.wide {
+  grid-column: 1 / -1;
+}
+.cardHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.cardHead h2 {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.cardHead small {
+  font-size: 12.5px;
+  color: var(--faint);
+}
+.chart {
+  position: relative;
+  min-width: 0;
+}
+.chart svg {
+  display: block;
+  overflow: visible;
+}
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 8px;
+  font-size: 12.5px;
+  color: #2b2b2b;
+}
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.legend i,
+.tip i {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.axis {
+  font: 11px var(--font-mono), monospace;
+  fill: var(--faint);
+}
+.endLabel {
+  font-size: 12px;
+  fill: #2b2b2b;
+}
+.tip {
+  position: absolute;
+  transform: translateX(-50%);
+  min-width: 170px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 12px 28px -12px rgba(24, 24, 24, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12.5px;
+  pointer-events: none;
+  z-index: 3;
+}
+.tip strong {
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.tip span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #2b2b2b;
+}
+.tip b {
+  margin-left: auto;
+  padding-left: 12px;
+  font: 500 12px var(--font-mono), monospace;
+  color: var(--ink);
+}
+.tipTotal {
+  border-top: 1px solid var(--line);
+  padding-top: 4px;
+  margin-top: 2px;
+}
+
+/* format bars */
+.bars {
+  --label: 130px;
+  --value: 44px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.barRow {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--label) minmax(0, 1fr) var(--value);
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  padding: 2px 0;
+}
+.barLabel {
+  color: #2b2b2b;
+}
+.barTrack {
+  position: relative;
+  height: 14px;
+}
+.barTrack i {
+  display: block;
+  height: 100%;
+  border-radius: 0 4px 4px 0;
+  background: #2a78d6;
+  transition: opacity 0.15s;
+}
+.avgLine,
+.avgKey {
+  border-left: 1.5px dashed #181818;
+}
+.avgLine {
+  position: absolute;
+  top: -4px;
+  bottom: 22px;
+  left: calc(var(--label) + 10px + (100% - var(--label) - var(--value) - 20px) * var(--avg));
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 1;
+}
+.avgKey {
+  display: inline-block;
+  height: 10px;
+  margin-right: 6px;
+  vertical-align: -1px;
+  opacity: 0.6;
+}
+.barValue {
+  font: 12px var(--font-mono), monospace;
+  text-align: right;
+}
+.barTip {
+  position: absolute;
+  left: 140px;
+  top: -30px;
+  padding: 5px 9px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 3;
+  pointer-events: none;
+}
+.footnote {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px !important;
+}
+
+/* heatmap */
+.heatGrid {
+  display: grid;
+  gap: 2px;
+}
+.heatHead {
+  font: 10.5px var(--font-mono), monospace;
+  color: var(--faint);
+  text-align: center;
+  padding-bottom: 4px;
+}
+.heatDay {
+  font-size: 12px;
+  color: var(--muted);
+  align-self: center;
+}
+.cell {
+  height: 30px;
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  font: 500 11px var(--font-mono), monospace;
+  cursor: default;
+}
+.cellOn {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px var(--ink);
+}
+.heatFoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 12.5px;
+  color: #2b2b2b;
+}
+.heatInfo strong {
+  font-weight: 500;
+}
+.ramp {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.ramp i {
+  width: 90px;
+  height: 8px;
+  border-radius: 4px;
+}
+.ramp small {
+  font: 10.5px var(--font-mono), monospace;
+  color: var(--faint);
+}
+
+/* top posts */
+.top li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+}
+.top li + li {
+  border-top: 1px solid #f2f2f2;
+}
+.rank {
+  width: 22px;
+  font: 12px var(--font-mono), monospace;
+  color: var(--faint);
+  flex: none;
+}
+.topText {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.topText strong {
+  font-size: 14px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.topText small,
+.topNums small {
+  font-size: 12px;
+  color: var(--faint);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+.topNums {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.topNums strong {
+  font: 500 14px var(--font-mono), monospace;
+}
+
+/* table view */
+.tableWrap {
+  max-height: 320px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+.table th,
+.table td {
+  padding: 7px 10px;
+  text-align: right;
+  white-space: nowrap;
+  border-bottom: 1px solid #f2f2f2;
+}
+.table th:first-child,
+.table td:first-child {
+  text-align: left;
+}
+.table th {
+  position: sticky;
+  top: 0;
+  background: #fafafa;
+  font-weight: 500;
+  color: var(--muted);
+}
+.table td {
+  font-family: var(--font-mono), monospace;
+}
+.table td:first-child {
+  font-family: inherit;
+}
+
+@media (max-width: 1099px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 860px) {
+  .kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .kpi:nth-child(2) {
+    border-right: 0;
+  }
+  .kpi:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--line);
+  }
+  .kpi strong {
+    font-size: 24px;
+  }
+  .vs {
+    display: none;
+  }
+  .bars {
+    --label: 96px;
+    --value: 38px;
+  }
+  .barTip {
+    left: 0;
+    white-space: normal;
+  }
+  .top li {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+  .topText {
+    flex: 1 1 calc(100% - 110px);
+  }
+  .topNums {
+    margin-left: 34px;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .top li > button {
+    margin-left: auto;
+  }
+}
+
+.loading {
+  margin-top: 26px;
+  color: var(--muted);
+  font-size: 14px;
+}

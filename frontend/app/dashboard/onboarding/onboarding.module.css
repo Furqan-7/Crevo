@@ -1,0 +1,488 @@
+/* Onboarding: full-page sky with clouds, no sidebar. Shares the dashboard
+   tokens so buttons, tags and eyebrows look the same. */
+
+.page {
+  --zoom: 1;
+  zoom: var(--zoom);
+  --ink: #181818;
+  --muted: #686868;
+  --faint: #8b8b8b;
+  --line: #ededed;
+  --soft: #f6f6f6;
+  --bg: #f9f9f9;
+  --red: #d64535;
+  position: relative;
+  min-height: calc(100vh / var(--zoom));
+  overflow: hidden;
+  background: linear-gradient(#f9f9f9 0%, #f3f6f9 45%, #dae3ed 72%, #b7cae0 100%);
+  color: var(--ink);
+  font-family: var(--font-inter), Inter, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+.page *,
+.page *::before,
+.page *::after {
+  box-sizing: border-box;
+}
+.page h1,
+.page h2,
+.page p,
+.page ul,
+.page ol,
+.page dl,
+.page dd,
+.page fieldset {
+  margin: 0;
+  padding: 0;
+}
+.page ul,
+.page ol {
+  list-style: none;
+}
+.page fieldset {
+  border: 0;
+  min-width: 0;
+}
+.page button {
+  font-family: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* background */
+.sky {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='101' height='86'%3E%3Cpath d='M0 43.5H101M50.5 0V86' stroke='%23e6e9ee' fill='none'/%3E%3Cpath d='M50.5 39V48M46 43.5H55' stroke='%23c4ccd6' fill='none'/%3E%3C/svg%3E");
+  background-size: 101px 86px;
+  mask-image: linear-gradient(#000 55%, transparent 85%);
+  -webkit-mask-image: linear-gradient(#000 55%, transparent 85%);
+}
+.clouds {
+  position: absolute;
+  left: -5%;
+  right: -5%;
+  bottom: -40px;
+  height: 52%;
+  min-height: 360px;
+  background: url(/assets/img/crevo-clouds.webp) center bottom / cover no-repeat;
+  mask-image: linear-gradient(transparent, #000 45%);
+  -webkit-mask-image: linear-gradient(transparent, #000 45%);
+}
+.px {
+  position: absolute;
+}
+
+/* top bar */
+.top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 74px;
+  padding: 0 40px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(249, 249, 249, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.04em;
+}
+.logoMark {
+  width: 24px;
+  height: 24px;
+}
+.steps {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+.step {
+  display: flex;
+  align-items: center;
+}
+.step + .step::before {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background: #d6d6d6;
+  margin: 0 10px;
+}
+.step button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  background: none;
+  padding: 0;
+  font-size: 14.5px;
+  color: var(--faint);
+}
+.step button:disabled {
+  cursor: default !important;
+}
+.stepMark {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #d0d0d0;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+}
+.stepNow button,
+.stepDone button {
+  color: var(--ink);
+}
+.stepNow .stepMark,
+.stepDone .stepMark {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+.skip {
+  margin-left: auto;
+  border: 0;
+  background: none;
+  font-size: 14.5px;
+  color: var(--muted) !important;
+}
+.skip:hover {
+  color: var(--ink) !important;
+}
+
+/* layout */
+.body {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 560px) minmax(0, 360px);
+  justify-content: center;
+  gap: 28px;
+  padding: 56px 24px 80px;
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 30px 30px 30px;
+  box-shadow: 0 30px 60px -30px rgba(24, 24, 24, 0.3);
+  min-width: 0;
+}
+.h1 {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  margin-top: 12px !important;
+}
+.lead {
+  font-size: 15.5px;
+  color: var(--muted);
+  margin-top: 10px !important;
+  line-height: 1.35;
+}
+
+/* step 1 */
+.accounts {
+  margin-top: 22px !important;
+}
+.accounts li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+}
+.accounts li + li {
+  border-top: 1px solid #f0f0f0;
+}
+.mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  flex: none;
+}
+.accountText {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.accountText strong {
+  font-size: 15px;
+  font-weight: 500;
+}
+.accountText small {
+  font-size: 13px;
+  color: var(--faint);
+  margin-top: 2px;
+}
+.accountBtn {
+  height: 34px !important;
+  padding: 0 18px !important;
+  font-size: 14px !important;
+}
+.connected,
+.connecting {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.connected {
+  color: #3d7a35;
+  background: #f1faef;
+  border: 1px solid #d2ecca;
+}
+.connecting {
+  color: var(--muted);
+  background: var(--soft);
+  border: 1px solid var(--line);
+}
+.card .note {
+  margin-top: 16px;
+  padding: 12px 14px;
+  font-size: 13px;
+  color: var(--muted);
+  background: #f8f9fb;
+  border: 1px solid #e8ebf0;
+  border-radius: 6px;
+}
+
+/* step 2 */
+.group {
+  margin-top: 22px !important;
+}
+.group legend {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 10px;
+  padding: 0;
+}
+.group legend small {
+  color: var(--faint);
+  font-size: 12.5px;
+  margin-left: 6px;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chip {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-size: 13.5px;
+  display: inline-flex;
+  align-items: center;
+  transition: background 0.15s, border-color 0.15s;
+}
+button.chip:hover {
+  border-color: #cfcfcf;
+}
+.chipOn,
+button.chipOn:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff !important;
+}
+.chipStatic {
+  height: 28px;
+  font-size: 13px;
+}
+
+/* step 3 + side previews */
+.briefing li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+}
+.briefing li + li {
+  border-top: 1px solid #f0f0f0;
+}
+.briefing li > span:last-child {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.briefing strong {
+  font-size: 14.5px;
+  font-weight: 500;
+}
+.briefing small {
+  font-size: 12.5px;
+  color: var(--faint);
+  margin-top: 2px;
+}
+.card .briefing {
+  margin-top: 18px !important;
+}
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+.card .error,
+.card .sample {
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.card .error {
+  color: var(--red);
+}
+.continue {
+  flex: 1;
+  justify-content: center;
+}
+.side {
+  padding-top: 0;
+  min-width: 0;
+}
+.side h2 {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px !important;
+}
+.side h2 + * + h2 {
+  margin-top: 28px !important;
+}
+.preview {
+  display: block;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: 0 18px 40px -26px rgba(24, 24, 24, 0.2);
+}
+.previewLabel {
+  display: block;
+  font-size: 13.5px;
+  color: var(--muted);
+  margin: 4px 0 10px;
+}
+.previewLabel ~ .previewLabel {
+  margin-top: 18px;
+}
+.summary div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 0;
+  font-size: 14px;
+}
+.summary div + div {
+  border-top: 1px solid #f0f0f0;
+}
+.summary dt {
+  font-size: 12.5px;
+  color: var(--faint);
+}
+.sideLink {
+  margin-top: 12px;
+  border: 0;
+  background: none;
+  padding: 0;
+  font-size: 13.5px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Drawn at 80% on desktop, like the workspace screens. */
+@media (min-width: 1100px) {
+  .page {
+    --zoom: 0.8;
+  }
+}
+
+@media (max-width: 1000px) {
+  .body {
+    grid-template-columns: minmax(0, 560px);
+  }
+}
+
+@media (max-width: 860px) {
+  .top {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 14px 16px;
+    row-gap: 12px;
+  }
+  .steps {
+    position: static;
+    transform: none;
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .step + .step::before {
+    width: 16px;
+    margin: 0 6px;
+  }
+  .step button {
+    font-size: 13px;
+    gap: 6px;
+  }
+  .body {
+    padding: 24px 16px 60px;
+  }
+  .card {
+    padding: 22px 18px;
+  }
+  .h1 {
+    font-size: 26px;
+  }
+  .px {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .stepNow ~ .step .stepLabel,
+  .step:not(.stepNow) .stepLabel {
+    display: none;
+  }
+  .step + .step::before {
+    flex: 1;
+  }
+  .step {
+    flex: 1;
+  }
+  .step:first-child {
+    flex: none;
+  }
+}

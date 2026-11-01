@@ -1,0 +1,149 @@
+/* The bell's dropdown. */
+
+.wrap {
+  position: relative;
+}
+.panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  width: 380px;
+  max-width: calc(100vw / var(--zoom, 1) - 32px);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 24px 50px -20px rgba(24, 24, 24, 0.35);
+  z-index: 15;
+  overflow: hidden;
+  animation: drop 0.16s ease;
+}
+@keyframes drop {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+.head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+}
+.head strong {
+  font-weight: 500;
+}
+.count {
+  font-size: 11.5px;
+  padding: 2px 7px;
+  border-radius: 10px;
+  background: #fdecea;
+  color: #a5332a;
+}
+.markAll {
+  margin-left: auto;
+  border: 0;
+  background: none;
+  padding: 0;
+  font-size: 12.5px;
+  color: var(--muted) !important;
+}
+.markAll:hover:not(:disabled) {
+  color: var(--ink) !important;
+  text-decoration: underline;
+}
+.markAll:disabled {
+  opacity: 0.45;
+  cursor: default !important;
+}
+.list {
+  max-height: min(440px, 60vh);
+  overflow-y: auto;
+}
+.group {
+  padding: 10px 16px 4px;
+  font-size: 11px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 16px;
+  border: 0;
+  background: none;
+  text-align: left;
+  transition: background 0.15s;
+}
+.item:hover {
+  background: #fafafa;
+}
+.unread {
+  background: #f8fafe;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  flex: none;
+  background: #fff;
+}
+.text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.text strong {
+  font-size: 13.5px;
+  font-weight: 500;
+}
+.text small {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.35;
+}
+.meta {
+  color: var(--faint) !important;
+  font-size: 11.5px !important;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2a6df4;
+  margin-top: 6px;
+  flex: none;
+}
+.foot {
+  display: block;
+  padding: 12px 16px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--muted) !important;
+  background: #fcfcfc;
+}
+.foot:hover {
+  color: var(--ink) !important;
+}
+
+@media (max-width: 860px) {
+  .panel {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    top: 120px;
+    width: auto;
+    max-width: none;
+  }
+}

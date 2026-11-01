@@ -13,6 +13,8 @@ deals, content, calendar and analytics.
 - Backend API: Express 5 + TypeScript REST API and background worker
   (`backend/`): inbox, deals, todos, ideas, calendar, videos and clips,
   publishing, analytics, Copilot and Google integrations.
+- Dashboard (`/dashboard`): onboarding, Today, Inbox, Publish, Deals,
+  Calendar, Analytics and Settings, for signed-in users only.
 
 ## Project structure
 
@@ -20,7 +22,7 @@ A pnpm monorepo:
 
 | Folder | What it is |
 |---|---|
-| `frontend/` | Next.js app: marketing site and auth pages |
+| `frontend/` | Next.js app: marketing site, auth pages and the dashboard |
 | `backend/` | Express 5 + TypeScript REST API (`/api/*`) and background worker |
 | `db/` | Prisma 7 schema, migrations and the shared Prisma Client |
 
@@ -30,12 +32,18 @@ under `frontend/app/` is a URL.
 ```
 frontend/
 ├── app/                        routes (file-based)
-│   ├── layout.tsx              root layout: <html>, shared styles, site scripts
-│   ├── page.tsx                /
-│   ├── contact-us/page.tsx     /contact-us
-│   ├── privacy-policy/page.tsx /privacy-policy
-│   ├── terms-of-service/page.tsx /terms-of-service
+│   ├── layout.tsx              root layout: <html>, fonts
+│   ├── (site)/                 marketing pages (the group name isn't in the URL)
+│   │   ├── layout.tsx          animations, mobile menu, FAQ and forms
+│   │   ├── page.tsx            /
+│   │   ├── contact-us/page.tsx /contact-us
+│   │   ├── privacy-policy/page.tsx   /privacy-policy
+│   │   └── terms-of-service/page.tsx /terms-of-service
 │   ├── not-found.tsx           404 page for any unknown URL
+│   ├── dashboard/              /dashboard (signed-in only)
+│   │   ├── onboarding/         /dashboard/onboarding (first visit)
+│   │   ├── (workspace)/        Today, inbox, publish, deals, calendar, analytics, settings
+│   │   └── _shell/             sidebar, API client, shared UI
 │   └── auth/
 │       ├── signup/page.tsx     /auth/signup
 │       ├── signin/page.tsx     /auth/signin
@@ -45,6 +53,7 @@ frontend/
 │       ├── google/route.ts     starts Google sign-in
 │       ├── google/callback/route.ts  Google sends people back here
 │       └── signout/route.ts    /auth/signout
+├── proxy.ts                    sends signed-out visitors from /dashboard to sign-in
 ├── lib/site.ts                 shared page metadata (title, description, social cards)
 ├── src/
 │   ├── views/                  one component per page, composed from its sections
@@ -60,7 +69,7 @@ To add a page, create `frontend/app/<name>/page.tsx`.
 ## Run it
 
 ```bash
-cp frontend/.env.example frontend/.env.local   # Supabase URL + anon key
+cp frontend/.env.example frontend/.env.local   # Supabase URL + anon key, NEXT_PUBLIC_API_URL
 cp db/.env.example db/.env                     # Neon DATABASE_URL, DIRECT_URL
 cp backend/.env.example backend/.env           # Neon + Supabase, and any optional keys
 pnpm install
@@ -125,5 +134,6 @@ root directory.
 Set `SITE_URL` (for example `https://crevo.ai`) in production so canonical
 links and social cards use your domain.
 
-After signing in, people are sent to `/dashboard`, which shows the 404 page
-until the dashboard is added.
+After signing up, people go through a short onboarding and land on
+`/dashboard`. A new workspace starts with sample data so every screen has
+something to show until Gmail, Calendar and YouTube are connected.
