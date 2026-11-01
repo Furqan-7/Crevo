@@ -23,7 +23,9 @@ export default function Onboarding({ name }: { name?: string }) {
     () => Object.fromEntries(onboardingAccounts.map((a) => [a.id, a.action])),
   );
   const [csvName, setCsvName] = useState<string | null>(null);
-  const [features, setFeatures] = useState({ google: false });
+  // null until the profile has loaded; Google buttons only say "not set up"
+  // once the API has actually said so.
+  const [features, setFeatures] = useState<{ google: boolean } | null>(null);
 
   // What's really connected (this page is also where Google sends people
   // back to after connecting).
@@ -41,7 +43,9 @@ export default function Onboarding({ name }: { name?: string }) {
           return next;
         });
       })
-      .catch(() => undefined);
+      .catch((err: unknown) => {
+        setError(err instanceof ApiError ? err.message : "Couldn't load your account. Try again.");
+      });
     const failed = new URLSearchParams(window.location.search).get("connect_error");
     if (failed) setError(failed === "cancelled" ? "Connecting was cancelled. You can connect later in Settings." : "Connecting didn't work. You can try again, or later in Settings.");
   }, []);
@@ -79,7 +83,20 @@ export default function Onboarding({ name }: { name?: string }) {
   // Off to Google's consent screen; it sends the creator back here.
   async function connect(id: string) {
     if (id !== "gmail" && id !== "calendar" && id !== "youtube") return;
-    if (!features.google) {
+    setError(null);
+    let google = features?.google;
+    if (google === undefined) {
+      // The profile didn't load earlier (or hasn't yet): ask again, so an
+      // unreachable API isn't reported as Google not being set up.
+      try {
+        google = (await api.profile()).features.google;
+        setFeatures({ google });
+      } catch (err) {
+        setError(err instanceof ApiError ? err.message : "Couldn't reach Crevo. Try again.");
+        return;
+      }
+    }
+    if (!google) {
       setError("Connecting Google accounts isn't set up on this server yet. You can carry on and connect later in Settings.");
       return;
     }
@@ -144,11 +161,12 @@ export default function Onboarding({ name }: { name?: string }) {
             </li>
           ))}
         </ol>
-        <button type="button" className={styles.skip} onClick={() => finish()} disabled={saving}>Skip for now</button>
+        <button type="button" className={styles.skip} onClick={() => finish()} disabled={saving}>{saving ? "Saving…" : "Skip for now"}</button>
       </header>
 
       <div className={styles.body}>
         <section className={styles.card} aria-labelledby="step-title">
+          {error && <p className={cx(styles.error, styles.errorTop)} role="alert">{error}</p>}
           <div className={base.eyebrow}><span>[</span>step {step + 1} of {STEPS.length}<span>]</span></div>
 
           {step === 0 && (
@@ -191,7 +209,6 @@ export default function Onboarding({ name }: { name?: string }) {
                   e.target.value = "";
                 }}
               />
-              {error && step === 0 && <p className={styles.error} role="alert">{error}</p>}
               <p className={styles.note}>🔒 Nothing is sent, posted or booked without your approval.</p>
             </>
           )}
@@ -255,7 +272,6 @@ export default function Onboarding({ name }: { name?: string }) {
               {step < STEPS.length - 1 ? "Continue" : saving ? "Setting up…" : "Open my briefing"}
             </button>
           </div>
-          {error && step !== 0 && <p className={styles.error} role="alert">{error}</p>}
           {step === STEPS.length - 1 && !error && (
             <p className={styles.sample}>Until your accounts sync, your workspace starts with a sample creator&apos;s inbox, deals and posts. Reset it any time in Settings.</p>
           )}

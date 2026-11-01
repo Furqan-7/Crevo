@@ -364,6 +364,14 @@ button.chipOn:hover {
 .card .error {
   color: var(--red);
 }
+/* Shown above the step, so a failed Skip (top right) or Connect is seen. */
+.card .errorTop {
+  margin: 0 0 16px !important;
+  padding: 10px 12px;
+  border: 1px solid #f3c9c9;
+  border-radius: 8px;
+  background: #fff5f5;
+}
 .continue {
   flex: 1;
   justify-content: center;
@@ -381,7 +389,9 @@ button.chipOn:hover {
 .side h2 + * + h2 {
   margin-top: 28px !important;
 }
-.preview {
+/* .page .preview: the .page ul reset would otherwise zero this padding and
+   push the list's icons against the card's edge. */
+.page .preview {
   display: block;
   background: rgba(255, 255, 255, 0.85);
   border: 1px solid var(--line);
