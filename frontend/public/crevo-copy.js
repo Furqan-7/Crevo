@@ -573,7 +573,7 @@
   // and the click goes nowhere, so they always get a full page load.
   var SITE_PAGES = [
     { path: "/privacy-policy", label: /^privacy( policy)?$/i },
-    { path: "/terms-of-service", label: /^terms( of service| (and|&) conditions)?$/i },
+    { path: "/terms-of-service", label: /^terms( of (service|use)| (and|&) conditions)?$/i },
     { path: "/contact-us", label: /^contact( us)?$/i },
   ];
   function sitePage(a, label) {

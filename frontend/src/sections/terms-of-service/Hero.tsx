@@ -1412,7 +1412,7 @@ export default function Hero() {
                           {"9. Governing Law"}
                         </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
-                          {"These Terms are governed by the laws of [Your Jurisdiction]. Any disputes shall be resolved in the courts of [Your Jurisdiction]."}
+                          {"These terms are governed by the laws of the country where Crevo is registered, and any disputes will be resolved in its courts. If a rule here can't be enforced, the rest of these terms still apply."}
                         </p>
                       </div>
                     </div>
@@ -1535,7 +1535,7 @@ export default function Hero() {
                           {"9. Governing Law"}
                         </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
-                          {"These Terms are governed by the laws of [Your Jurisdiction]. Any disputes shall be resolved in the courts of [Your Jurisdiction]."}
+                          {"These terms are governed by the laws of the country where Crevo is registered, and any disputes will be resolved in its courts. If a rule here can't be enforced, the rest of these terms still apply."}
                         </p>
                       </div>
                     </div>
@@ -1658,7 +1658,7 @@ export default function Hero() {
                           {"9. Governing Law"}
                         </h2>
                         <p dir="auto" className="cv-text cv-styles-preset-12h7zc6">
-                          {"These Terms are governed by the laws of [Your Jurisdiction]. Any disputes shall be resolved in the courts of [Your Jurisdiction]."}
+                          {"These terms are governed by the laws of the country where Crevo is registered, and any disputes will be resolved in its courts. If a rule here can't be enforced, the rest of these terms still apply."}
                         </p>
                       </div>
                     </div>
