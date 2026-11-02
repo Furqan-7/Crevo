@@ -8,6 +8,7 @@ import styles from "./onboarding.module.css";
 import { BLUE, GREEN, Logo, PATTERNS, PURPLE, Pixels, YELLOW, cx } from "../_shell/ui";
 import type { Provider } from "@api-types";
 import { ApiError, api } from "../_shell/api";
+import { GOOGLE_NOT_GRANTED, GoogleNotice } from "../_shell/GoogleNotice";
 import { browserTimeZone, goals, niches, onboardingAccounts } from "../data";
 
 const STEPS = ["Connect", "About you", "First briefing"];
@@ -47,7 +48,7 @@ export default function Onboarding({ name }: { name?: string }) {
         setError(err instanceof ApiError ? err.message : "Couldn't load your account. Try again.");
       });
     const failed = new URLSearchParams(window.location.search).get("connect_error");
-    if (failed) setError(failed === "cancelled" ? "Connecting was cancelled. You can connect later in Settings." : "Connecting didn't work. You can try again, or later in Settings.");
+    if (failed) setError(failed === "cancelled" ? GOOGLE_NOT_GRANTED : "Connecting didn't work. You can try again, or later in Settings.");
   }, []);
   const [niche, setNiche] = useState(niches[0]);
   const [goal, setGoal] = useState<Set<string>>(new Set([goals[0]]));
@@ -173,6 +174,7 @@ export default function Onboarding({ name }: { name?: string }) {
             <>
               <h1 id="step-title" className={styles.h1}>Connect your accounts</h1>
               <p className={styles.lead}>{name ? `Welcome, ${name}. ` : ""}Crevo reads these to build your daily briefing. You can add more later.</p>
+              {features?.google !== false && <GoogleNotice />}
               <ul className={styles.accounts}>
                 {onboardingAccounts.map((a) => {
                   const state = accounts[a.id];
