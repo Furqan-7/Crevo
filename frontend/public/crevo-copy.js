@@ -563,10 +563,27 @@
 
   // Framer's runtime navigates on click from its own copy of each link's
   // target (the template's contact page), ignoring the href fixLink set. Catch
-  // clicks on the sign-up and "how it works" buttons first (capture phase,
-  // before React's handlers) and go where the button says.
+  // clicks on the sign-up and "how it works" buttons and the links to this
+  // site's own pages first (capture phase, before React's handlers) and go
+  // where the link says.
   var TO_SIGNUP = /^(get started( free)?|start creating|sign up( free)?|get template)$/i;
   var TO_HOW = /^(see how it works|try demo)$/i;
+  // The legal and contact pages are this site's own pages, not Framer's: on
+  // a client-side navigation Framer's runtime tries to draw its template page
+  // and the click goes nowhere, so they always get a full page load.
+  var SITE_PAGES = [
+    { path: "/privacy-policy", label: /^privacy( policy)?$/i },
+    { path: "/terms-of-service", label: /^terms( of service| (and|&) conditions)?$/i },
+    { path: "/contact-us", label: /^contact( us)?$/i },
+  ];
+  function sitePage(a, label) {
+    var path = "";
+    try { path = new URL(a.getAttribute("href") || "", location.href).pathname.replace(/\/+$/, ""); } catch (err) { /* not a URL */ }
+    for (var i = 0; i < SITE_PAGES.length; i++) {
+      if (path === SITE_PAGES[i].path || SITE_PAGES[i].label.test(label)) return SITE_PAGES[i].path;
+    }
+    return null;
+  }
   function labelOf(a) {
     // Framer renders each label twice (for its hover effect); use one copy.
     var text = (a.textContent || "").replace(/\s+/g, " ").trim();
@@ -580,6 +597,7 @@
     var label = labelOf(a), dest = null;
     if (TO_SIGNUP.test(label)) dest = SIGNUP;
     else if (TO_HOW.test(label)) dest = "/#how-it-works";
+    else dest = sitePage(a, label);
     if (!dest) return;
     a.setAttribute("href", dest);
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; // new tab or window: the browser uses the href
