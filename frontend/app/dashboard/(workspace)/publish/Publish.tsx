@@ -343,10 +343,22 @@ function Editor({ video, initialClip }: { video: Video; initialClip?: string }) 
 
   // While any short renders (after upload or a trim), refresh to show progress.
   const rendering = clips.some((c) => c.render.status === "rendering" || c.render.stale);
+  // Every 3s at first, slowing down, and stopping after 10 minutes so a
+  // render that never finishes can't keep reloading the page.
   useEffect(() => {
     if (!rendering) return;
-    const t = setInterval(() => void refreshVideo().catch(() => undefined), 3000);
-    return () => clearInterval(t);
+    const started = Date.now();
+    let timer: ReturnType<typeof setTimeout>;
+    const tick = () => {
+      const elapsed = Date.now() - started;
+      if (elapsed > 10 * 60_000) return;
+      timer = setTimeout(async () => {
+        await refreshVideo().catch(() => undefined);
+        tick();
+      }, elapsed < 60_000 ? 3_000 : 10_000);
+    };
+    tick();
+    return () => clearTimeout(timer);
   }, [rendering, refreshVideo]);
   const hasShorts = clips.some((c) => c.render.status !== "none");
 

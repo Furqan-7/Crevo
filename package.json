@@ -15,7 +15,7 @@
     "db:studio": "pnpm --filter db db:studio",
     "check:setup": "node scripts/check-setup.mjs",
     "build:api": "pnpm install --frozen-lockfile --prod=false && pnpm --filter db build && pnpm --filter backend build",
-    "start:api": "node backend/dist/index.js"
+    "start:api": "node scripts/start-api.mjs"
   },
   "devDependencies": {
     "concurrently": "^10.0.6"

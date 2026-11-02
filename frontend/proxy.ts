@@ -45,14 +45,19 @@ export async function proxy(request: NextRequest) {
     },
   });
 
-  // getClaims verifies the token (and refreshes it first when it's about to expire).
-  const { data } = await supabase.auth.getClaims();
+  // The session from the cookies, refreshed first when it's about to expire.
+  // Reading it needs no network call, unlike getClaims with Supabase's
+  // shared-secret tokens (a round trip to Supabase on every page). This only
+  // decides where to send the visitor: the data itself comes from the API,
+  // which verifies the token on every request.
+  const { data } = await supabase.auth.getSession();
+  const signedIn = Boolean(data.session?.access_token);
 
   // Sign-in and sign-up: someone already signed in (e.g. coming back through
   // the landing page's Get started buttons) goes straight to the dashboard
   // instead of seeing the form as if they'd been signed out.
   if (authPage) {
-    if (!data?.claims) return response;
+    if (!signedIn) return response;
     const next = request.nextUrl.searchParams.get("next");
     const to = next && next.startsWith("/") && !next.startsWith("//") ? next : "/dashboard";
     const redirect = NextResponse.redirect(new URL(to, request.url));
@@ -60,7 +65,7 @@ export async function proxy(request: NextRequest) {
     return redirect;
   }
 
-  if (!data?.claims) {
+  if (!signedIn) {
     const signIn = new URL("/auth/signin", request.url);
     return NextResponse.redirect(signIn);
   }

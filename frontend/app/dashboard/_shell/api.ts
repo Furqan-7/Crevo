@@ -91,7 +91,9 @@ async function request<T>(method: "GET" | "POST" | "PATCH" | "PUT" | "DELETE", p
   if (response.status === 204) return undefined as T;
   const json = (await response.json().catch(() => null)) as ApiSuccess<unknown> | ApiFailure | null;
   if (response.status === 401) {
-    window.location.href = "/auth/signin";
+    // The API rejected the session: clear it (via sign-out) before going to
+    // sign-in, or the sign-in page would see the cookie and send us back.
+    window.location.href = "/auth/signout";
   }
   if (!response.ok || !json || !json.success) {
     const failure = json && !json.success ? json : null;

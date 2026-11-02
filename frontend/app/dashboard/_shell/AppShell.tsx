@@ -126,21 +126,59 @@ interface Workspace {
 
 type Collection = "threads" | "deals" | "todos" | "ideas" | "events" | "video" | "alerts" | "summary";
 
-const LOADERS: { [K in Collection]: () => Promise<Partial<Workspace>> } = {
-  threads: async () => ({ threads: (await api.messages()).map(toThread) }),
-  deals: async () => ({ deals: (await api.deals()).map(toDeal) }),
-  todos: async () => ({ todos: (await api.todos()).map(toTodo) }),
-  ideas: async () => ({ ideas: (await api.ideas()).map(toIdea) }),
-  events: async () => ({ events: (await api.events()).map(toEvent) }),
+// Each collection: fetch, then (as a second step) map to what the screens
+// use. The mapping waits for the profile's time zone ("today" depends on
+// it), but the fetches don't, so a first load starts every request at once.
+const FETCHERS: { [K in Collection]: () => Promise<() => Partial<Workspace>> } = {
+  threads: async () => {
+    const r = await api.messages();
+    return () => ({ threads: r.map(toThread) });
+  },
+  deals: async () => {
+    const r = await api.deals();
+    return () => ({ deals: r.map(toDeal) });
+  },
+  todos: async () => {
+    const r = await api.todos();
+    return () => ({ todos: r.map(toTodo) });
+  },
+  ideas: async () => {
+    const r = await api.ideas();
+    return () => ({ ideas: r.map(toIdea) });
+  },
+  events: async () => {
+    const r = await api.events();
+    return () => ({ events: r.map(toEvent) });
+  },
   // The newest finished video, plus one still uploading or processing.
   video: async () => {
     const videos = await api.videos();
     const ready = videos.find((v) => v.status === "ready");
     const pending = videos.find((v) => v.status !== "ready" && (!ready || v.createdAt > ready.createdAt));
-    return { video: ready ? toVideo(ready) : null, pendingVideo: pending ?? null };
+    return () => ({ video: ready ? toVideo(ready) : null, pendingVideo: pending ?? null });
   },
-  alerts: async () => ({ alerts: (await api.alerts()).map(toAlert) }),
-  summary: async () => ({ minutesSaved: (await api.summary()).minutesSavedThisWeek }),
+  alerts: async () => {
+    const r = await api.alerts();
+    return () => ({ alerts: r.map(toAlert) });
+  },
+  summary: async () => {
+    const r = await api.summary();
+    return () => ({ minutesSaved: r.minutesSavedThisWeek });
+  },
+};
+const LOADERS = Object.fromEntries(
+  (Object.keys(FETCHERS) as Collection[]).map((name) => [name, async () => (await FETCHERS[name]())()]),
+) as { [K in Collection]: () => Promise<Partial<Workspace>> };
+
+const SECTION_LABEL: Record<Collection, string> = {
+  threads: "Inbox",
+  deals: "Brand deals",
+  todos: "To-dos",
+  ideas: "Ideas",
+  events: "Calendar",
+  video: "Publish",
+  alerts: "Notifications",
+  summary: "Weekly summary",
 };
 
 const EMPTY: Workspace = { threads: [], deals: [], todos: [], ideas: [], events: [], video: null, pendingVideo: null, alerts: [], minutesSaved: 0 };
@@ -161,10 +199,10 @@ export default function AppShell({ children }: { children: ReactNode }) {
   const [toast, setToast] = useState<string | null>(null);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const notify = useCallback((message: string) => {
+  const notify = useCallback((message: string, ms = 2800) => {
     setToast(message);
     if (toastTimer.current) clearTimeout(toastTimer.current);
-    toastTimer.current = setTimeout(() => setToast(null), 2800);
+    toastTimer.current = setTimeout(() => setToast(null), ms);
   }, []);
 
   const patchWs = useCallback((update: (w: Workspace) => Partial<Workspace>) => setWs((w) => ({ ...w, ...update(w) })), []);
@@ -198,6 +236,9 @@ export default function AppShell({ children }: { children: ReactNode }) {
   const load = useCallback(async () => {
     setStatus("loading");
     try {
+      // Everything at once: the profile and every collection.
+      const names = Object.keys(FETCHERS) as Collection[];
+      const fetched = Promise.allSettled(names.map((name) => FETCHERS[name]()));
       const profile = await api.profile();
       if (!profile.onboarded) {
         router.replace("/dashboard/onboarding");
@@ -206,14 +247,21 @@ export default function AppShell({ children }: { children: ReactNode }) {
       setWorkspaceClock(profile.timezone);
       setSettings(toSettings(profile));
       setIntegrations(integrationsOf(profile));
-      const parts = await Promise.all((Object.keys(LOADERS) as Collection[]).map((name) => LOADERS[name]()));
+      // A section that fails to load is left empty, not the whole workspace.
+      const results = await fetched;
+      const parts = results.map((r) => (r.status === "fulfilled" ? r.value() : {}));
       setWs(Object.assign({ ...EMPTY }, ...parts));
       setStatus("ready");
+      const failed = names.filter((_, i) => results[i]!.status === "rejected");
+      if (failed.length > 0) {
+        const first = results.find((r): r is PromiseRejectedResult => r.status === "rejected")!.reason;
+        notify(`Couldn't load ${failed.map((n) => SECTION_LABEL[n]).join(", ")}${first instanceof ApiError ? `: ${first.message}` : ""}. Refresh to try again.`, 10_000);
+      }
     } catch (err) {
       setLoadError(err instanceof ApiError ? err.message : "Something went wrong.");
       setStatus("error");
     }
-  }, [router]);
+  }, [router, notify]);
 
   useEffect(() => {
     load();
