@@ -8,10 +8,11 @@ import { PageHead, TopBar, useShell } from "../../_shell/AppShell";
 import { ACCOUNT_META, type AccountId, type BriefingSection, type NotificationId, type Settings as SettingsShape } from "../../_shell/settings";
 import { BLUE, GREEN, PATTERNS, PURPLE, Pixels, YELLOW, cx } from "../../_shell/ui";
 import { ApiError, api } from "../../_shell/api";
+import { GOOGLE_NOT_GRANTED, GoogleNotice } from "../../_shell/GoogleNotice";
 import { browserTimeZone, goals, niches, type InboxThread, type Tone } from "../../data";
 
 const CONNECT_ERRORS: Record<string, string> = {
-  cancelled: "Connecting was cancelled. Nothing changed.",
+  cancelled: GOOGLE_NOT_GRANTED,
   permissions: "Google didn't give every permission Crevo needs. Connect again and leave all the boxes ticked.",
   expired: "That connect link expired. Try again.",
   failed: "Connecting didn't work. Try again in a minute.",
@@ -297,6 +298,7 @@ export default function Settings({ initialTab }: { initialTab: SettingsTab }) {
 
           {tab === "accounts" && (
             <>
+              {integrations.features.google && <GoogleNotice />}
               <ul className={styles.accounts}>
                 {(Object.keys(ACCOUNT_META) as AccountId[]).map((id) => {
                   const meta = ACCOUNT_META[id];
