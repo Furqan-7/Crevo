@@ -74,10 +74,14 @@ test.describe("marketing pages", () => {
   });
 
   test("security headers are sent and private pages aren't publicly cached", async ({ request }) => {
-    // / allows Framer's runtime; every other page keeps the strict policy.
-    const landing = (await request.get("/")).headers()["content-security-policy"];
+    // / allows Framer's runtime and may be embedded only by the owner's portfolio;
+    // every other page keeps the strict policy and can't be embedded anywhere.
+    const landingRes = await request.get("/");
+    const landing = landingRes.headers()["content-security-policy"];
     expect(landing).toContain("https://framerusercontent.com");
-    expect(landing).toContain("frame-ancestors 'none'");
+    expect(landing).toContain("frame-ancestors 'self' https://furqan7.dev https://www.furqan7.dev");
+    expect(landingRes.headers()["x-frame-options"]).toBeUndefined();
+    expect(landingRes.headers()["x-content-type-options"]).toBe("nosniff");
 
     const home = await request.get("/contact-us");
     expect(home.headers()["content-security-policy"]).not.toContain("framerusercontent");

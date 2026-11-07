@@ -428,7 +428,9 @@ authorised redirect URI on your Google Cloud OAuth client.
 
 - Security headers on every page (`frontend/next.config.ts`): Content Security
   Policy, `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`,
-  `Permissions-Policy` and HSTS.
+  `Permissions-Policy` and HSTS. No page can be embedded in another site, except
+  the landing page (`/`), which only https://furqan7.dev may embed (it shows the
+  live site on its project card).
 - The API uses Helmet, a CORS allow-list, rate limits and Zod validation.
 - Every `/api/*` request is checked against Supabase Auth, and data is scoped
   to the signed-in creator.
