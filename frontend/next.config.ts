@@ -54,7 +54,9 @@ const landingCsp = [
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self' mailto:",
-  "frame-ancestors 'none'",
+  // Only the landing page may be embedded, and only by the owner's portfolio,
+  // which shows it as a live preview on its project card.
+  "frame-ancestors 'self' https://furqan7.dev https://www.furqan7.dev",
 ].join("; ");
 
 const securityHeaders = [
@@ -66,6 +68,13 @@ const securityHeaders = [
   { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
 ];
 
+// The landing page gets the same headers minus X-Frame-Options (which cannot name
+// an allowed site); its Content-Security-Policy frame-ancestors decides instead.
+const landingHeaders = [
+  { key: "Content-Security-Policy", value: landingCsp },
+  ...securityHeaders.filter((h) => h.key !== "Content-Security-Policy" && h.key !== "X-Frame-Options"),
+];
+
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   // Unknown addresses get app/global-not-found.tsx, rendered only for them,
@@ -75,9 +84,9 @@ const nextConfig: NextConfig = {
   outputFileTracingRoot: workspace,
   async headers() {
     return [
-      { source: "/:path*", headers: securityHeaders },
-      // Listed after the rule above so its Content-Security-Policy wins on /.
-      { source: "/", headers: [{ key: "Content-Security-Policy", value: landingCsp }] },
+      // Every page except the landing page: strict policy, never embeddable.
+      { source: "/:path+", headers: securityHeaders },
+      { source: "/", headers: landingHeaders },
       // Images and fonts under public/assets. Some keep their name when edited
       // (crevo-hero-*.webp), so they are cached for a week, not forever.
       { source: "/assets/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }] },
